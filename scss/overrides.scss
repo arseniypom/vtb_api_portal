@@ -1,0 +1,25 @@
+// import connect variables
+@import "connect-variables";
+
+// place your override variables here
+
+// import everything from connect_theme as a starting point
+@import "connect-styles";
+
+// place further styling overrides here
+@import 'fonts';
+@import 'general';
+@import 'drupal-override';
+@import 'cookie-banner';
+@import 'header';
+@import 'onboarding';
+@import 'target-audience';
+@import 'popular-api';
+@import 'existing-clients';
+@import 'client-path';
+@import 'suppliers';
+@import 'news';
+@import 'footer';
+
+@import 'catalog';
+@import 'connection';

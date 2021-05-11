@@ -1,0 +1,411 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR API PAGE ----------------------- */
+// Верх страницы ------------------------------------------------
+.productApiWrapper #innerWrapper>article:not(.apiprotocol-graphql) {
+  border-top: none;
+}
+
+// Две колонки вместе
+.apicProduct .apicProductBody, .productApiWrapper #innerWrapper {
+  padding: 0 3rem;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+// Левая колонка ------------------------------------------------
+.Pane.vertical.Pane1 {
+  max-width: 17.5rem;
+  margin-right: 8.5rem;
+}
+
+ul.apiContent {
+  background: #2D2F35;
+  border-radius: 8px;
+  padding: 15px 5px !important;
+}
+
+.bx--global-light-ui .apiconnect-explorer .explorer-toc ul .tocItem a:hover,
+.bx--global-light-ui .apiconnect-explorer .explorer-toc ul .tocItem a.selected {
+  background-color: transparent;
+}
+
+.bx--global-light-ui .apiconnect-explorer .explorer-toc a.selected {
+  color: #3A85FF;
+  border-left: 0;
+}
+
+li.searchListItem {
+  display: none !important;
+}
+
+// Правая колонка ------------------------------------------------
+.Pane.vertical.Pane2 {
+  max-width: 37rem;
+}
+
+// Ошибки валидации сваггера
+section.swaggerValidationErrors {
+  display: none;
+}
+
+.apiconnect-explorer .operation-section .operationHeader, .apiconnect-explorer .overview-section .overviewHeader, .apiconnect-explorer .overview-section .overviewBody, .apiconnect-explorer .definitions-section .definitionsHeader, .apiconnect-explorer .definitions-section .definitionsBody {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.apiconnect-explorer .operation-section .operationDisplay section.tab-content {
+  padding: 0;
+}
+
+// Заголовок
+a.subscribeButton.button {
+  padding: .75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.apicApiIcon {
+  display: none;
+}
+
+.Resizer.vertical {
+  display: none;
+}
+
+
+// Раздел "Обзор"
+section.overviewHeader h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.apiconnect-explorer .labelText {
+  font-size: 1rem;
+}
+
+.operationInformation.operationDownloadOpenApi .labelText {
+  color: #3A85FF;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+use {
+  fill: #3A85FF;
+}
+
+.apiconnect-explorer .operationInformation, .apiconnect-explorer .operationDisplay .testToolSection {
+  display: -ms-flexbox;
+  display: flex;
+  grid-template-columns: unset;
+  -ms-grid-columns: unset;
+  padding: 20px 0;
+}
+
+// Расширения API
+.apiconnect-explorer .extensionDisplay code div {
+  background-color: transparent;
+}
+
+// Тип / эндпоинт
+.operationType .labelText,
+.operationEndpoints .labelText {
+  color: #7B7E86;
+}
+
+// Безопасность
+.operationInformation.operationSecurity {
+  display: flex;
+  flex-direction: column;
+
+  .labelText {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.bx--tile.securityOption.securityOption-1 {
+  border: none;
+  padding: 0;
+}
+
+.apiconnect-explorer .securityTitle {
+  font-weight: 400;
+}
+
+.apiconnect-explorer .securityOptionPart {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.securityTitle.keyValueDisplay {
+  color: #7B7E86;
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.securityNameAndType.keyValueDisplay {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  -ms-grid-columns: unset;
+  grid-template-columns: unset;
+  grid-row-gap: unset;
+  padding: 0;
+}
+
+.bx--module .bx--module__inner {
+  background-color: transparent;
+}
+.apiconnect-explorer .bx--module .bx--module__title {
+  color: inherit;
+}
+
+// Контакты
+.apiconnect-explorer a, .apiconnect-explorer .bx--link {
+  color: #3a85ff;
+}
+
+// Поддержка / форум
+.infoSection.forum {
+  display: none;
+}
+
+// Методы ------------------------------------------------
+.bx--tabs__nav-item--selected {
+  border-bottom: 2px solid #0062FF;
+}
+
+.operationInformation.operationSummary {
+  flex-direction: column;
+}
+
+.apiconnect-explorer .labelText.method {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  color: #F3F4F6;
+  margin-bottom: 1rem;
+}
+
+.apiconnect-explorer .testTool ul.bx--accordion .bx--accordion__content {
+  background-color: transparent;
+}
+
+.apiconnect-explorer .operation-section .operationDisplay .bx--tabs.op-tabs {
+  padding: 0;
+}
+.operationTitle h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.apiconnect-explorer .bx--accordion__heading {
+  background: transparent;
+  border: none;
+  border-top: 0;
+}
+.bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading {
+  color: #E5E7EB;
+
+  & > * {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+// Инпуты
+.apiconnect-explorer .bx--text__input {
+  font-weight: inherit;
+  background-color: transparent;
+  color: #7B7E86;
+  border: 1px solid #505258;
+  border-radius: 4px;
+}
+
+// Контент из 2х колонок
+.bx--data-table-v2 th:first-of-type, .bx--data-table-v2 td:first-of-type {
+  padding-left: 0;
+  border-left: none;
+}
+.apiconnect-explorer .parameterNameContainer, .apiconnect-explorer .responseHeaderNameContainer {
+  width: 20%;
+}
+
+.bx--data-table-v2 tbody {
+  font-size: .875rem;
+  background-color: transparent;
+  border-right: none;
+}
+.bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading:focus, .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading:hover, .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading:active {
+  background: rgba(136, 136, 136, 0.08);
+  border: none;
+  border-top: 0;
+}
+
+.bx--data-table-v2 th, .bx--data-table-v2 td {
+  font-size: .875rem;
+  border-top: 1px solid #37383C;
+  padding-left: .75rem;
+  vertical-align: middle;
+  text-align: left;
+  color: #F3F4F6;
+}
+
+.apiconnect-explorer .definitionDisplay .bx--tabs, .apiconnect-explorer .definitionsBody .definitionDisplay .bx--tabs, .apiconnect-explorer .operation-section .operationDisplay .responseSchema .definitionDisplay .bx--tabs {
+  padding: .5rem 1rem;
+  min-height: unset;
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.apiconnect-explorer .definitionDisplay .body, .apiconnect-explorer .codeSnippetsDisplay .body, .apiconnect-explorer .testRequestBody .body, .apiconnect-explorer .testResponseBody .body, .apiconnect-explorer .apiexplorer--snippet--light {
+  border-top: none;
+  padding: 1rem;
+  background: #2D2F35;
+  border-radius: 8px;
+}
+
+.body.small > * {
+  color: #F3F4F6;
+}
+
+code span, .json-schema-view * {
+  color: #F3F4F6 !important;
+}
+
+li.bx--tabs__nav-item.bx--tabs__nav-item--selected {
+  border-bottom: 2px solid #3A85FF;
+  color: #3A85FF;
+}
+
+// Код
+.apiconnect-explorer .json-schema-view, .apiconnect-explorer json-schema-view, .apiconnect-explorer .bodyParam textarea, .apiconnect-explorer code {
+  color: #F3F4F6;
+}
+.bx--global-light-ui .apiconnect-explorer .hljs {
+  color: #F3F4F6;
+}
+
+// Ответы
+.operationInformation.operationSummary.responseSelection {
+  flex-direction: column;
+
+  & .labelText {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+select#operationResponses {
+  background-color: transparent;
+  border-bottom: none;
+  border: 1px solid #505258;
+  border-radius: 4px;
+  color: #E5E7EB;
+}
+.apiconnect-explorer .responsesContainer .responseDescription {
+  color: #E5E7EB;
+  padding-top: 0;
+  padding-left: 1rem;
+  font-style: normal;
+  font-size: .875rem;
+}
+.responsesContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+// Определения
+.bx--data-table-v2 thead {
+  font-size: .875rem;
+  background-color: transparent;
+  font-weight: 700;
+  border-right: none;
+}
+.bx--data-table-v2--zebra tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+tr.bx--expandable-row-v2:hover+tr[data-child-row]>td {
+  background-color: transparent;
+  border-bottom: none;
+  border-right: none;
+}
+.apiconnect-explorer .definitionDisplay, .apiconnect-explorer .definitionsBody .definitionDisplay, .apiconnect-explorer .responseSchema .definitionDisplay {
+  border: none;
+  background-color: #2D2F35;
+  border-radius: 8px;
+}
+.apiconnect-explorer .bx--tabs__nav {
+  position: unset;
+  background: #22242A;
+  border-radius: 16px;
+  width: fit-content;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+li.bx--tabs__nav-item.bx--tabs__nav-item {
+  padding: 2px 16px;
+
+  &--selected {
+    border-bottom: none;
+    color: #E5E7EB;
+    background-color: #505258;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    height: 24px;
+  }
+}
+
+tr.bx--expandable-row-v2+tr[data-child-row] td {
+  padding: .5rem;
+}
+
+// Подписаться на АПИ ------------------------------------------------
+.planTableSelector {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail {
+  height: 100px;
+  background-color: transparent;
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+// Модалка
+.modalAppResultContainer.modal-dialog {
+  color: #E5E7EB;
+}
+.clientIDContainer .field__label, .clientSecretContainer .field__label, .applicationCredentials .credentialsTable .credentialsContent .credentialsData .field__label {
+  color: #7B7E86;
+}
+.bx--global-light-ui .modal-header {
+  padding: 1rem 3rem .5rem;
+}
+
+
+// Подвал ------------------------------------------------
+.page-node-type-api footer, .route-productapi footer {
+  display: flex;
+}

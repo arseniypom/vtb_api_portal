@@ -1,0 +1,354 @@
+<div class="content">
+    {% block header %}
+      <header class="header-bg" id="navbar">
+        <div class="header">
+          <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
+          {# Navbar #}
+          <div class="header-menu">
+            {% if page.navigation or page.navigation_right %}
+              {% block navbar %}
+                <div class="header-menu-links">
+                    <a class="header-menu-links-item" href="/vtb/test/product">Каталог API</a>
+                    <a class="header-menu-links-item" href="/vtb/test/connection">Подключение</a>
+                    <a class="header-menu-links-item" href="/vtb/test/application">Приложения</a>
+                    <a class="header-menu-links-item" href="/vtb/test/support">Поддержка</a>
+                    <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a>
+                </div>
+                <div class="navbar-right">
+                  {{ page.navigation_right }}
+                </div>
+              {% endblock %}
+            {% endif %}
+          </div>
+        </div>
+      </header>
+    {% endblock %}
+
+        <div class="onboarding-bg blue-bg open-interface-bg" id="onboarding">
+            <div class="container-medium onboarding">
+                <h3>Портал API ВТБ — тестирование и эксплуатация сервисов и данных банка</h3>
+                <h1>Получите доступ к банковским сервисам и используйте их </h1>
+                <div class="onboarding-image">
+                    <img class="onboarding-image-round-letters" src="{{ base_path ~ directory }}/images/round_letters.svg" alt="scroll down">
+                    <img class="onboarding-image-arrow" src="{{ base_path ~ directory }}/images/arrow-down.png" alt="arrow">
+                </div>
+            </div>
+            <!-- <button class="onboarding-button button-transparent button-transparent-big"><img src="{{ base_path ~ directory }}/images/plus.svg" alt="plus" class="plus-img"><p>Подключиться</p></button> -->
+        </div>
+
+        <a href="/vtb/test/connection" class="onboarding-button button-transparent button-transparent-big" id="action-button"><img src="{{ base_path ~ directory }}/images/plus.svg" alt="plus" class="plus-img"><p class="onboarding-button-text">Подключиться</p></a>
+
+        <div class="target-audience-bg dark-grey-bg" id="targetAudience">
+          <div class="target-audience-content-wrapper">
+              <div class="title-container">
+                  <h2 class="title-text-neutral title-container-number">01</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Кому</h2> <h2 class="title-text-green text-green">полезны API ></h2>
+              </div>
+              <div class="container-medium target-audience">
+                  <div class="target-audience-section target-audience-section-developers">
+                      <img class="decorative-img decorative-img-1" src="{{ base_path ~ directory }}/images/decorative-img-1.png" alt="decorative 1">
+                      <div class="target-audience-section-info target-audience-section-info-1">
+                          <img src="{{ base_path ~ directory }}/images/developers-text.png" alt="developers" class="target-audience-section-info-developers-text-img">
+                          <h1>/* Разработчикам</h1>
+                          <ul class="target-audience-section-info-bullets">
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Доступные данные <p class="text-muted">— встраивайте данные банка в ваши приложения и тестируйте открытые API, используя подробную <a class="connect-instruction" href="">инструкцию</a></p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Swagger-файлы <p class="text-muted">— получите доступ к библиотеке  swagger-файлов как в тестовом режиме, так и при подписке на уникальные API</p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Бесшовность <p class="text-muted">— оцените незаметный переход из одной системы в другую</p></div></li>
+                          </ul>
+                          <img class="target-audience-section-info-triangle" src="{{ base_path ~ directory }}/images/triangle.svg" alt="triangle">
+                      </div>
+                  </div>
+                  <div class="target-audience-section target-audience-section-business">
+                      <div class="target-audience-section-info target-audience-section-info-2">
+                          <img src="{{ base_path ~ directory }}/images/business-text.png" alt="business" class="target-audience-section-info-business-text-img">
+                          <h1>/* Бизнесу</h1>
+                          <ul class="target-audience-section-info-bullets">
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Финтех <p class="text-muted">— совершенствуйте ваши приложения, создавайте новые технологичные про-дукты и предоставляйте лучший сервис своим клиентам</p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Контроль, делегирование и аналитика <p class="text-muted">— подключайте своих сотрудников к API, следите за количеством вызовов, контролируйте ваши действия в личном кабинете</p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Простота и надежность <p class="text-muted">— регистрация для тестовых API или заявка на подключение к уникальным API занимает не больше минуты, а гарантия безопасной передачи данных и  шифрования по ГОСТу стопроцентное</p></div></li>
+                          </ul>
+                      </div>
+                      <img class="decorative-img decorative-img-2" src="{{ base_path ~ directory }}/images/decorative-img-2.png" alt="decorative 2">
+                  </div>
+              </div>
+          </div>
+          <img class="target-audience-bg-plus" src="{{ base_path ~ directory }}/images/decorative-plus-big.svg" alt="plus">
+      </div>
+
+      <div class="popular-api-bg dark-grey-bg">
+          <div class="title-container">
+              <h2 class="title-text-neutral title-container-number">02</h2> <h2 class="title-text-green text-green">< Популярные </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green text-green"> ></h2>
+          </div>
+          <div class="container-large popular-api">
+              <div class="popular-api-card">
+                  <img src="{{ base_path ~ directory }}/images/popular-api-icon-1.svg" alt="" class="popular-api-card-icon">
+                  <div class="popular-api-card-text">
+                      <h4>Ипотечный калькулятор ВТБ</h4>
+                      <p>Контроль, делегирование и аналитика</p>
+                      <p class="text-muted"> — подключайте своих сотрудников к тестированию API</p>
+                  </div>
+                  <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
+              </div>
+              <div class="popular-api-card">
+                  <img src="{{ base_path ~ directory }}/images/popular-api-icon-2.svg" alt="" class="popular-api-card-icon">
+                  <div class="popular-api-card-text">
+                      <h4>Карта жителя Кузбаса</h4>
+                      <p>Бесплатное тестирование API</p>
+                      <p class="text-muted"> — тестируйте приложения с использованием открытых данных</p>
+                  </div>
+                  <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
+              </div>
+              <div class="popular-api-card">
+                  <img src="{{ base_path ~ directory }}/images/popular-api-icon-3.svg" alt="" class="popular-api-card-icon">
+                  <div class="popular-api-card-text">
+                      <h4>ВТБ Мобайл</h4>
+                      <p>Поддержка</p>
+                      <p class="text-muted"> — команда ВТБ всегда на связи api@vtb.ru, консультационная и техническая помощь
+                      </p>
+                  </div>
+                  <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
+              </div>
+              <div class="popular-api-card">
+                  <h1>Смотреть больше API</h1>
+                  <a class="popular-api-card-link link-primary" href=""><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="popular-api-card-link-arrow"><p>Перейти в каталог</p></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="existing-clients-bg dark-grey-bg">
+          <div class="title-container">
+              <h2 class="title-text-neutral title-container-number">03</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">API уже</h2> <h2 class="title-text-green text-green">используют ></h2>
+          </div>
+          <div class="container-large existing-clients">
+              <div class="existing-clients-card">
+                  <div class="existing-clients-card-body">
+                      <img src="{{ base_path ~ directory }}/images/magnit-logo.png" alt="magnit shop logo" class="existing-clients-card-body-logo-magnit">
+                  </div>
+                  <h4 class="existing-clients-card-title">Сеть магазинов МАГНИТ</h4>
+              </div>
+              <div class="existing-clients-card">
+                  <div class="existing-clients-card-body">
+                      <img src="{{ base_path ~ directory }}/images/fns-logo.png" alt="fns logo" class="existing-clients-card-body-logo-fns">
+                  </div>
+                  <h4 class="existing-clients-card-title">Федеральная налоговая служба Российской Федерации</h4>
+              </div>
+              <div class="existing-clients-card">
+                  <div class="existing-clients-card-body">
+                      <img src="{{ base_path ~ directory }}/images/sogaz-logo.png" alt="sogaz logo" class="existing-clients-card-body-logo-sogaz">
+                  </div>
+                  <h4 class="existing-clients-card-title">Страховая компания СОГАЗ-ЖИЗНЬ</h4>
+              </div>
+          </div>
+      </div>
+
+      <div class="client-path-bg blue-bg connect-bg">
+          <div class="title-container">
+              <h2 class="title-text-neutral title-container-number">04</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Как</h2> <h2 class="title-text-green text-green"> подключиться ></h2>
+          </div>
+          <div class="container-medium client-path">
+              <img src="{{ base_path ~ directory }}/images/triangle.svg" alt="triangle" class="client-path-triangle">
+              <div class="client-path-steps upper-steps-div">
+                  <div class="client-path-steps-item client-path-steps-item-1">
+                      <img src="{{ base_path ~ directory }}/images/step-1.png" alt="step 1" class="step-number-img step-number-img-first">
+                      <div class="client-path-steps-item-number">
+                          <p>/* step</p>
+                          <p>01</p>
+                      </div>
+                      <h4>Посетить портал разработчиков developer.vtb.ru</h4>
+                  </div>
+                  <div class="client-path-steps-item client-path-steps-item-3">
+                      <img src="{{ base_path ~ directory }}/images/step-3.png" alt="step 3" class="step-number-img">
+                      <div class="client-path-steps-item-number">
+                          <p>/* step</p>
+                          <p>03</p>
+                      </div>
+                      <h4>Найти и протестировать нужные API</h4>
+                  </div>
+                  <div class="client-path-steps-item client-path-steps-item-5">
+                      <img src="{{ base_path ~ directory }}/images/step-5.png" alt="step 5" class="step-number-img">
+                      <div class="client-path-steps-item-number">
+                          <p>/* step</p>
+                          <p>05</p>
+                      </div>
+                      <h4>Использовать API в своих разработках</h4>
+                  </div>
+              </div>
+              <div class="client-path-timeline">
+                  <div class="client-path-timeline-wrapper">
+                      <span class="line"></span>
+                      <span class="dot dot-1"></span>
+                      <span class="dot dot-2 dot-active"></span>
+                      <span class="dot dot-3"></span>
+                      <span class="dot dot-4"></span>
+                      <span class="dot dot-5"></span>
+                  </div>
+                  <div class="arrows">
+                      <div class="arrowSliding">
+                          <span class="arrow"> > </span>
+                      </div>
+                      <div class="arrowSliding delay1">
+                          <span class="arrow"> > </span>
+                      </div>
+                      <div class="arrowSliding delay2">
+                          <span class="arrow"> > </span>
+                      </div>
+                      <div class="arrowSliding delay3">
+                          <span class="arrow"> > </span>
+                      </div>
+                  </div>
+              </div>
+              <div class="client-path-steps lower-steps-div">
+                  <div class="client-path-steps-item client-path-steps-item-2">
+                      <img src="{{ base_path ~ directory }}/images/step-2.png" alt="step 2" class="step-number-img">
+                      <div class="client-path-steps-item-number">
+                          <p>/* step</p>
+                          <p>02</p>
+                      </div>
+                      <h4>Зарегистрироваться на портале разработчиков</h4>
+                  </div>
+                  <div class="client-path-steps-item client-path-steps-item-4">
+                      <img src="{{ base_path ~ directory }}/images/step-4.png" alt="step 4" class="step-number-img">
+                      <div class="client-path-steps-item-number">
+                          <p>/* step</p>
+                          <p>04</p>
+                      </div>
+                      <h4>Заключить договор на информационное взаимодействие</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="suppliers-bg dark-grey-bg">
+          <div class="title-container">
+              <h2 class="title-text-neutral title-container-number">05</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Кого</h2> <h2 class="title-text-green text-green"> подключаем ></h2>
+          </div>
+          <div class="container-large suppliers-list">
+              <img src="{{ base_path ~ directory }}/images/decorative-plus-big.svg" alt="decorative plus" class="suppliers-list-plus">
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/government.svg" alt="government">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Государственные органы</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/heart.svg" alt="heart">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Страховые компании</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/subtract.svg" alt="subtract">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Технологические компании</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/megaphone.svg" alt="megaphone">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Лидогенерации</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/chat.svg" alt="chat">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Мессенджеры</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/signal.svg" alt="signal">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Телеком</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/bank.svg" alt="bank">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Банки</h4>
+              </div>
+              <div class="suppliers-list-item">
+                  <div class="suppliers-list-item-icon">
+                      <img src="{{ base_path ~ directory }}/images/figures.svg" alt="">
+                  </div>
+                  <h4 class="suppliers-list-item-title">Стартапы</h4>
+              </div>
+          </div>
+          <div class="container-medium become-supplier">
+              <img src="{{ base_path ~ directory }}/images/partnership-text.png" alt="partnership" class="become-supplier-partnership-text-img">
+              <div class="become-supplier-text">
+                  {# <h1>/*Поставщики API </h1>
+                  <p>Хотите сотрудничать с Банком в области данных и API, пишите на почту <a href="mailto:api@vtb.ru" class="become-supplier-text-email-link">api@vtb.ru</a> или заполните форму обратной связи</p>
+                  <img src="{{ base_path ~ directory }}/images/rhombus.svg" alt="rhombus" class="become-supplier-text-rhombus"> #}
+                    <h1>/*Поддержка</h1>
+                    <p>Есди у Вас возникли вопросы организационного или технического характера, задайте их по адресу <a href="mailto:api@vtb.ru" class="become-supplier-text-email-link">api@vtb.ru</a></p>
+              </div>
+              {# <div class="become-supplier-form">
+                  <label for="description">Описание</label>
+                  <textarea id="description" class="become-supplier-form-description" rows="5" placeholder="Расскажите, как мы можем сотрудничать"></textarea>
+                  <label for="user-email">Адрес электронной почты для обратной связи</label>
+                  <input type="email" id="user-email" placeholder="Введите адрес почты">
+                  <button class="button-blue button-blue-big become-supplier-form-button" type="submit"><img class="become-supplier-form-button-icon" src="{{ base_path ~ directory }}/images/collaborate-icon.svg" alt="collaborate">Сотрудничать</button>
+              </div> #}
+          </div>
+      </div>
+
+      <div class="news-bg dark-grey-bg">
+          <div class="title-container">
+              <h2 class="title-text-neutral title-container-number">06</h2> <h2 class="title-text-green text-green">< Блог </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green text-green"> ></h2>
+          </div>
+          <div class="container-large news">
+              <div class="news-cards-wrapper">
+                  <div class="news-card">
+                      <img src="{{ base_path ~ directory }}/images/news-picture-1.png" alt="news" class="news-card-picture">
+                      <div class="news-card-text">
+                          <h4>Длинный заголовок записи в блоге длинный заголовок </h4>
+                          <p class="text-muted">Текст записи в блоге подключайте своих сотрудников</p>
+                      </div>
+                      <a href="" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+                  </div>
+                  <div class="news-card">
+                      <img src="{{ base_path ~ directory }}/images/news-picture-2.png" alt="news" class="news-card-picture">
+                      <div class="news-card-text">
+                          <h4>Короткий заголовок блога</h4>
+                          <p class="text-muted">Текст записи в блоге подключайте своих сотрудников</p>
+                      </div>
+                      <a href="" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+                  </div>
+                  <div class="news-card">
+                      <img src="{{ base_path ~ directory }}/images/news-picture-3.png" alt="news" class="news-card-picture">
+                      <div class="news-card-text">
+                          <h4>Длинный заголовок записи в блоге длинный заголовок</h4>
+                          <p class="text-muted">Текст блога подключайте своих</p>
+                      </div>
+                      <a href="" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+                  </div>
+
+                  <div class="news-card news-card-last" id="lastNewsCard">
+                      <h1>Читайте блог портала</h1>
+                      <a href="/vtb/test/blog" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Перейти в блог</p></a>
+                  </div>                
+              </div>
+          </div>
+      </div>
+
+
+
+    {% if page.footer %}
+        <footer class="footer-bg" id="footer">
+            <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
+            <div class="footer-info">
+                <div class="footer-info-text">
+                    <p>Дегтярный переулок, д.11, лит. А, г. Санкт-Петербург, 191144</p>
+                    <p>Генеральная лицензия Банка России №1000</p>
+                    <p>© ВТБ, 2021</p>
+                </div>
+                <div class="footer-info-links">
+                    <a class="link-primary" href="{{ assets_path }}/documents/user_agreement.docx" target="_blank">Пользовательское соглашение</a>
+                    <a class="link-primary" href="https://www.vtb.ru/o-banke/">О Банке ВТБ</a>
+                    <a class="link-primary" href="{{ assets_path }}/documents/Obrabotka-pdn.pdf" target="_blank">Положение об организации обработки персональных данных в Банке ВТБ (ПАО)</a>
+                </div>
+            </div>
+            <img src="{{ base_path ~ directory }}/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">
+        </footer>
+    {% endif %}
+
+</div>

@@ -1,0 +1,101 @@
+/* ----------------------- CONNECTION PAGE ----------------------- */
+.connection-bg {
+    position: relative;
+    overflow: visible;
+
+    &-rhombus-img {
+        position: absolute;
+        right: 13.2%;
+        bottom: -1.75rem;
+        z-index: 3;
+    }
+}
+
+.connection-content-wrapper {
+    overflow: hidden;
+}
+
+.connection {
+    margin-left: auto;
+    margin-right: auto;
+    // margin-top: 7rem;
+    margin-top: 0;
+
+    &-header {
+        margin-bottom: 1.75rem;
+    }
+}
+
+.connection-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 62.5rem;
+
+    position: relative;
+
+    &-general {
+        margin-bottom: 2.25rem;
+    }
+
+    &-title {
+        display: flex;
+        align-items:baseline;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            background: #22242A;
+        }
+
+        h3 {
+            font-weight: 600;
+            margin-left: 1.25rem;
+            width: 14.625rem;
+        }
+    }
+
+    &-plus-img {
+        position: absolute;
+        top: 5.938rem;
+        left: 6.5rem;
+    }
+
+    &-instruction {
+        padding-top: .8rem;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-size: 1.125rem;
+            width: 34.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+    
+            &-text {
+                width: 32.25rem;
+                margin-left: 2rem;
+            }
+
+            h4 {
+                font-weight: 600;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &-arrow-img {
+        height: 13.125rem;
+        position: absolute;
+        right: -10.5rem;
+        top: -.5rem;
+    }
+}

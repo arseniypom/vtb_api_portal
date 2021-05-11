@@ -1,0 +1,29 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR ORGANISATION PAGE ----------------------- */
+
+.route-ibm-apimmyorg header.apicMyOrgHeader, .route-ibm-apimanalytics header.apicMyOrgHeader {
+  background-color: transparent;
+  padding: 2rem 3rem 0;
+}
+
+h1.orgName {
+  font-weight: 600 !important;
+  font-size: 48px;
+  line-height: 52px;
+  color: #F3F4F6;
+}
+
+.apicMyOrg .titleSection .organizationTabs {
+  background-color: transparent;
+  flex-basis: 100%;
+  margin-top: 15px;
+}
+
+// Selected class
+.applicationWrapper .titleSection .applicationTabs li.selected a, .applicationWrapper .titleSection .applicationTabs li:hover a, .applicationWrapper .titleSection .applicationTabs li:focus a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li.selected a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li:hover a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li:focus a, .apicMyOrg .titleSection .organizationTabs li.selected a, .apicMyOrg .titleSection .organizationTabs li:hover a, .apicMyOrg .titleSection .organizationTabs li:focus a {
+  color: #3A85FF;
+  border-bottom: 2px solid #3A85FF;
+}
+
+.apicMyOrg .titleSection .organizationTabs li a {
+  color: #E5E7EB;
+}

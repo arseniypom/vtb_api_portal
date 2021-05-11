@@ -1,0 +1,223 @@
+/* ----------------------- CATALOG PAGE ----------------------- */
+.catalog-bg {
+    position: relative;
+    overflow: visible;
+
+    &-plus-img {
+        position: absolute;
+        right: 18.6%;
+        bottom: -1.5rem;
+
+        z-index: 3;
+
+        display: none;
+        transition: display .3s ease-in-out;
+    }
+}
+
+.catalog-content-wrapper {
+    overflow: hidden;
+}
+
+.catalog {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7rem;
+    position: relative;
+
+    &-header {
+        margin-bottom: 1rem;
+    }
+
+
+    &-info {
+        margin-top: 2rem;
+        // position: absolute;
+        height: fit-content;
+        width: fit-content;
+
+        &-description {
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+    
+            &-public {
+                color: #7B7E86;
+            }
+        }
+    }
+
+    &-info-unique {
+        display: none;
+    }
+}
+
+
+.catalog-switch {
+    position: relative;
+
+    &-plus-img {
+        position: absolute;
+        right: 8.55%;
+        top: -.875rem;
+    }
+}
+
+.catalog-switch-option {
+    display: inline-block;
+    text-align: center;
+    padding: .5rem 1.25rem;
+    cursor: pointer;
+
+    p {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    &-public {
+        width: 12.063rem;
+    }
+    &-unique {
+        width: 12.5rem;
+    }
+}
+
+.catalog-switch-line {
+    height: 2px;
+    width: 12.063rem;
+    margin-left: 0;
+    background: #3A85FF;
+    border: none;
+    transition: .3s ease-in-out;
+    position: absolute;
+    z-index: 3;
+}
+
+.catalog-background-line {
+    height: 2px;
+    width: 100%;
+    background: #505258;
+    border: none;
+
+    position: absolute;
+    z-index: 1;
+}
+
+// Публичные данные
+
+.catalog-info-public {
+    transition: .3s ease-in-out;
+}
+
+.catalog-info-public-cards {
+    display: inline-flex;
+    flex-wrap: wrap;
+    --gap: 2rem;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+
+    &-item {
+        width: 24rem;
+        height: 15rem;
+        min-height: unset;
+        max-width: unset;
+        padding: 1.25rem 1.25rem 3rem;
+        background-color: #2D2F35;
+        border-radius: 8px;
+
+
+        margin: var(--gap) 0 0 var(--gap);
+
+        position: relative;
+
+        h4 {
+            font-weight: 600;
+            max-width: 17.375rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            max-width: 17.375rem;
+            margin-bottom: 1.5rem;
+        }
+    
+        button {
+            padding: .625rem 1.5rem;
+            position: absolute;
+            left: 1.25rem;
+            bottom: 1.25rem;
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            background: #22242A;
+
+            position: absolute;
+            right: 1.25rem;
+            top: 1.25rem;
+        }
+    }
+}
+
+// Уникальные данные
+
+.catalog-info-unique {
+    transition: .3s ease-in-out;
+}
+
+.catalog-info-unique-cards {
+    display: inline-flex;
+    flex-wrap: wrap;
+    --gap: 2rem;
+    margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+    width: calc(100% + var(--gap));
+
+    &-item {
+        width: 24rem;
+        height: 11rem;
+        background-color: #2D2F35;
+        border-radius: 8px;
+        padding: 1.25rem;
+
+        margin: var(--gap) 0 0 var(--gap);
+
+        position: relative;
+
+        h4 {
+            font-weight: 600;
+            max-width: 17.375rem;
+            margin-bottom: 1rem;
+        }
+
+        // p {
+        //     max-width: 17.375rem;
+        //     margin-bottom: 1.5rem;
+        // }
+        
+    
+        button {
+            padding: .625rem 1.5rem;
+            position: absolute;
+            left: 1.25rem;
+            bottom: 1.25rem;
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            background: #22242A;
+
+            position: absolute;
+            right: 1.25rem;
+            top: 1.25rem;
+        }
+    }
+}

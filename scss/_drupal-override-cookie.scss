@@ -1,0 +1,58 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR COOKIE BANNER ----------------------- */
+.sliding-popup-bottom {
+  width: 100%;
+}
+
+.bx--global-light-ui .eu-cookie-compliance-banner {
+  background-color: transparent;
+  padding: 1rem 0;
+}
+
+.eu-cookie-compliance-message {
+  float: initial;
+  max-width: initial;
+  display: flex;
+}
+
+.eu-cookie-compliance-content {
+  margin: 0 auto;
+  display: flex;
+  text-align: left;
+  width: 100%;
+  max-width: 1008px;
+  background-color: rgba(2,45,154,0.95);
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+.eu-cookie-compliance-buttons {
+  float: initial;
+  max-width: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+.agree-button.eu-cookie-compliance-secondary-button,
+.decline-button.eu-cookie-compliance-default-button {
+  padding: .625rem 1.5rem;
+  color: #ffffff;
+  font-size: .875rem;
+  font-weight: 500;
+
+  background-color: transparent !important;
+  border: 1px solid #FFFFFF !important;
+  border-radius: 4px !important;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+  &:active {
+    background-color:  rgba(255, 255, 255, 0.2) !important;
+  }
+  &:focus {
+    outline: none !important;
+  }
+}

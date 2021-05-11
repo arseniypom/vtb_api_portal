@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<article class="personal-info">
+    <div class="personal-info-upper">
+        <div class="personal-info-column-left">
+            <div class="personal-info-upper-block">
+                <p class="personal-info-block-title">{{ 'User'|t }}</p>
+                <h3 class="personal-info-block-text personal-info-block-text-name">{{ content.last_name[0] }} {{ content.first_name[0] }}</h3>
+            </div>
+        </div>
+        <div class="personal-info-column-right">
+            <div class="personal-info-block">
+                <p class="personal-info-block-title">Member for</p>
+                <p class="personal-info-block-text">6 месяцев 1 неделя</p>
+            </div>
+        </div>
+    </div>
+    <div class="personal-info-lower">
+        <div class="personal-info-column-left">
+            <div class="personal-info-block">
+                <p class="personal-info-block-title">{{ 'E-mail'|t }}</p>
+                <p class="personal-info-block-text">{{ user.email }}</p>
+            </div>
+            <div  class="personal-info-block">
+                <p class="personal-info-block-title">{{ 'Organization'|t }}</p>
+                <p class="personal-info-block-text">{{ org_full.title }}</p>
+            </div>
+            <div  class="personal-info-block">
+                <p class="personal-info-block-title">ИНН</p>
+                <p class="personal-info-block-text">0000000000</p>
+            </div>
+        </div>
+        <div class="personal-info-column-right">
+            <div class="personal-info-block">
+                <p class="personal-info-block-title">{{ 'Language code'|t }}</p>
+                <p class="personal-info-block-text">{{ lang.name }}</p>
+            </div>
+        </div>
+    </div>
+    <img src="/vtb/test/sites/vtb.test.portal.vtb.cinimex.dev/themes/vtb_theme/images/rhombus.svg" alt="rhombus" class="personal-info-rhombus">
+</article>

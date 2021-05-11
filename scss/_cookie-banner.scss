@@ -1,0 +1,65 @@
+.cookie-banner {
+    max-width: 1008px;
+    background-color: rgba($color: #022D9A, $alpha: 0.95);
+    border-radius: 8px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 1rem;
+    z-index: 100;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25rem;
+
+    &-img {
+        max-width: 6.25rem;
+    }
+
+    &-text {
+        margin: 0 1rem 0 .875rem;
+        p {
+            color: #ffffff;
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
+        p:last-child {
+            margin-top: .75rem;
+        }
+
+        &-link {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+}
+
+.close-button {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+
+    right: .75rem;
+    top: .75rem;
+
+    border: none;
+}
+.close-button:focus {
+    outline: none;
+}
+
+.agree-button {
+    padding: .625rem 1.5rem;
+    color: #ffffff;
+    font-size: .875rem;
+    font-weight: 500;
+}

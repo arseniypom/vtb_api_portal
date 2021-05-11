@@ -1,0 +1,52 @@
+/* ----------------------- EXISTING CLIENTS CONTAINER ----------------------- */
+
+.existing-clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+    .existing-clients {
+        justify-content: space-evenly;
+    }
+
+    .existing-clients-card {
+        margin: 0 .5rem 1rem;
+    }
+}
+
+.existing-clients-card {
+    width: 24rem;
+
+    &-body {
+        background-color: #2D2F35;
+        border-radius: 8px;
+        height: 12.5rem;
+        padding: 1.5rem 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-logo-magnit {
+            max-width: 15rem;
+        }
+        &-logo-fns {
+            max-width: 9.5rem;
+        }
+        &-logo-sogaz {
+            max-width: 11rem;
+        }
+    }
+
+    &-title {
+        margin-top: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
+}

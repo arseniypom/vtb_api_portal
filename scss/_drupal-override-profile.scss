@@ -1,0 +1,95 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR USER PROFILE PAGE ----------------------- */
+
+.route-entityusercanonical .region-content, .route-entityuseredit-form .region-content, .route-change-pwd-pagechange-password-form:not(.pass-reset) .region-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: unset;
+  grid-template-columns: unset;
+  -ms-grid-rows: unset;
+  grid-template-rows: unset;
+  grid-gap: unset;
+  margin: 0 auto;
+  max-width: 995px;
+}
+
+.route-entityusercanonical .page-header, .route-entityuseredit-form .page-header, .route-change-pwd-pagechange-password-form:not(.pass-reset) .page-header {
+  display: none;
+}
+
+article.personal-info {
+  width: 100%;
+}
+
+.path-user.route-entityuseredit-form .region-content nav.tabs {
+  margin: 0;
+}
+
+.path-user.route-entityusercanonical .region-content nav.tabs ul.tabs--primary li, .path-user.route-entityuseredit-form .region-content nav.tabs ul.tabs--primary li, .path-user.route-change-pwd-pagechange-password-form:not(.pass-reset) .region-content nav.tabs ul.tabs--primary li {
+  border: 0;
+  border-radius: 8px;
+  width: auto;
+}
+
+.tabs ul.tabs--primary li {
+  background-color: transparent;
+  color: #3A85FF;
+  padding: .7rem 1rem;
+}
+
+.tabs ul.tabs--primary li.active {
+  background-color: #3A85FF;
+  color: #fff;
+}
+
+
+// Кастомный контент части "article"
+$rhombus-width: 6.813rem;
+
+.personal-info {
+  position: relative;
+  max-width: 35rem;
+
+  &-upper {
+    margin-bottom: 2.5rem;
+    display: flex;
+  }
+
+  &-lower {
+    display: flex;
+
+    .personal-info-block {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &-column {
+      &-left {
+        width: 60%;
+        margin-right: 2rem;
+      }
+
+      &-right {
+        width: 40%;
+      }
+  }
+
+  &-block {
+
+    &-title {
+      color: $color-coldgrey-50;
+      margin-bottom: .5rem;
+      font-size: 0.875rem;
+    }
+
+    &-text-name {
+      font-weight: 600;
+    }
+  }
+
+  &-rhombus {
+    width: $rhombus-width;
+    position: absolute;
+    right: -$rhombus-width;
+    bottom: -$rhombus-width;
+  }
+}

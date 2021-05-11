@@ -1,0 +1,34 @@
+<?php
+
+function vtb_theme_preprocess(&$variables, $hook) {
+  $variables['base_path'] = base_path();
+  $variables['assets_path'] = $base_url . base_path() .drupal_get_path('theme', 'vtb_theme');
+  $variables['lang'] = \Drupal::languageManager()->getCurrentLanguage();
+}
+
+
+
+/**
+* Implements hook_theme_suggestions_HOOK_alter().
+*/
+// function landing_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+//     $request = \Drupal::routeMatch()->getRouteObject();
+//     $path_args = explode('/', $request->getPath());
+//     if (\Drupal::currentUser()->isAuthenticated() && in_array('user', $path_args)) {
+//         $suggestions[] = 'user__profile';
+//     }
+// }
+
+function vtb_theme_preprocess_user(&$variables) {
+//   dpm($variables['elements']['#user']->get('consumerorg_url')->getValue());
+  $userUtils = \Drupal::service('ibm_apim.user_utils');
+  $org = $userUtils->getCurrentConsumerOrg();
+  $consumerOrgService = \Drupal::service('ibm_apim.consumerorg');
+  $consumerOrg = $consumerOrgService->get($org['url']);
+  $variables['org'] = $org;
+  $variables['org_full'] = $consumerOrg;
+  dpm($variables);
+}
+
+
+

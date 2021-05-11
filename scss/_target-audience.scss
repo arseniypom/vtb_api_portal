@@ -1,0 +1,116 @@
+/* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
+.target-audience-bg {
+    position: relative;
+    overflow: visible;
+    &-plus {
+        position: absolute;
+        bottom: -.8rem;
+        left: 42.5%;
+    }
+}
+
+.target-audience-content-wrapper {
+    overflow: hidden;
+}
+
+.target-audience-section {
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .decorative-img-1 {
+        max-width: 26rem;
+        z-index: 3;
+    }
+
+    .decorative-img-2 {
+        max-width: 30rem;
+        z-index: 3;
+    }
+
+    
+
+    &-info {
+        width: 30.5rem;
+        position: relative;
+        z-index: 0;
+
+        &-developers-text-img {
+            position: absolute;
+            max-width: 53.75rem;
+            top: -3.75rem;
+            right: -10rem;
+
+            z-index: -1;
+        }
+        &-business-text-img {
+            position: absolute;
+            max-width: 43.75rem;
+            top: -4rem;
+            left: -9.8rem;
+
+            z-index: -1;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        &-triangle {
+            position: absolute;
+            right: -5rem;
+            top: -4rem;
+        }
+        &-plus {
+            position: absolute;
+            right: -1rem;
+            bottom: -6.625rem;
+        }
+    }
+
+    &-info-1 {
+        margin-right: 3rem;
+    }
+
+    &-info-bullets {
+        li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: .5rem;
+            }
+        }
+
+        p {
+            display: inline;
+        }
+
+        .connect-instruction {
+            color: #3A85FF;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .target-audience-section {
+        align-items: center;
+
+        &-developers {
+            flex-direction: column;
+        }
+        &-business {
+            flex-direction: column-reverse;
+        }
+    }
+}

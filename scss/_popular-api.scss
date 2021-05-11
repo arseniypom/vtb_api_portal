@@ -1,0 +1,96 @@
+/* ----------------------- POPULAR API CONTAINER ----------------------- */
+
+.popular-api {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popular-api-card {
+    background-color: #2D2F35;
+    border-radius: 8px;
+    padding: 1rem 1rem 2rem;
+    max-width: 17.5rem;
+    height: 26.75rem;
+
+    position: relative;
+
+    &-icon {
+        max-width: 6.25rem;
+    }
+
+    h4 {
+        margin: 1rem 0;
+        max-width: 13.5rem;
+        font-weight: 600;
+    }
+
+    &-text {
+        margin-left: 1rem;
+
+        p {
+            display: inline;
+            max-width: 13.5rem;
+        }
+    }
+
+    &-button {
+        // margin: 2.5rem 0 0 1rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
+
+.popular-api-card:last-child {
+    background-color: #000;
+    background-image: url("/images/card-bg-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6.25rem 0 2rem 2rem;
+
+    h1 {
+        font-size: 2.125rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+    }
+}
+
+.popular-api-card-link {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        margin-left: 2rem;
+    }
+
+    &-arrow {
+        position: absolute;
+        left: 0;
+        transition: left .3s ease-in-out;
+    }
+}
+
+.popular-api-card-link:hover .popular-api-card-link-arrow {
+    left: .375rem;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(67%) saturate(3802%) hue-rotate(214deg) brightness(103%) contrast(106%);
+}
+
+
+@media (max-width: 1200px) {
+    .popular-api {
+        justify-content: space-evenly;
+    }
+    .popular-api-card {
+        display: inline-block;
+        margin: 0 2rem 1rem;
+    }    
+}

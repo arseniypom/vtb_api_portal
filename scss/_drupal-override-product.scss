@@ -1,0 +1,338 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR PRODUCTS ----------------------- */
+// Карточка продукта в каталоге API ----------------------------------------------------
+.bx--card .apicProductCard {
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  display: flex;
+}
+
+.node--type-product.bx--card {
+  height: auto;
+  min-height: 13.25rem;
+  margin-bottom: 2rem;
+}
+
+// Название карточки
+.bx--card .apicProductCardMain .bx--about__title--name {
+  width: auto;
+  height: auto;
+}
+
+.bx--card .apicApiCount {
+  border-top: none;
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+
+.bx--card .apicProductCardMain {
+  margin-left: 0;
+}
+
+.apicProductCardVersionAndRating {
+  display: flex;
+}
+
+.bx--card .apicProductCardVersion {
+  font-size: .875rem;
+  color: $color-neutral-50;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+  line-height: 16px;
+  min-width: 3.1rem;
+}
+
+// Звезды (рейтинг)
+.br-widget a:after {
+  content: '\e006';
+  color: #7B7E86 !important;
+}
+.bx--card .votingapi-widgets .select-wrapper a {
+  font-size: 19px;
+}
+.br-theme-bootstrap-stars .br-widget {
+  height: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  max-width: 7.25rem;
+}
+
+.catalog-info-public-cards-item {
+  min-height: unset;
+  max-width: unset;
+  padding: 1.25rem 1.25rem 3rem;
+
+  .card-read_more {
+    left: unset;
+    bottom: 1.25rem;
+  }
+
+  p {
+    max-width: unset !important;
+    margin-bottom: 0 !important;
+  }
+
+  &-description {
+    margin-top: .5rem;
+  }
+}
+// Саммари (сводка) продукта
+.apicProduct .label, .apicProduct .apicProductSummary .field--label, .apicProduct .apicAttachments .field--label, .apicProduct .customFields .field--label, .apicProduct .apicProductDesc .field--label, .apicProduct .customDocPages .field--label {
+  font-weight: 500;
+}
+// Описание продукта
+.field--name-apic-summary .field--item {
+  text-align: justify;
+  line-height: 24px;
+}
+
+// Страница продукта ------------------------------------------------------
+.apicProductTitle {
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.apicProductTitleText {
+  display: flex;
+  flex-direction: column;
+  width: 24rem;
+}
+
+.productName {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.apicProductVersion {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: baseline;
+  color: $color-neutral-10;
+
+  &Text {
+    margin-right: .2rem;
+  }
+}
+
+.br-theme-css-stars .br-widget {
+  height: 28px;
+  white-space: nowrap;
+  width: 12rem;
+  display: flex;
+  justify-content: space-around;
+}
+// Звезды рейтинга
+.br-theme-css-stars .br-widget a {
+  font-size: 1.5rem;
+  margin-right: 1px;
+}
+
+.apicProductTitleDescription {
+  max-width: 37rem;
+  margin-top: 4.875rem;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Лэйблы "API" и "Тарифные планы"
+h2.field__label.label {
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 32px;
+}
+
+// Секция API
+
+.apicProduct {
+  margin: 0 2rem;
+}
+
+.apicProduct .apicProductBody {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+.apicProduct .apicProductBody .field {
+  margin: 0;
+}
+// Хэдер
+.apicProduct .apicProductHeader {
+  margin: 0 auto;
+  max-width: 1220px;
+  border-bottom: none;
+  background: none;
+  padding: .625rem 0;
+}
+
+// Карточка API
+.node--type-api.node--view-mode-embedded.bx--card {
+  min-height: 8rem;
+  border: none;
+  padding: 1.25rem;
+  position: relative;
+}
+
+article a.card-read_more.link-primary {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // &:hover {
+  //   color: $color-primary-60;
+  //   text-decoration-line: underline;
+  //   text-underline-offset: 3px;
+  // }
+}
+
+.bx--card .apicApiCard {
+  padding: 0;
+  display: flex;
+  grid-template-columns: none;
+}
+
+.bx--card .apicApiCardMain {
+  margin-left: 0;
+}
+
+.bx--about__title--name {
+  padding: 0;
+}
+
+.apicApiCardVersion {
+  font-size: .75rem;
+  display: flex;
+  align-items: baseline;
+  margin-top: .3rem;
+  color: $color-neutral-50;
+
+  & > * {
+    font-size: .75rem;
+  }
+}
+
+// Тарифные планы
+.subHeading {
+  display: flex;
+  padding: 10px 0 20px 0;
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.field.plans.footer-bg {
+  align-items: initial;
+  flex-direction: column;
+  // max-width: 1220px;
+  padding: 3.75rem 2rem 0;
+}
+
+h2.field__label.label.tariff-label {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto 10px;
+}
+
+
+.apicTableFixedContainer {
+  display: flex;
+  justify-content: initial;
+  background: transparent;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .apicTableFixedContainer {
+    flex-wrap: wrap;
+  }
+}
+
+.tariff-plans-section {
+  color: $color-neutral-05;
+  
+  // &-paid {
+  //   max-width: 50rem;
+  //   margin-left: 2rem;
+  // }
+
+  &-description {
+    width: 100%;
+    display: flex;
+    margin-top: 1.5rem;
+    color: $color-neutral-50;
+
+    &-free {
+      max-width: 17.5rem;
+    }
+    &-paid {
+      max-width: 50rem;
+    }
+  }
+
+  &-text {
+    width: 100%;
+    margin: 2.5rem 0 3rem;
+    color: $color-neutral-50;
+  }
+}
+
+
+.tariff-plans {
+  display: flex;
+  background: #111215;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tariff-plan {
+  max-width: 17.5rem; 
+  
+  &-title {
+    margin-bottom: .5rem;
+  }
+  
+  &-label {
+    color: $color-neutral-50;
+    margin: 0 0 .5rem;
+  }
+  
+  &-api_calls {
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+  
+  &-price {
+    margin: 0 0 1.25rem;
+    font-weight: 600;
+  }
+  
+  &-button-subscribe {
+    padding: .625rem 1.5rem !important;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Дополнительная информация внизу страницы
+.productInfoWrapper {
+  background-color: #111215;
+  width: 100%;
+}
+
+.productInfo{
+  display: flex;
+  max-width: 1220px;
+  margin: 0 auto;
+  justify-content: space-between;
+}

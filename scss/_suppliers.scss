@@ -1,0 +1,162 @@
+/* ----------------------- API SUPPLIERS CONTAINER ----------------------- */
+
+.suppliers-list {
+    background: rgba($color: #ffffff, $alpha: 0.05);
+    border-radius: 8px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+
+    padding: 2.75rem .875rem .25rem 2.75rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    &-plus {
+        position: absolute;
+        right: 29.8%;
+        top: -8.25rem;
+
+    }
+
+    &-item {
+        width: 25%;
+        min-width: 16.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin-bottom: 2.5rem;
+
+        &-icon {
+            width: 64px;
+            height: 64px;
+            background-color: #22242A;
+            border-radius: 50%;
+
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h4 {
+            color: $color-neutral-05;
+            font-weight: 600;
+
+            margin-left: 1.25rem;
+        }
+    }
+}
+
+.become-supplier {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    &-partnership-text-img {
+        max-width: 55.5rem;
+        position: absolute;
+
+        right: -10.5rem;
+        top: -4.3rem;
+    }
+
+
+    &-text {
+        z-index: 3;
+        max-width: 30.5rem;
+
+        position: relative;
+
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        &-email-link {
+            color: #3A85FF;
+            text-decoration: underline;
+        }
+
+        &-rhombus {
+            position: absolute;
+            bottom: -10rem;
+            left: -.875rem;
+        }
+    }
+    
+    &-form {
+        z-index: 3;
+        width: 30.5rem;
+        display: flex;
+        flex-direction: column;
+        color: #7B7E86;
+
+        label {
+            font-size: .875rem;
+            margin-bottom: .5rem;
+        }
+
+        textarea, input {
+            background-color: $color-neutral-90;
+            border: 1px solid #B1B5BB;
+            border-radius: 4px;
+
+            font-size: 1rem;
+
+            padding: .5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        textarea:focus, input:focus {
+            outline: none;
+        }
+
+        textarea {
+            height: 7rem;
+            resize: none;
+        }
+
+        input {
+            height: 3.5rem;
+        }
+
+        &-button {
+            max-width: 12.125rem;
+            
+            &-icon {
+                margin-right: .45rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .suppliers-list {
+        &-item {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .suppliers-list {
+        justify-content: center;
+        &-item {
+            min-width: 20rem;
+        }
+    }
+
+    .become-supplier {
+        flex-direction: column;
+        align-items: center;
+
+        &-text {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+

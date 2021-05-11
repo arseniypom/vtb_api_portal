@@ -1,0 +1,107 @@
+/* ----------------------- NEWS CONTAINER ----------------------- */
+
+.news {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    margin-bottom: 12rem;
+}
+
+.news-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-card {
+    background-color: #2D2F35;
+    border-radius: 8px;
+    max-width: 17.5rem;
+    height: 26.75rem;
+
+    position: relative;
+
+    &-picture {
+        width: 100%;
+    }
+
+    &-text {
+        margin: 2rem 0 0 2rem;
+        h4 {
+            max-width: 13.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 13.5rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    &-button {
+        margin: 2.5rem 0 0 1rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+    }
+}
+
+.news-card-last {
+    background-color: #000;
+    background-image: url("/images/card-bg-black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6.25rem 0 2rem 2rem;
+
+    h1 {
+        font-size: 2.125rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+    }
+
+}
+
+.card-read_more {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        margin-left: 2rem;
+    }
+
+    &-arrow {
+        position: absolute;
+        left: 0;
+        transition: left .3s ease-in-out;
+    }
+}
+
+.card-read_more:hover .card-read_more-arrow{
+    left: .375rem;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(67%) saturate(3802%) hue-rotate(214deg) brightness(103%) contrast(106%);
+}
+
+
+.news-action {
+    &-active {
+        position: absolute;
+        bottom: -5rem;
+        left: 41%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .news-cards-wrapper {
+        justify-content: space-evenly;
+    }
+    .news-card {
+        display: inline-block;
+        margin: 0 2rem 1rem;
+    }    
+}

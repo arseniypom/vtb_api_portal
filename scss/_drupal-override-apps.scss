@@ -1,0 +1,110 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR APPS PAGE----------------------- */
+
+// Верхняя часть
+a.button.apicNewApp {
+  padding: .75rem 1.75rem;
+}
+
+.view-empty {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+
+
+// Карточки приложений ------------------------------------------------------------------------------------------------------
+.masonry-item.views-row {
+  margin-bottom: 1rem;
+}
+
+.masonry-layout-applications.form-group.masonry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1220px;
+}
+
+.node--type-application.bx--card {
+  min-height: unset;
+  min-width: 15.625rem;
+  height: 7.75rem;
+  max-width: 17.5rem;
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.bx--card .apicAppCard {
+  height: auto;
+  padding: 0;
+}
+
+.node--type-application.bx--card a .apicAppName {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #E5E7EB;
+}
+
+.apicAppDesc.apicFade {
+  display: none;
+}
+
+.node--type-application.bx--card .apicCardIcon {
+  display: none;
+}
+
+.node--type-application.bx--card .apicAppCardMain {
+  text-align: left;
+  height: auto;
+}
+
+.applicationType {
+  margin-top: 0;
+  border-radius: 4px;
+}
+
+.bx--card-footer {
+  background-color: #2D2F35;
+  border-radius: 8px;
+  color: $color-neutral-10;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.bx--card-footer__app-status {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  background-color: #003111;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+}
+
+.apicAppStatus:before {
+  display: none;
+}
+
+
+
+// Страница конкретного приложения
+.applicationWrapper {
+  max-width: 1220px;
+  margin: 0 auto 6rem;
+}
+
+.analyticsWidgetContainer #appAnalyticsSummary {
+  background-color: transparent;
+}
+
+.applicationSubscriptions .subscriptionsTable .subscriptionsContent table tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+
+

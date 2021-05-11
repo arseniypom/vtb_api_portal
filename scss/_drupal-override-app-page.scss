@@ -1,0 +1,61 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR APP PAGE ----------------------- */
+
+nav.tabs {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.applicationWrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+// Создание приложения
+div#drupal-modal--content {
+  background-color: #2D2F35;
+  color: #E5E7EB;
+}
+
+.bx--global-light-ui .modal-body .form-item input, .bx--global-light-ui .modal-body .form-item input:hover, .bx--global-light-ui .modal-body .form-item textarea, .bx--global-light-ui .modal-body .form-item select {
+  border: 1px solid #505258;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: transparent;
+}
+// Модальное окно
+.bx--global-light-ui .modal-content {
+  border-radius: 4px;
+  border-top: none;
+}
+
+.modal-content {
+  background-color: #2D2F35;
+  border: none;
+  border-radius: 4px;
+}
+
+.field--name-application-redirect-endpoints .field-multiple-table tbody {
+  border: none;
+}
+.field--name-application-redirect-endpoints .form-item .clearfix {
+  border: none;
+}
+
+.field--name-application-redirect-endpoints .field-multiple-table th.field-label {
+  display: table-cell;
+  color: #E5E7EB !important;
+  line-height: normal;
+  border-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 0;
+}
+
+// Кнопка-крест
+.field--name-application-redirect-endpoints .field-multiple-table button.multiple-fields-remove-button {
+  display: inline-block;
+  vertical-align: top;
+  height: auto;
+  border: none !important;
+  background-color: transparent;
+}
