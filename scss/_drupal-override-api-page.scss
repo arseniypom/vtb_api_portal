@@ -6,15 +6,27 @@
 
 // Две колонки вместе
 .apicProduct .apicProductBody, .productApiWrapper #innerWrapper {
-  padding: 0 3rem;
+  padding: 0 3rem 1rem;
   max-width: 1220px;
   margin: 0 auto;
+}
+
+// Отображение контента целиком без прокрутки
+.SplitPane.vertical {
+  position: static !important;
+}
+.apiconnect-explorer .stretch {
+  position: static;
 }
 
 // Левая колонка ------------------------------------------------
 .Pane.vertical.Pane1 {
   max-width: 17.5rem;
   margin-right: 8.5rem;
+}
+
+.apiconnect-explorer-menu .explorer-toc ul ul {
+  min-width: 17.5rem;
 }
 
 ul.apiContent {
@@ -27,7 +39,9 @@ ul.apiContent {
 .bx--global-light-ui .apiconnect-explorer .explorer-toc ul .tocItem a.selected {
   background-color: transparent;
 }
-
+.bx--global-light-ui .apiconnect-explorer .explorer-toc a {
+  outline: none;
+}
 .bx--global-light-ui .apiconnect-explorer .explorer-toc a.selected {
   color: #3A85FF;
   border-left: 0;
@@ -103,6 +117,43 @@ use {
   grid-template-columns: unset;
   -ms-grid-columns: unset;
   padding: 20px 0;
+}
+
+// Лэйблы
+.apiconnect-explorer .operationInformation .labelText {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 1.5rem;
+}
+
+// Эндпоинты
+.apiEndpoint {
+  margin-bottom: .4rem;
+}
+.apiEndpointType {
+  max-width: 7rem;
+}
+
+// Маркер "обязательный" / "необязательный" параметр
+.parameterIn {
+  font-size: 12px;
+  line-height: 16px;
+  color: #E5E7EB;
+  background-color: #505258;
+  width: fit-content;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+}
+// "Обязательный" параметр
+.requiredHighlight {
+  color: #E5E7EB !important;
+  background-color: #591C04;
+}
+
+// Тип параметра
+.apiconnect-explorer .schema.parameterType {
+  font-style: italic;
 }
 
 // Расширения API
@@ -192,8 +243,9 @@ use {
   font-weight: 600;
   font-size: 28px;
   line-height: 32px;
-  color: #F3F4F6;
+  color: inherit !important;
   margin-bottom: 1rem;
+  align-self: auto;
 }
 
 .apiconnect-explorer .testTool ul.bx--accordion .bx--accordion__content {
@@ -208,7 +260,7 @@ use {
   font-size: 28px;
   line-height: 32px;
 }
-
+// разворачивающиеся пункты
 .apiconnect-explorer .bx--accordion__heading {
   background: transparent;
   border: none;
@@ -223,6 +275,10 @@ use {
     line-height: 20px;
   }
 }
+.bx--accordion__item:last-child {
+  border-bottom: none;
+}
+
 
 // Инпуты
 .apiconnect-explorer .bx--text__input {
@@ -231,6 +287,10 @@ use {
   color: #7B7E86;
   border: 1px solid #505258;
   border-radius: 4px;
+
+  &:hover {
+    border: 1px solid #505258;
+  }
 }
 
 // Контент из 2х колонок
@@ -239,7 +299,7 @@ use {
   border-left: none;
 }
 .apiconnect-explorer .parameterNameContainer, .apiconnect-explorer .responseHeaderNameContainer {
-  width: 20%;
+  width: 23%;
 }
 
 .bx--data-table-v2 tbody {
@@ -283,18 +343,32 @@ use {
 code span, .json-schema-view * {
   color: #F3F4F6 !important;
 }
-
+// Переключалка (напр. сведения/попробовать)
 li.bx--tabs__nav-item.bx--tabs__nav-item--selected {
-  border-bottom: 2px solid #3A85FF;
-  color: #3A85FF;
+  border-bottom: none;
+
+  & a {
+    color: #E5E7EB;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bx--tabs__nav-item--selected .bx--tabs__nav-link:focus, .bx--tabs__nav-item:hover .bx--tabs__nav-link {
+    color: #E5E7EB;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+  }
 }
 
-// Код
+// Блок кода
 .apiconnect-explorer .json-schema-view, .apiconnect-explorer json-schema-view, .apiconnect-explorer .bodyParam textarea, .apiconnect-explorer code {
   color: #F3F4F6;
 }
 .bx--global-light-ui .apiconnect-explorer .hljs {
   color: #F3F4F6;
+}
+.definitionDisplay .tab-content {
+  padding: 0 0 1rem 1rem;
 }
 
 // Ответы
@@ -319,7 +393,7 @@ select#operationResponses {
   color: #E5E7EB;
   padding-top: 0;
   padding-left: 1rem;
-  font-style: normal;
+  font-style: italic;
   font-size: .875rem;
 }
 .responsesContainer {
@@ -328,11 +402,17 @@ select#operationResponses {
 }
 
 // Определения
+.bx--data-table-v2 {
+  border-bottom: none;
+}
 .bx--data-table-v2 thead {
   font-size: .875rem;
   background-color: transparent;
   font-weight: 700;
   border-right: none;
+}
+.bx--data-table-v2 th, .bx--data-table-v2 td {
+  border-top: 1px solid #37383c !important;
 }
 .bx--data-table-v2--zebra tbody tr:nth-child(even) {
   background-color: transparent;
@@ -373,6 +453,21 @@ li.bx--tabs__nav-item.bx--tabs__nav-item {
 
 tr.bx--expandable-row-v2+tr[data-child-row] td {
   padding: .5rem;
+}
+// Отключение пропадающих границ по ховеру
+.apiconnect-explorer .parameterTable.bx--data-table-v2 tbody tr:hover td, .apiconnect-explorer .definitionsBody .bx--data-table-v2 tbody tr:hover td {
+  border: none;
+}
+
+// Отключение аутлайна стрелок по клику (focus)
+.bx--table-expand-v2__button:focus svg {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+// Отключение синей полоски слева на "открытой вкладке"
+tr.bx--expandable-row-v2>td:first-of-type:before {
+  background-color: transparent;
 }
 
 // Подписаться на АПИ ------------------------------------------------
