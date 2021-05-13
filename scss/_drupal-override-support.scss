@@ -1,0 +1,44 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR SUPPORT PAGE ----------------------- */
+// Блок с вопросами и фильтром
+.supportContentWrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.apicMainContent .supportContentWrapper .views-element-container .view {
+  background-color: inherit;
+  background: inherit;
+  border: none;
+}
+
+// Блок с заголовком "Часто задаваемые вопросы" и фильтром
+.bx--global-light-ui .view-faqs .views-exposed-form {
+  flex-direction: column-reverse;
+}
+
+// Заголовок "Часто задаваемые вопросы"
+.bx--global-light-ui .view-faqs .views-exposed-form h2.viewTitle {
+  font-weight: 600;
+  margin: 0 0 2.5rem;
+}
+
+// Блок со сгруппированными вопросами
+.faq .content {
+  align-items: initial;
+}
+
+// Вопрос
+.views-element-container .view.view-faqs .ui-state-default,
+.views-element-container .view.view-faqs .ui-state-active {
+  color: #E5E7EB;
+  font-weight: 600;
+  line-height: 20px;
+  border-top: 1px solid #505258;
+  border-radius: 0;
+}
+
+// Ответ
+.supportContentWrapper .views-element-container .view .ui-widget-content {
+  color: #E5E7EB;
+  height: auto;
+  text-align: justify;
+}

@@ -5,6 +5,7 @@
 @import 'drupal-override-apps';
 @import 'drupal-override-app-page';
 @import 'drupal-override-organisation';
+@import 'drupal-override-support';
 
 /* ----------------------- STYLES TO OVERRIDE DRUPAL DEFAULTS ----------------------- */
 // Всевозможные окна с белой границей
@@ -303,11 +304,6 @@ li.dropit-trigger a {
     color: inherit;
 }
 
-// Страница Поддержки ------------------------------------------------
-
-.apicMainContent .supportContentWrapper .views-element-container .view {
-    background-color: inherit;
-}
 // Ссылка-кнопка "Поделитесь своим мнением"
 .feedbackToggle {
     color: #3A85FF;
@@ -416,7 +412,7 @@ span.input-group-addon {
     border-radius: 4px;
 }
 // Селект общий
-.bx--select-input {
+select, .select-wrapper select, .bx--select-input {
     background-color: transparent;
     color: #7B7E86;
     border: 1px solid #505258;

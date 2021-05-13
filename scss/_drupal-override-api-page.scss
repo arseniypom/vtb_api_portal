@@ -89,6 +89,20 @@ a.subscribeButton.button {
   display: none;
 }
 
+// Информационная кнопка
+.bx--tag {
+  width: max-content;
+}
+// Подсказка, появляющаяся после клика на инфо. кнопку
+.bx--tooltip {
+  background: #2D2F35;
+  color: #F3F4F6;
+  border: none;
+}
+.bx--tooltip .bx--tooltip__caret {
+  background: #2D2F35;
+  border: none;
+}
 
 // Раздел "Обзор"
 section.overviewHeader h2 {
@@ -187,6 +201,8 @@ use {
 
 .apiconnect-explorer .securityTitle {
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
 }
 
 .apiconnect-explorer .securityOptionPart {
