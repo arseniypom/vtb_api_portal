@@ -515,6 +515,15 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
   padding: 1rem 3rem .5rem;
 }
 
+// Планы
+.apicTableFixedColumn table thead {
+  background-color: transparent;
+}
+// Развернутые планы
+.apicTableFixedColumn tbody tr.api-odd {
+  background-color: transparent;
+}
+
 
 // Подвал ------------------------------------------------
 .page-node-type-api footer, .route-productapi footer {

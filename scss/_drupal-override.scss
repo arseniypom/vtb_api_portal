@@ -124,30 +124,6 @@
     margin-left: 2.3rem;
 }
 
-.bx--global-light-ui button, .bx--global-light-ui .form-actions .button.button--primary, .bx--global-light-ui .form-actions .btn.button--primary, .bx--global-light-ui .form-actions .button.btn-primary, .bx--global-light-ui .form-actions .btn.btn-primary, .bx--global-light-ui .button, .bx--global-light-ui .btn {
-    color: #fff;
-    background-color: #0062FF;
-    font-family: $main-font;
-    height: auto;
-    padding: .2rem .5rem; 
-
-    border-radius: 4px;
-    border: none;
-    font-weight: 500;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        background-color: #0142D3;
-    }
-    &:active, &:focus {
-        outline: none;
-        border: none;
-        background-color: #022D9A;
-    }
-}
 
 
 .bx--global-light-ui .label, .bx--global-light-ui .form-item label, .bx--label {
@@ -322,46 +298,6 @@ li.dropit-trigger a {
     background-color: inherit;
 }
 
-// Личный кабинет
-// Блок редактировать
-.panel {
-    background-color: inherit;
-}
-
-
-// Страница организации пользователя
-// Владелец организации
-.apicMyOrgOwner {
-    background: inherit;
-    padding: .625rem 1rem;
-    border: 1px solid #dfe3e6;
-    margin: .8rem 0;
-}
-// Список участников
-.apicMyOrg .apicMyOrgMembers table thead {
-    background: inherit;
-}
-.apicMyOrg .apicMyOrgMembers tbody tr.member-even {
-    background-color: inherit;
-}
-.apicMyOrg .apicMyOrgMembers .apicMyOrgNoMembers {
-    background: inherit;
-}
-
-
-// Создание материала Вопросы и ответы
-.table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: inherit;
-}
-.table-hover>tbody>tr:hover {
-    background-color: inherit;
-}
-
-
-// Страница подддержки
-.forumDiv {
-    display: none;
-}
 
 
 // Фильтрация ----------------------------------------------------------------
@@ -461,7 +397,32 @@ select.simpler-select.form-select {
     color: #7B7E86;
 }
 
-// Кнопки
+// Кнопки ----------------------------------------------------------------
+.bx--global-light-ui button, .bx--global-light-ui .form-actions .button.button--primary, .bx--global-light-ui .form-actions .btn.button--primary, .bx--global-light-ui .form-actions .button.btn-primary, .bx--global-light-ui .form-actions .btn.btn-primary, .bx--global-light-ui .button, .bx--global-light-ui .btn {
+    color: #fff;
+    background-color: #0062FF;
+    font-family: $main-font;
+    height: auto;
+    padding: .2rem .5rem; 
+
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #0142D3;
+    }
+    &:active, &:focus {
+        outline: none;
+        border: none;
+        background-color: #022D9A;
+    }
+}
+
 .bx--global-light-ui .view-filters.form-group .form-actions {
     margin: 1rem 0;
     display: inline-flex;
@@ -521,8 +482,13 @@ button#edit-reset {
 
 }
 
+// Алерты наверху страницы -------------------------------------------------------
+.alert {
+    color: #F3F4F6;
+}
 
-// Footer
+
+// Footer ----------------------------------------------------------------
 .route-ibm-apimsubscription-wizard footer, .route-ibm-apimsubscription-wizardstep footer, .route-ibm-apimsubscription-wizardnoplan footer, .route-ibm-apimsubscription-wizardnoplanstep footer, .route-mail-subscribersproduct-wizard footer, .route-mail-subscribersproduct-wizardstep footer, .route-mail-subscribersplan-wizard footer, .route-mail-subscribersplan-wizardstep footer, .route-mail-subscribersapi-wizard footer, .route-mail-subscribersapi-wizardstep footer, .route-mail-subscribersall-wizard footer, .route-mail-subscribersall-wizardstep footer {
     display: flex;
 }

@@ -10,7 +10,7 @@ nav.tabs {
   margin: 0 auto;
 }
 
-// Создание приложения
+// Создание приложения ---------------------------------------------------------------
 div#drupal-modal--content {
   background-color: #2D2F35;
   color: #E5E7EB;
@@ -32,6 +32,10 @@ div#drupal-modal--content {
   background-color: #2D2F35;
   border: none;
   border-radius: 4px;
+}
+
+.bx--global-light-ui .modal-body {
+  overflow-y: scroll;
 }
 
 .field--name-application-redirect-endpoints .field-multiple-table tbody {
@@ -57,5 +61,16 @@ div#drupal-modal--content {
   vertical-align: top;
   height: auto;
   border: none !important;
+  background-color: transparent;
+}
+
+// Курсор на ключе и пароле
+.bx--global-light-ui .form-item input:read-only, .bx--global-light-ui .form-control[readonly] {
+  cursor: text;
+}
+
+// Оглавление
+.panel-default>.panel-heading {
+  color: #F3F4F6;
   background-color: transparent;
 }

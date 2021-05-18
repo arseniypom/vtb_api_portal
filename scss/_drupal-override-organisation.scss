@@ -5,11 +5,30 @@
   padding: 2rem 3rem 0;
 }
 
+// Владелец организации
+.apicMyOrgOwner {
+  background: inherit;
+  padding: .625rem 1rem;
+  border: 1px solid #dfe3e6;
+  margin: .8rem 0;
+}
+
 h1.orgName {
   font-weight: 600 !important;
   font-size: 48px;
   line-height: 52px;
   color: #F3F4F6;
+}
+
+// Список участников
+.apicMyOrg .apicMyOrgMembers table thead {
+  background: inherit;
+}
+.apicMyOrg .apicMyOrgMembers tbody tr.member-even {
+  background-color: inherit;
+}
+.apicMyOrg .apicMyOrgMembers .apicMyOrgNoMembers {
+  background: inherit;
 }
 
 .apicMyOrg .titleSection .organizationTabs {
@@ -26,4 +45,9 @@ h1.orgName {
 
 .apicMyOrg .titleSection .organizationTabs li a {
   color: #E5E7EB;
+}
+
+// Статистика вызовов АПИ (последние 100)
+.analyticsWidgetContainer #apicalls {
+  background-color: transparent;
 }

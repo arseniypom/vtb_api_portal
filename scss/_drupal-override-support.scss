@@ -1,4 +1,10 @@
 /* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR SUPPORT PAGE ----------------------- */
+
+// Отключение показа форума
+.forumDiv {
+  display: none;
+}
+
 // Блок с вопросами и фильтром
 .supportContentWrapper {
   max-width: 1220px;
@@ -41,4 +47,12 @@
   color: #E5E7EB;
   height: auto;
   text-align: justify;
+}
+
+// Создание материала Вопросы и ответы
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: inherit;
+}
+.table-hover>tbody>tr:hover {
+  background-color: inherit;
 }
