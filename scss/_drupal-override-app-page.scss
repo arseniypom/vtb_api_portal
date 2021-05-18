@@ -12,7 +12,7 @@ nav.tabs {
 
 // Создание приложения ---------------------------------------------------------------
 div#drupal-modal--content {
-  background-color: #2D2F35;
+  background-color: $color-light-grey-bg;
   color: #E5E7EB;
 }
 
@@ -29,7 +29,7 @@ div#drupal-modal--content {
 }
 
 .modal-content {
-  background-color: #2D2F35;
+  background-color: $color-light-grey-bg;
   border: none;
   border-radius: 4px;
 }

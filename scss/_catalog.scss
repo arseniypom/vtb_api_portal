@@ -121,7 +121,7 @@
         min-height: unset;
         max-width: unset;
         padding: 1.25rem 1.25rem 3rem;
-        background-color: #2D2F35;
+        background-color: $color-light-grey-bg;
         border-radius: 8px;
 
 
@@ -179,7 +179,7 @@
     &-item {
         width: 24rem;
         height: 11rem;
-        background-color: #2D2F35;
+        background-color: $color-light-grey-bg;
         border-radius: 8px;
         padding: 1.25rem;
 
