@@ -103,7 +103,8 @@
 .apicProductTitleText {
   display: flex;
   flex-direction: column;
-  width: 24rem;
+  width: 50rem;
+  word-break: break-word;
 }
 
 .productName {
