@@ -6,11 +6,13 @@
 @import 'drupal-override-app-page';
 @import 'drupal-override-organisation';
 @import 'drupal-override-support';
+@import 'drupal-override-search';
 
 /* ----------------------- STYLES TO OVERRIDE DRUPAL DEFAULTS ----------------------- */
 // Всевозможные окна с белой границей
 .route-apic-appcreate .main-container .row, .route-apic-appcreate-step-two .main-container .row, .route-applicationcreate .main-container .row, .route-applicationcreate-step-two .main-container .row, .route-apic-appverify-clientsecret .main-container .row, .route-apic-appcredentials-create .main-container .row, .route-apic-appreset-clientid .main-container .row, .route-apic-appreset-clientsecret .main-container .row, .route-apic-appcredentials-update .main-container .row, .route-apic-appcredentials-delete .main-container .row, .route-apic-appupdate .main-container .row, .route-apic-appdelete .main-container .row, .route-apic-apppromote .main-container .row, .route-apic-appimage-upload .main-container .row, .route-apic-appimage-delete .main-container .row, .route-consumerorgcreate .main-container .row, .route-consumerorgupdate .main-container .row, .route-consumerorgdelete .main-container .row, .route-consumerorgchangeowner .main-container .row, .route-consumerorginvite .main-container .row, .route-consumerorgremove-user .main-container .row, .route-consumerorgresend-invite .main-container .row, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form, .route-entityuseredit-form .main-container .row .user-form, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input, form.user-pass-reset, .apicForm, .apic-user-form {
     border: none;
+    margin-bottom: 4rem;
 }
 
 .route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail {
@@ -71,11 +73,6 @@
     box-sizing: border-box;
     border-radius: 4px;
     background-color: transparent;
-}
-
-// Алерт наверху страницы
-.alert:nth-child(2) {
-    margin-top: 3rem;
 }
 
 // Кнопка копирования
@@ -484,7 +481,25 @@ button#edit-reset {
 
 // Алерты наверху страницы -------------------------------------------------------
 .alert {
-    color: #F3F4F6;
+    color: $color-darkweb-text-primary;
+    margin: 0 1rem;
+    border-radius: 4px;
+    background-color: $color-darkweb-bg;
+
+    &.alert-success {
+        border: 1px solid #4AB56E;
+    }
+    &.alert-danger {
+        border: 1px solid #E15664;
+    }
+}
+.alert:nth-child(2) {
+    margin-top: 3rem;
+}
+svg.bx--inline-notification__close-icon,
+.close, .close:hover, .close:focus {
+    opacity: 1;
+    filter: invert(35%) sepia(28%) saturate(307%) hue-rotate(177deg) brightness(101%) contrast(92%);
 }
 
 // Переключатели страниц внизу

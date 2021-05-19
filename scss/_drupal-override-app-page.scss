@@ -10,6 +10,11 @@ nav.tabs {
   margin: 0 auto;
 }
 
+// Табы в разделе "Идентификационные данные"
+.applicationWrapper .titleSection .applicationTabs li a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li a, .applicationWrapper .titleSection .applicationTabs li, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li .apicMyOrg .titleSection .organizationTabs li a, .apicMyOrg .titleSection .organizationTabs li {
+  color: $color-neutral-05;
+}
+
 // Создание приложения ---------------------------------------------------------------
 div#drupal-modal--content {
   background-color: $color-light-grey-bg;

@@ -1,0 +1,27 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR SEARCH PAGE----------------------- */
+
+.view.view-search-content {
+  max-width: 1220px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+
+.node--view-mode-teaser, article.search-result {
+  background-color: $color-darkweb-bg;
+  border-radius: 8px;
+  border: none;
+}
+
+.apicTeaserIcon {
+  display: none;
+}
+
+.apicApiTeaserMain h2 {
+  margin-bottom: 0;
+
+  & a {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
