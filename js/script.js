@@ -204,3 +204,36 @@ jQuery('#unique-api').click(function(){
 function closeCookieBanner() {
   jQuery(".cookie-banner").css('display', 'none');
 }
+
+// Страница поддержки
+if (jQuery(".feedbackCollapse")) {
+  jQuery(".feedbackCollapse").addClass('in');
+}
+
+// Добавление классов кнопке отмены
+if (jQuery('[data-drupal-selector="edit-cancel"]')) {
+  jQuery('[data-drupal-selector="edit-cancel"]').addClass('button-transparent button-transparent-blue');
+}
+
+jQuery(function() {
+  // Отмена стилей большого заголовка в форме приглашения участников организации
+  if (jQuery('.consumerorg-invite-user-form').length === 0) {
+    jQuery('.page-header').css({
+      'font-weight': '600',
+      'font-size': '3rem',
+      'line-height': '3.25rem'
+    });
+  } else {
+    jQuery('.page-header').css({
+      'font-style': 'normal',
+      'font-weight': '600',
+      'font-size': '20px',
+      'line-height': '24px'
+    });
+  }
+
+  // Изменение текста кнопки на странице организации
+  if (jQuery('.apicNewUserWrapper')) {
+    jQuery('.orgInvite').html('<span>Пригласить участника</span>');
+  }
+});

@@ -45,7 +45,7 @@
 // Ответ
 .supportContentWrapper .views-element-container .view .ui-widget-content {
   color: #E5E7EB;
-  height: auto;
+  height: auto !important;
   text-align: justify;
 }
 
@@ -55,4 +55,14 @@
 }
 .table-hover>tbody>tr:hover {
   background-color: inherit;
+}
+
+// Кнопка скрыть/показать форму отправки отзыва
+.feedbackToggle {
+  display: none;
+}
+
+// Блок с соц. сетями
+.socialDiv {
+  display: none;
 }

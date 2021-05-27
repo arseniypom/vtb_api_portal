@@ -3,7 +3,7 @@
 .existing-clients {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     margin-left: auto;
     margin-right: auto;
@@ -33,14 +33,9 @@
         align-items: center;
         justify-content: center;
 
-        &-logo-magnit {
-            max-width: 15rem;
-        }
-        &-logo-fns {
-            max-width: 9.5rem;
-        }
-        &-logo-sogaz {
-            max-width: 11rem;
+        &-logo {
+            max-width: 14rem;
+            border-radius: 8px;
         }
     }
 

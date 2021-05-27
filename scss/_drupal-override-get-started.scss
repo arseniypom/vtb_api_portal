@@ -1,0 +1,11 @@
+/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR GET STARTED PAGE ----------------------- */
+.ibmapimGetStarted {
+  margin-bottom: 3rem;
+}
+
+.ibmapimGetStarted .getStartedContentWrapper .exploreDiv,
+.ibmapimGetStarted .getStartedContentWrapper .createAppDiv {
+  background-color: #505258;
+  border: none;
+  border-radius: 4px;
+}

@@ -44,37 +44,37 @@
                   <h2 class="title-text-neutral title-container-number">01</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Кому</h2> <h2 class="title-text-green text-green">полезны API ></h2>
               </div>
               <div class="container-medium target-audience">
-                  <div class="target-audience-section target-audience-section-developers">
-                      <img class="decorative-img decorative-img-1" src="{{ base_path ~ directory }}/images/decorative-img-1.png" alt="decorative 1">
-                      <div class="target-audience-section-info target-audience-section-info-1">
-                          <img src="{{ base_path ~ directory }}/images/developers-text.png" alt="developers" class="target-audience-section-info-developers-text-img">
-                          <h1>/* Разработчикам</h1>
-                          <ul class="target-audience-section-info-bullets">
-                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Доступные данные <p class="text-muted">— встраивайте данные банка в ваши приложения и тестируйте открытые API, используя подробную <a class="connect-instruction" href="">инструкцию</a></p></div></li>
-                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Swagger-файлы <p class="text-muted">— получите доступ к библиотеке  swagger-файлов как в тестовом режиме, так и при подписке на уникальные API</p></div></li>
-                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Бесшовность <p class="text-muted">— оцените незаметный переход из одной системы в другую</p></div></li>
-                          </ul>
-                          <img class="target-audience-section-info-triangle" src="{{ base_path ~ directory }}/images/triangle.svg" alt="triangle">
-                      </div>
-                  </div>
-                  <div class="target-audience-section target-audience-section-business">
+                    <div class="target-audience-section target-audience-section-business">
                       <div class="target-audience-section-info target-audience-section-info-2">
                           <img src="{{ base_path ~ directory }}/images/business-text.png" alt="business" class="target-audience-section-info-business-text-img">
                           <h1>/* Бизнесу</h1>
                           <ul class="target-audience-section-info-bullets">
-                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Финтех <p class="text-muted">— совершенствуйте ваши приложения, создавайте новые технологичные про-дукты и предоставляйте лучший сервис своим клиентам</p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Финтех <p class="text-muted">— совершенствуйте ваши приложения, создавайте новые технологичные продукты и предоставляйте лучший сервис своим клиентам, используя подробную <a class="connect-instruction" href="{{ assets_path }}/documents/Guide_VTB_API.pdf" target="_blank">инструкцию</a></p></div></li>
                               <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Контроль, делегирование и аналитика <p class="text-muted">— подключайте своих сотрудников к API, следите за количеством вызовов, контролируйте ваши действия в личном кабинете</p></div></li>
                               <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Простота и надежность <p class="text-muted">— регистрация для тестовых API или заявка на подключение к уникальным API занимает не больше минуты, а гарантия безопасной передачи данных и  шифрования по ГОСТу стопроцентное</p></div></li>
                           </ul>
                       </div>
                       <img class="decorative-img decorative-img-2" src="{{ base_path ~ directory }}/images/decorative-img-2.png" alt="decorative 2">
                   </div>
+                  <div class="target-audience-section target-audience-section-developers">
+                      <img class="decorative-img decorative-img-1" src="{{ base_path ~ directory }}/images/decorative-img-1.png" alt="decorative 1">
+                      <div class="target-audience-section-info target-audience-section-info-1">
+                          <img src="{{ base_path ~ directory }}/images/developers-text.png" alt="developers" class="target-audience-section-info-developers-text-img">
+                          <h1>/* Разработчикам</h1>
+                          <ul class="target-audience-section-info-bullets">
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Доступные данные <p class="text-muted">— встраивайте данные банка в ваши приложения и тестируйте открытые API</p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Swagger-файлы <p class="text-muted">— получите доступ к библиотеке  swagger-файлов как в тестовом режиме, так и при подписке на уникальные API</p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Бесшовность <p class="text-muted">— оцените незаметный переход из одной системы в другую</p></div></li>
+                          </ul>
+                          <img class="target-audience-section-info-triangle" src="{{ base_path ~ directory }}/images/triangle.svg" alt="triangle">
+                      </div>
+                  </div>
               </div>
           </div>
           <img class="target-audience-bg-plus" src="{{ base_path ~ directory }}/images/decorative-plus-big.svg" alt="plus">
       </div>
 
-      <div class="popular-api-bg dark-grey-bg">
+      {# <div class="popular-api-bg dark-grey-bg">
           <div class="title-container">
               <h2 class="title-text-neutral title-container-number">02</h2> <h2 class="title-text-green text-green">< Популярные </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green text-green"> ></h2>
           </div>
@@ -102,7 +102,7 @@
                   <div class="popular-api-card-text">
                       <h4>ВТБ Мобайл</h4>
                       <p>Поддержка</p>
-                      <p class="text-muted"> — команда ВТБ всегда на связи api@vtb.ru, консультационная и техническая помощь
+                      <p class="text-muted"> — команда ВТБ всегда на связи open_api@vtb.ru, консультационная и техническая помощь
                       </p>
                   </div>
                   <button class="popular-api-card-button button-blue button-blue-small">Подключить</button>
@@ -112,37 +112,37 @@
                   <a class="popular-api-card-link link-primary" href=""><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="popular-api-card-link-arrow"><p>Перейти в каталог</p></a>
               </div>
           </div>
-      </div>
+      </div> #}
 
       <div class="existing-clients-bg dark-grey-bg">
           <div class="title-container">
-              <h2 class="title-text-neutral title-container-number">03</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">API уже</h2> <h2 class="title-text-green text-green">используют ></h2>
+              <h2 class="title-text-neutral title-container-number">02</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">API уже</h2> <h2 class="title-text-green text-green">используют ></h2>
           </div>
           <div class="container-large existing-clients">
               <div class="existing-clients-card">
                   <div class="existing-clients-card-body">
-                      <img src="{{ base_path ~ directory }}/images/magnit-logo.png" alt="magnit shop logo" class="existing-clients-card-body-logo-magnit">
+                      <img src="{{ base_path ~ directory }}/images/comita-logo.png" alt="comita logo" class="existing-clients-card-body-logo existing-clients-card-body-logo-comita">
                   </div>
-                  <h4 class="existing-clients-card-title">Сеть магазинов МАГНИТ</h4>
+                  <h4 class="existing-clients-card-title">ГК Комита</h4>
               </div>
-              <div class="existing-clients-card">
+              {# <div class="existing-clients-card">
                   <div class="existing-clients-card-body">
-                      <img src="{{ base_path ~ directory }}/images/fns-logo.png" alt="fns logo" class="existing-clients-card-body-logo-fns">
+                      <img src="{{ base_path ~ directory }}/images/vtb24-logo.jpeg" alt="vtb24 logo" class="existing-clients-card-body-logo existing-clients-card-body-logo-vtb24">
                   </div>
-                  <h4 class="existing-clients-card-title">Федеральная налоговая служба Российской Федерации</h4>
-              </div>
-              <div class="existing-clients-card">
+                  <h4 class="existing-clients-card-title">ВТБ 24</h4>
+              </div> #}
+              {# <div class="existing-clients-card">
                   <div class="existing-clients-card-body">
-                      <img src="{{ base_path ~ directory }}/images/sogaz-logo.png" alt="sogaz logo" class="existing-clients-card-body-logo-sogaz">
+                      <img src="{{ base_path ~ directory }}/images/sogaz-logo.png" alt="sogaz logo" class="existing-clients-card-body-logo existing-clients-card-body-logo-sogaz">
                   </div>
                   <h4 class="existing-clients-card-title">Страховая компания СОГАЗ-ЖИЗНЬ</h4>
-              </div>
+              </div> #}
           </div>
       </div>
 
       <div class="client-path-bg blue-bg connect-bg">
           <div class="title-container">
-              <h2 class="title-text-neutral title-container-number">04</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Как</h2> <h2 class="title-text-green text-green"> подключиться ></h2>
+              <h2 class="title-text-neutral title-container-number">03</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Как</h2> <h2 class="title-text-green text-green"> подключиться ></h2>
           </div>
           <div class="container-medium client-path">
               <img src="{{ base_path ~ directory }}/images/triangle.svg" alt="triangle" class="client-path-triangle">
@@ -219,7 +219,7 @@
 
       <div class="suppliers-bg dark-grey-bg">
           <div class="title-container">
-              <h2 class="title-text-neutral title-container-number">05</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Кого</h2> <h2 class="title-text-green text-green"> подключаем ></h2>
+              <h2 class="title-text-neutral title-container-number">04</h2> <h2 class="title-text-green text-green"><</h2> <h2 class="title-text-neutral">Кого</h2> <h2 class="title-text-green text-green"> подключаем ></h2>
           </div>
           <div class="container-large suppliers-list">
               <img src="{{ base_path ~ directory }}/images/decorative-plus-big.svg" alt="decorative plus" class="suppliers-list-plus">
@@ -276,10 +276,10 @@
               <img src="{{ base_path ~ directory }}/images/partnership-text.png" alt="partnership" class="become-supplier-partnership-text-img">
               <div class="become-supplier-text">
                   {# <h1>/*Поставщики API </h1>
-                  <p>Хотите сотрудничать с Банком в области данных и API, пишите на почту <a href="mailto:api@vtb.ru" class="become-supplier-text-email-link">api@vtb.ru</a> или заполните форму обратной связи</p>
+                  <p>Хотите сотрудничать с Банком в области данных и API, пишите на почту <a href="mailto:open_api@vtb.ru" class="become-supplier-text-email-link">open_api@vtb.ru</a> или заполните форму обратной связи</p>
                   <img src="{{ base_path ~ directory }}/images/rhombus.svg" alt="rhombus" class="become-supplier-text-rhombus"> #}
                     <h1>/*Поддержка</h1>
-                    <p>Есди у Вас возникли вопросы организационного или технического характера, задайте их по адресу <a href="mailto:api@vtb.ru" class="become-supplier-text-email-link">api@vtb.ru</a></p>
+                    <p>Вопросы технического характера можно отправлять по адресу <a href="mailto:open_api@vtb.ru" class="become-supplier-text-email-link">open_api@vtb.ru</a>, организационного – <a href="mailto:developer@vtb.ru" class="become-supplier-text-email-link">developer@vtb.ru</a></p>
               </div>
               {# <div class="become-supplier-form">
                   <label for="description">Описание</label>
@@ -293,38 +293,39 @@
 
       <div class="news-bg dark-grey-bg">
           <div class="title-container">
-              <h2 class="title-text-neutral title-container-number">06</h2> <h2 class="title-text-green text-green">< Блог </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green text-green"> ></h2>
+              <h2 class="title-text-neutral title-container-number">05</h2> <h2 class="title-text-green text-green">< Блог </h2> <h2 class="title-text-neutral">API</h2> <h2 class="title-text-green text-green"> ></h2>
           </div>
           <div class="container-large news">
               <div class="news-cards-wrapper">
                   <div class="news-card">
-                      <img src="{{ base_path ~ directory }}/images/news-picture-1.png" alt="news" class="news-card-picture">
+                      <img src="{{ base_path ~ directory }}/images/news-pic-1.jpeg" alt="news" class="news-card-picture">
                       <div class="news-card-text">
-                          <h4>Длинный заголовок записи в блоге длинный заголовок </h4>
-                          <p class="text-muted">Текст записи в блоге подключайте своих сотрудников</p>
+                          <h4>ВТБ первым из российских банков создал портал для разработчиков</h4>
+                          <p class="text-muted">CNews: ВТБ продолжает технологическую трансформацию...</p>
                       </div>
-                      <a href="" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+                      <a target="_blank" href="https://www.cnews.ru/articles/2021-05-19_vtb_pervym_iz_rossijskih_bankov_sozdal" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
                   </div>
                   <div class="news-card">
                       <img src="{{ base_path ~ directory }}/images/news-picture-2.png" alt="news" class="news-card-picture">
                       <div class="news-card-text">
-                          <h4>Короткий заголовок блога</h4>
-                          <p class="text-muted">Текст записи в блоге подключайте своих сотрудников</p>
+                          <h4>ВТБ открывает доступ к сервисам банка через новую API-платформу</h4>
+                          <p class="text-muted">ВТБ разработал и начал внедрять новую платформу...</p>
                       </div>
-                      <a href="" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+                      <a target="_blank" href="https://www.vtb.ru/o-banke/press-centr/novosti-i-press-relizy/2021/03/2021-03-25-vtb-otkryvaet-partneram-dostup-k-servisam-banka-cherez-novuyu-api-platformu/#" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
                   </div>
                   <div class="news-card">
                       <img src="{{ base_path ~ directory }}/images/news-picture-3.png" alt="news" class="news-card-picture">
                       <div class="news-card-text">
-                          <h4>Длинный заголовок записи в блоге длинный заголовок</h4>
-                          <p class="text-muted">Текст блога подключайте своих</p>
+                          <h4>В банковском секторе России начинается API-трансформация</h4>
+                          <p class="text-muted">В ходе исследования, проведенного...</p>
                       </div>
-                      <a href="" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+                      <a target="_blank" href="https://www.vtb.ru/o-banke/press-centr/novosti-i-press-relizy/2019/10/2019-10-11-v-bankovskom-sektore-rossii-nachinaetsya-api-transformatciia/" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
                   </div>
 
                   <div class="news-card news-card-last" id="lastNewsCard">
                       <h1>Читайте блог портала</h1>
-                      <a href="/vtb/test/blog" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Перейти в блог</p></a>
+                      <p class="text-muted" style="margin-top:3rem;">Скоро здесь появятся обновления</p>
+                      {# <a href="/vtb/test/blog" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Перейти в блог</p></a> #}
                   </div>                
               </div>
           </div>

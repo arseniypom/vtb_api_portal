@@ -7,9 +7,10 @@
 
 // Владелец организации
 .apicMyOrgOwner {
-  background: inherit;
+  background: #2D2F35;
   padding: .625rem 1rem;
-  border: 1px solid #dfe3e6;
+  border: none;
+  border-radius: 8px;
   margin: .8rem 0;
 }
 
@@ -20,21 +21,101 @@ h1.orgName {
   color: #F3F4F6;
 }
 
-// Список участников
-.apicMyOrg .apicMyOrgMembers table thead {
-  background: inherit;
+.memberIcon {
+  display: none;
 }
-.apicMyOrg .apicMyOrgMembers tbody tr.member-even {
-  background-color: inherit;
+
+// Кнопка приглашения участников
+.apicNewUser.orgInvite {
+  background-color: transparent !important;
+  color: #3A85FF !important;
+
+  &:hover {
+    color: #0062ff !important;
+  }
+}
+
+// Заголовок "Участники"
+.apicMyOrg .memberHeader h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 32px;
+  color: #F3F4F6;
+}
+
+// Список участников
+.apicMyOrg .field.organizationMembers {
+  padding: 2rem 3rem 6rem;
+}
+
+.apicMyOrg .apicMyOrgMembers table {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 .75rem !important;
+
+  & thead {
+    background: inherit;
+  }
+}
+// Заголовок таблицы с участниками
+.apicMyOrg .apicMyOrgMembers th:first-child {
+  padding-left: 0;
+}
+// Строчка участника
+.apicMyOrg .apicMyOrgMembers tbody tr,
+.apicMyOrg .apicMyOrgMembers tbody tr.member-even,
+.apicMyOrg .apicMyOrgMembers tbody tr.member-odd {
+  background-color: #2D2F35;
+}
+.apicMyOrg .apicMyOrgMembers th:first-child, .apicMyOrg .apicMyOrgMembers tbody td:first-child {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.apicMyOrg .apicMyOrgMembers tbody tr.member-even, .apicMyOrg .apicMyOrgMembers tbody tr.member-odd {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.apicMyOrg .apicMyOrgMembers th:first-child, .apicMyOrg .apicMyOrgMembers tbody td:last-child {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.apicMyOrg .apicMyOrgMembers tbody tr.member-even, .apicMyOrg .apicMyOrgMembers tbody tr.member-odd {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .apicMyOrg .apicMyOrgMembers .apicMyOrgNoMembers {
-  background: inherit;
+  background: transparent;
 }
 
 .apicMyOrg .titleSection .organizationTabs {
   background-color: transparent;
   flex-basis: 100%;
   margin-top: 15px;
+}
+
+// Галочка роли участника
+.apicMyOrg .apicMyOrgMembers polygon {
+  fill: #3A85FF;
+}
+
+// Статус участника
+.apicMyOrg .apicMyOrgMembers .apicMyOrgStatus {
+  color: #E5E7EB;
+  font-size: .875rem;
+  background-color: #505258;
+  padding: .25rem .5rem;
+  width: fit-content;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+// Управление участниками
+.overflow-menu .dropit-icon svg:hover {
+  fill: #3A85FF;
+}
+.dropit-icon {
+  transform: rotate(90deg);
 }
 
 // Selected class
@@ -47,7 +128,46 @@ h1.orgName {
   color: #E5E7EB;
 }
 
+// Аналитика
+.ibmapimOrgAnalytics .analyticsWidgetContainer {
+  padding: 2rem 2rem;
+}
+
 // Статистика вызовов АПИ (последние 100)
 .analyticsWidgetContainer #apicalls {
   background-color: transparent;
+}
+
+// Форма приглашение нового сотрудника
+.bx--global-light-ui .label, .bx--global-light-ui .form-item label, .bx--label {
+  color: #7B7E86;
+  font-weight: 400;
+}
+
+legend {
+  color: #7B7E86;
+  border-bottom: none;
+
+  & span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+// Выбор роли
+#edit-role {
+  display: flex;
+
+  & .js-form-item {
+    margin: 0;
+  }
+}
+
+form#consumerorg-resend-invitation-form {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
 }
