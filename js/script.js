@@ -1,14 +1,6 @@
 // Скрытие хэдера при скролле вниз и отображение при скролле вверх
 var prevScrollpos = window.pageYOffset;
 jQuery(window).on("scroll", function() {
-  // var currentScrollPos = window.pageYOffset;
-  // var headerDivHeight = jQuery("#navbar").outerHeight();
-  // if (prevScrollpos > currentScrollPos) {
-  //   jQuery(".header-bg").css('top', '0')
-  // } else {
-  //   jQuery(".header-bg").css('top', `-${headerDivHeight}px`)
-  // }
-  // prevScrollpos = currentScrollPos;
 
   // Добавление непрозрачного фона хэдеру при скролле ниже 70 пикселей
   // Добавление прозрачного фона при нахождении наверху страницы
@@ -26,6 +18,11 @@ jQuery(window).on("scroll", function() {
       "background-color": "#0062FF"
     });
   }
+});
+
+jQuery('.header-burger').click(function(event) {
+  jQuery('.header-burger,.header-menu').toggleClass('active');
+  jQuery('.content').toggleClass('lock');
 });
 
 // Анимирование кнопки
@@ -49,16 +46,15 @@ jQuery(function () {
           });
 
           if (onboardingDivBottom < document.documentElement.clientHeight - 70) {
-            jQuery(".onboarding-button").removeClass("button-transparent button-transparent-big");
-            jQuery(".onboarding-button").addClass("button-blue");
+            jQuery(".onboarding-button").removeClass("button-transparent onboarding-button-big");
+            jQuery(".onboarding-button").addClass("button-blue onboarding-button-small");
             jQuery(".onboarding-button-text").css({
               "display":"none",
             });
             jQuery(".onboarding-button").css({
               "opacity": "1",
-              "left":"2rem",
-              "padding": "1rem",
-              "bottom":"15%"
+              "left": "",
+              "bottom": ""
             });
 
             if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 350) {
@@ -67,14 +63,14 @@ jQuery(function () {
               });
 
 
-              if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 50) {
+              if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 50) {            
+                jQuery(".onboarding-button").removeClass("onboarding-button-small");    
                 jQuery(".onboarding-button-text").css({
                   "display":"inline",
                 });
                 jQuery(".onboarding-button").css({
                   "opacity": "1",
                   "left": leftButtonIndent,
-                  "padding": "1rem 2rem",
                   "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
                 });
               } else if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 250) {
@@ -82,10 +78,7 @@ jQuery(function () {
                   "display":"inline",
                 });
                 jQuery(".onboarding-button").css({
-                  "opacity": "0",
-                  "left": leftButtonIndent,
-                  "padding": "1rem 2rem",
-                  "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
+                  "opacity": "0"
                 });
               }
             }
@@ -93,12 +86,11 @@ jQuery(function () {
         } else {
           jQuery(".onboarding-button").css({
             "opacity":"1",
-            "left":"10.5%",
-            "bottom":"15%",
-            "padding":"1rem 2rem"
+            "left": "",
+            "bottom": ""
           });
-          jQuery(".onboarding-button").removeClass("button-blue");
-          jQuery(".onboarding-button").addClass("button-transparent button-transparent-big");
+          jQuery(".onboarding-button").removeClass("button-blue onboarding-button-small");
+          jQuery(".onboarding-button").addClass("button-transparent onboarding-button-big");
           jQuery(".onboarding-button-text").css({
             "display":"inline",
           })
@@ -112,39 +104,16 @@ jQuery(function () {
 
 let item1Css = {
   'left': '0',
-  'top': '-3.5rem',
-  'transform': 'rotate(180deg)'
 };
 let item2Css = {
-  'left': '12.982rem',
-  'top': '1rem',
-  'transform': 'rotate(0deg)'
+  'left': '16.875rem',
 };
 let item3Css = {
-  'left': '26.04rem',
-  'top': '-3.5rem',
-  'transform': 'rotate(180deg)'
+  'left': '34.25rem',
 };
 let item4Css = {
-  'left': '39.21rem',
-  'top': '1rem',
-  'transform': 'rotate(0deg)'
+  'left': '51.625rem',
 };
-let item5Css = {
-  'left': '52.081rem',
-  'top': '-3.5rem',
-  'transform': 'rotate(180deg)'
-};
-
-
-// let regex = /client-path-steps-item-/;
-
-// jQuery(".client-path-steps-item").click(function(){
-//   let classes = this.className.split(' ');
-//   classes.forEach(class => {
-//     return class.match(regex);
-//   });
-// });
 
 jQuery(".client-path-steps-item").hover(function(){
     let stepName = this.className.split(' ')[1];
@@ -172,8 +141,6 @@ jQuery(".dot").hover(function(){
     jQuery('.arrows').css(item3Css);
   } else if (jQuery(this).hasClass("dot-4")) {
     jQuery('.arrows').css(item4Css);
-  } else if (jQuery(this).hasClass("dot-5")) {
-    jQuery('.arrows').css(item5Css);
   }
 });
 

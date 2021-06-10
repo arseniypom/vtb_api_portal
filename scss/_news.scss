@@ -1,4 +1,7 @@
 /* ----------------------- NEWS CONTAINER ----------------------- */
+.news-bg {
+    padding: 0;
+}
 
 .news {
     margin-left: auto;
@@ -10,14 +13,20 @@
 
 .news-cards-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media (max-width: 1219px) {
+    .news-cards-wrapper {
+        overflow-x: scroll;
+    }
 }
 
 .news-card {
     background-color: $color-light-grey-bg;
     border-radius: 8px;
-    max-width: 17.5rem;
+    width: 17.5rem;
+    min-width: 17.5rem;
     height: 26.75rem;
 
     position: relative;
@@ -99,9 +108,6 @@
 }
 
 @media (max-width: 1200px) {
-    .news-cards-wrapper {
-        justify-content: space-evenly;
-    }
     .news-card {
         display: inline-block;
         margin: 0 2rem 1rem;

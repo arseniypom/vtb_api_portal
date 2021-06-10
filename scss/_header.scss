@@ -9,15 +9,16 @@
     transition: all 0.2s ease-in-out;
 }
 
-// .header-bg::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: plum;
-// }
+.header-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 2;
+}
 
 .header {
     position: relative;
@@ -28,17 +29,20 @@
     align-items: center;
     justify-content: space-between;
 
-    &-logo-img {
-        width: 100%;
-        width: 7rem;
-    }
-
     &-burger {
         display: none;
     }
+    
+    &-logo {
+        z-index: 3;
+
+        &-img {
+            width: 100%;
+            width: 7rem;
+        }
+    }
 
     &-menu {
-        // width: 57rem;
         width: 80%;
         color: #ffffff;
 
@@ -51,10 +55,12 @@
             min-width: 19.6rem;
             max-width: 34rem;
 
-            // margin-right: 25.43%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            position: relative;
+            z-index: 2;
 
             &-item {
                 font-size: .875rem;
@@ -92,41 +98,95 @@
     }
 }
 
-// .search-icon-smartphone {
-//     display: none;
-// }
 
-// @media (max-width: 1023px) {
-//     .header {
-//         &-burger {
-//             width: 21px;
-//             height: 18px;
-//             display: block;
-//             position: relative;
 
-//             span {
-//                 background-color: #fff;
-//                 position: absolute;
-//                 left: 0;
-//                 top: 8px;
-//                 width: 100%;
-//                 height: 2px;
-//                 border-radius: 8px;
-//             }
-//         }
-//         &-burger::before, &-burger::after {
-//             content: '';
-//             background-color: #fff;
-//             position: absolute;
-//             width: 100%;
-//             height: 2px;
-//             border-radius: 8px;
-//         }
-//         &-burger::before {
-//             top: 0;
-//         }
-//         &-burger::after {
-//             bottom: 0;
-//         }
-//     }
-// }
+
+/* HEADER */
+@media (max-width: 1023px) {
+    .content.lock {
+      overflow: hidden;
+    }
+  
+    .header-burger {
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      z-index: 3;
+
+        span {
+            position: absolute;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+            transition: all 0.3s ease 0s;
+        }
+
+        &::before, &::after {
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+
+        &.active {
+            span {
+                transform: scale(0);
+            }
+
+            &::before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+        }
+    }
+  
+    .header-menu {
+        padding: 4rem 0 0 0;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        transition: all 0.3s ease 0s;
+        background-color: #0062FF;
+
+        display: flex;
+        flex-direction: column;
+
+        &.active {
+        top: 0;
+        }
+
+        &-links {
+            width: 100%;
+            line-height: 150%;
+            padding: 0 1rem;
+
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &-item {
+                margin: 0 .25rem;
+            }
+        }
+    }
+}

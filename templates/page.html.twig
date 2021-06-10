@@ -61,30 +61,33 @@
 {% set background = is_front ? '' : 'dark-gradient-bg' %}
 {# Header #}
 
-    {% block header %}
+  {% block header %}
       <header class="header-bg" id="navbar">
-        <div class="header">
-          <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
-          {# Navbar #}
-          <div class="header-menu">
-            {% if page.navigation or page.navigation_right %}
-              {% block navbar %}
-                <div class="header-menu-links">
-                    <a class="header-menu-links-item" href="/vtb/test/product">Каталог API</a>
-                    <a class="header-menu-links-item" href="/vtb/test/connection">Подключение</a>
-                    <a class="header-menu-links-item" href="/vtb/test/application">Приложения</a>
-                    <a class="header-menu-links-item" href="/vtb/test/support">Поддержка</a>
-                    <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a>
-                </div>
-                <div class="navbar-right">
-                  {{ page.navigation_right }}
-                </div>
-              {% endblock %}
-            {% endif %}
+          <div class="header">
+              <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
+              <div class="header-burger">
+                  <span></span>
+              </div>
+              {# Navbar #}
+              <div class="header-menu">
+              {% if page.navigation or page.navigation_right %}
+                  {% block navbar %}
+                  <div class="header-menu-links">
+                      <a class="header-menu-links-item" href="/vtb/test/product">Каталог API</a>
+                      <a class="header-menu-links-item" href="/vtb/test/connection">Подключение</a>
+                      <a class="header-menu-links-item" href="/vtb/test/application">Приложения</a>
+                      <a class="header-menu-links-item" href="/vtb/test/support">Поддержка</a>
+                      <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a>
+                  </div>
+                  <div class="navbar-right">
+                      {{ page.navigation_right }}
+                  </div>
+                  {% endblock %}
+              {% endif %}
+              </div>
           </div>
-        </div>
       </header>
-    {% endblock %}
+  {% endblock %}
 
 
 

@@ -11,6 +11,13 @@
 @import 'drupal-override-blog';
 
 /* ----------------------- STYLES TO OVERRIDE DRUPAL DEFAULTS ----------------------- */
+// Шапка сайта
+@media (max-width: 1023px) {
+    .navbar-right {
+        margin: 1rem 0;
+    }
+}
+
 // Ссылки
 a:focus {
     outline: none;
@@ -248,9 +255,9 @@ a, a:hover, a:visited, a:active {
     align-items: center;
 }
 .block-login {
-    min-width: 19rem;
     margin-left: 1rem;
 }
+
 .menu--login {
     display: flex;
     align-items: center;
@@ -273,6 +280,25 @@ li.dropit-trigger a {
     max-width: 15rem;
     min-width: 7.25rem;
     margin-left: .625rem;
+}
+
+@media (max-width: 1024px) {
+    #block-vtb-theme-searchiconblock {
+        padding-right: .5rem;
+        margin-right: .5rem;
+    }
+
+    .block-login {
+        min-width: none;
+    }
+
+    .menu--login {
+        flex-direction: column;
+
+        &>li>a {
+            padding: .25rem 0;
+        }
+    }
 }
 
 // Заголовок страницы
@@ -610,7 +636,7 @@ button#edit-reset {
     }
 }
 .alert:nth-child(2) {
-    margin-top: .75rem;
+    margin: .75rem 1rem;
 }
 svg.bx--inline-notification__close-icon,
 .close, .close:hover, .close:focus {

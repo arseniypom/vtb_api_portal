@@ -4,6 +4,7 @@
     background-color: #111215;
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     padding: 3.75rem 7rem 4.25rem 2rem;
 
     position: relative;
@@ -13,6 +14,7 @@
 
 .footer-info {
     width: 100%;
+    max-width: 61rem;
 
     margin-left: 5.625rem;
 
@@ -33,6 +35,7 @@
     }
 
     &-links {
+        width: 100%;
         max-width: 27rem;
 
         display: flex;
@@ -48,8 +51,29 @@
 }
 
 .footer-contacts-text-img {
+    width: 100%;
     max-width: 28rem;
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+@media (max-width: 767px) {
+    .footer-bg {
+        flex-direction: column;
+        padding: 1.75rem 1rem 2.5rem;
+    }
+
+    .footer-info {
+        margin: 1.5rem 0 0;
+
+        &-links {
+            margin-top: 2.5rem;
+            flex-direction: column;
+
+            a {
+                margin-bottom: 1rem;
+            }
+        }
+    }
 }

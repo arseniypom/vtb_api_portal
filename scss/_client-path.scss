@@ -1,27 +1,40 @@
 /* ----------------------- CLIENT PATH CONTAINER ----------------------- */
 $first-step-indent: 0;
-$second-step-indent: 12.832rem;
-$third-step-indent: 26.04rem;
-$fourth-step-indent: 39.06rem;
-$fifth-step-indent: 52.081rem;
+$second-step-indent: 16.875rem;
+$third-step-indent: 34.25rem;
+$fourth-step-indent: 51.625rem;
 
 
 .client-path-bg {
     position: relative;
+    min-height: 37rem;
 }
 
 .client-path {
-    max-width: 63.375rem;
-    height: 26.5rem;
-    margin-top: 8.25rem;
+    width: 100%;
+    max-width: 1014px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 3rem 3rem 3rem 1rem;
+    // box-sizing: content-box;
 
-    position: relative;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
     z-index: 3;
 
     &-triangle {
         position: absolute;
         right: 19rem;
         top: -10rem;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .client-path {
+        overflow-x: scroll;
     }
 }
 
@@ -44,16 +57,15 @@ $fifth-step-indent: 52.081rem;
             left: $first-step-indent;
         }
         &-2 {
-            left: calc(#{$second-step-indent} + .15rem);
+            // left: calc(#{$second-step-indent} + .15rem);
+            left: $second-step-indent;
         }
         &-3 {
             left: $third-step-indent;
         }
         &-4 {
-            left: calc(#{$fourth-step-indent} + .15rem);
-        }
-        &-5 {
-            left: $fifth-step-indent;
+            // left: calc(#{$fourth-step-indent} + .15rem);
+            left: $fourth-step-indent;
         }
 
         .step-number-img {
@@ -104,6 +116,7 @@ $fifth-step-indent: 52.081rem;
             border: 1px solid #FFFFFF;
             height: 1px;
             width: 100%;
+            min-width: 948px;
             display: block;
         }
 
@@ -131,9 +144,6 @@ $fifth-step-indent: 52.081rem;
             &-4 {
                 left: $fourth-step-indent;
             }
-            &-5 {
-                left: $fifth-step-indent;
-            }
 
             &-hovered, &-clicked, &:hover {
                 background-color: #0736C9;
@@ -151,12 +161,13 @@ $fifth-step-indent: 52.081rem;
     width: .7rem;
     position: absolute;
     left: calc(#{$second-step-indent} + .15rem);
-    top: 1rem;
+    top: -3.5rem;
     z-index: 3;
     overflow: hidden;
 
     display: flex;
     flex-direction: column;
+    transform: rotate(180deg);
 }
 
 .arrowSliding {

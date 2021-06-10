@@ -41,6 +41,24 @@ p {
     line-height: 1.5rem;
 }
 
+@media (max-width: 1023px) {
+    h1 {
+        font-size: 2.125rem;
+        line-height: 2.25rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+    h3 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    } 
+}
+
 .text-muted-light {
     color: $color-neutral-05;
 }
@@ -113,12 +131,16 @@ p {
     }
 }
 @media (max-width: 767px) {
+    .title-container {
+        margin: 5rem auto 1.5rem;
+    }
+
     .container-medium {
         margin: 6.25rem auto 5.25rem;
         max-width: none;
     }
     .container-large {
-        margin: 6.25rem 1.94rem;
+        margin: 1.5rem 1.94rem;
         max-width: none;
     }
 }
@@ -157,6 +179,7 @@ p {
     color: $color-neutral-05;
     overflow: hidden;
     width: 100%;
+    padding: 0 1rem;
 }
 
 .button-blue {

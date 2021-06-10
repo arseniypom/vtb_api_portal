@@ -1,28 +1,37 @@
 <div class="content">
     {% block header %}
-      <header class="header-bg" id="navbar">
-        <div class="header">
-          <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
-          {# Navbar #}
-          <div class="header-menu">
-            {% if page.navigation or page.navigation_right %}
-              {% block navbar %}
-                <div class="header-menu-links">
-                    <a class="header-menu-links-item" href="/vtb/test/product">Каталог API</a>
-                    <a class="header-menu-links-item" href="/vtb/test/connection">Подключение</a>
-                    <a class="header-menu-links-item" href="/vtb/test/application">Приложения</a>
-                    <a class="header-menu-links-item" href="/vtb/test/support">Поддержка</a>
-                    <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a>
+        <header class="header-bg" id="navbar">
+            <div class="header">
+                <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
+                <div class="header-burger">
+                    <span></span>
                 </div>
-                <div class="navbar-right">
-                  {{ page.navigation_right }}
+                {# Navbar #}
+                <div class="header-menu">
+                {% if page.navigation or page.navigation_right %}
+                    {% block navbar %}
+                    <div class="header-menu-links">
+                        <a class="header-menu-links-item" href="/vtb/test/product">Каталог API</a>
+                        <a class="header-menu-links-item" href="/vtb/test/connection">Подключение</a>
+                        <a class="header-menu-links-item" href="/vtb/test/application">Приложения</a>
+                        <a class="header-menu-links-item" href="/vtb/test/support">Поддержка</a>
+                        <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a>
+                    </div>
+                    <div class="navbar-right">
+                        {{ page.navigation_right }}
+                    </div>
+                    {% endblock %}
+                {% endif %}
                 </div>
-              {% endblock %}
-            {% endif %}
-          </div>
-        </div>
-      </header>
+            </div>
+        </header>
     {% endblock %}
+    
+    <div class="highlighted">
+        <div class="region region-highlighted" aria-label="highlighted">
+            <div data-drupal-messages-fallback="" class="hidden"></div>
+        </div>
+    </div>
 
         <div class="onboarding-bg blue-bg open-interface-bg" id="onboarding">
             <div class="container-medium onboarding">
@@ -153,7 +162,15 @@
                           <p>/* step</p>
                           <p>01</p>
                       </div>
-                      <h4>Посетить портал разработчиков developer.vtb.ru</h4>
+                      <h4>Зарегистрироваться на портале разработчиков developer.vtb.ru</h4>
+                  </div>
+                  <div class="client-path-steps-item client-path-steps-item-2">
+                      <img src="{{ base_path ~ directory }}/images/step-2.png" alt="step 2" class="step-number-img">
+                      <div class="client-path-steps-item-number">
+                          <p>/* step</p>
+                          <p>02</p>
+                      </div>
+                      <h4>Найти и протестировать нужные API</h4>
                   </div>
                   <div class="client-path-steps-item client-path-steps-item-3">
                       <img src="{{ base_path ~ directory }}/images/step-3.png" alt="step 3" class="step-number-img">
@@ -161,13 +178,13 @@
                           <p>/* step</p>
                           <p>03</p>
                       </div>
-                      <h4>Найти и протестировать нужные API</h4>
+                      <h4>Заключить договор на информационное взаимодействие</h4>
                   </div>
-                  <div class="client-path-steps-item client-path-steps-item-5">
-                      <img src="{{ base_path ~ directory }}/images/step-5.png" alt="step 5" class="step-number-img">
+                  <div class="client-path-steps-item client-path-steps-item-4">
+                      <img src="{{ base_path ~ directory }}/images/step-4.png" alt="step 4" class="step-number-img">
                       <div class="client-path-steps-item-number">
                           <p>/* step</p>
-                          <p>05</p>
+                          <p>04</p>
                       </div>
                       <h4>Использовать API в своих разработках</h4>
                   </div>
@@ -179,7 +196,6 @@
                       <span class="dot dot-2 dot-active"></span>
                       <span class="dot dot-3"></span>
                       <span class="dot dot-4"></span>
-                      <span class="dot dot-5"></span>
                   </div>
                   <div class="arrows">
                       <div class="arrowSliding">
@@ -194,24 +210,6 @@
                       <div class="arrowSliding delay3">
                           <span class="arrow"> > </span>
                       </div>
-                  </div>
-              </div>
-              <div class="client-path-steps lower-steps-div">
-                  <div class="client-path-steps-item client-path-steps-item-2">
-                      <img src="{{ base_path ~ directory }}/images/step-2.png" alt="step 2" class="step-number-img">
-                      <div class="client-path-steps-item-number">
-                          <p>/* step</p>
-                          <p>02</p>
-                      </div>
-                      <h4>Зарегистрироваться на портале разработчиков</h4>
-                  </div>
-                  <div class="client-path-steps-item client-path-steps-item-4">
-                      <img src="{{ base_path ~ directory }}/images/step-4.png" alt="step 4" class="step-number-img">
-                      <div class="client-path-steps-item-number">
-                          <p>/* step</p>
-                          <p>04</p>
-                      </div>
-                      <h4>Заключить договор на информационное взаимодействие</h4>
                   </div>
               </div>
           </div>
