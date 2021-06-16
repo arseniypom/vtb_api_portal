@@ -81,7 +81,8 @@ a:focus {
     border-image-outset: initial;
     border-image-repeat: initial;
     height: 2.5rem;
-    width: 33rem;
+    width: 100%;
+    max-width: 33rem;
 
     border: 1px solid #505258;
     box-sizing: border-box;
@@ -91,6 +92,7 @@ a:focus {
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
     border: inherit;
+    box-shadow: 0 0 0px 1000px #2d2f35 inset;
     -webkit-text-fill-color: #e5e7eb;
     -webkit-box-shadow: 0 0 0px 1000px #2d2f35 inset;
     transition: background-color 5000s ease-in-out 0s;
@@ -209,6 +211,12 @@ li.selectorg {
 
 .region-content {
     background-color: inherit;
+}
+@media (max-width: 767px) {
+    .region-content {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
 }
 
 .apic-user-form {
@@ -438,6 +446,8 @@ li.dropit-trigger a {
     background-color: transparent;
     border: 1px solid #505258;
     border-radius: 4px;
+    width: 100%;
+    max-width: 33rem;
     &:focus {
         outline: none;
         -webkit-box-shadow: none;
@@ -459,6 +469,11 @@ input#edit-title {
     border: 1px solid #505258;
     border-radius: 4px 0 0 4px;
     color: #7B7E86;
+    max-width: 100%;
+}
+.view-filters.form-group input.form-text {
+    width: 100%;
+    max-width: 20rem;
 }
 span.input-group-addon {
     background-color: transparent;

@@ -74,7 +74,8 @@
 
         &-title {
             font-size: 1.125rem;
-            width: 34.5rem;
+            max-width: 34.5rem;
+            width: 100%;
             margin-bottom: 1.5rem;
         }
 

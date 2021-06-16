@@ -54,6 +54,7 @@ li.searchListItem {
 // Правая колонка ------------------------------------------------
 .Pane.vertical.Pane2 {
   max-width: 37rem;
+  width: 100%;
 }
 
 // Ошибки валидации сваггера
@@ -156,6 +157,8 @@ use {
   color: #E5E7EB;
   background-color: #505258;
   width: fit-content;
+  max-width: 100%;
+  word-break: break-all;
   padding: .25rem .5rem;
   border-radius: 4px;
 }
@@ -343,7 +346,10 @@ use {
   min-height: unset;
   border-bottom: none;
   background-color: transparent;
+  // color: #F3F4F6;
 }
+
+
 
 .apiconnect-explorer .definitionDisplay .body, .apiconnect-explorer .codeSnippetsDisplay .body, .apiconnect-explorer .testRequestBody .body, .apiconnect-explorer .testResponseBody .body, .apiconnect-explorer .apiexplorer--snippet--light {
   border-top: none;
@@ -446,6 +452,7 @@ tr.bx--expandable-row-v2:hover+tr[data-child-row]>td {
 .apiconnect-explorer .bx--tabs__nav {
   position: unset;
   background: #22242A;
+  color: #E5E7EB;;
   border-radius: 16px;
   width: fit-content;
   height: 2rem;
@@ -453,8 +460,15 @@ tr.bx--expandable-row-v2:hover+tr[data-child-row]>td {
   align-items: center;
   padding: 4px;
 }
+@media (max-width: 767px) {
+  .apiconnect-explorer .bx--tabs__nav {
+    height: auto;
+  }
+}
+
 li.bx--tabs__nav-item.bx--tabs__nav-item {
   padding: 2px 16px;
+  background-color: transparent;
 
   &--selected {
     border-bottom: none;
@@ -529,3 +543,51 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 .page-node-type-api footer, .route-productapi footer {
   display: flex;
 }
+
+
+// Адаптив ------------------------------------------------
+
+// Главный заголовок
+.productApiWrapper .titleInnerWrapper .leftTitle {
+  max-width: 50rem;
+}
+
+.apiconnect-explorer .SplitPane:not(.showResponsiveMenu) {
+  background-color: transparent;
+}
+
+// Кнопка открытия меню с методами (левая колонка)
+.apiconnect-explorer button.expMenuCollapseButton {
+  position: absolute;
+  top: -.5rem;
+  left: 0;
+  background-color: #0062FF !important;
+
+  & .line {
+    background-color: #fff;
+  }
+}
+
+// Табы "Сведения/попробовать"
+.bx--tabs-trigger {
+  background-color: transparent;
+}
+
+.bx--tabs__nav--hidden {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  // Две колонки вместе
+  .apicProduct .apicProductBody, .productApiWrapper #innerWrapper {
+    padding: 0 1rem 1rem;
+  }
+
+  .bx--global-light-ui .views-exposed-form {
+    flex-direction: column;
+  }
+
+  .bx--global-light-ui .views-exposed-form .form-item {
+    margin-left: 0;
+  }
+}
+
