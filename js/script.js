@@ -13,7 +13,7 @@ jQuery(window).on("scroll", function() {
     });
   }
 
-  if (jQuery(window).scrollTop() > 150) {
+  if (jQuery(window).scrollTop() > 110) {
     jQuery(".header-bg").css({
       "background-color": "#0062FF"
     });
@@ -54,6 +54,7 @@ jQuery(function () {
             jQuery(".onboarding-button").css({
               "opacity": "1",
               "left": "",
+              "right": "",
               "bottom": ""
             });
 
@@ -71,6 +72,7 @@ jQuery(function () {
                 jQuery(".onboarding-button").css({
                   "opacity": "1",
                   "left": leftButtonIndent,
+                  "right": "auto",
                   "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
                 });
               } else if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 250) {
@@ -87,6 +89,7 @@ jQuery(function () {
           jQuery(".onboarding-button").css({
             "opacity":"1",
             "left": "",
+            "right": "",
             "bottom": ""
           });
           jQuery(".onboarding-button").removeClass("button-blue onboarding-button-small");
@@ -185,11 +188,19 @@ if (jQuery('[data-drupal-selector="edit-cancel"]')) {
 jQuery(function() {
   // Отмена стилей большого заголовка в форме приглашения участников организации
   if (jQuery('.consumerorg-invite-user-form').length === 0) {
-    jQuery('.page-header').css({
-      'font-weight': '600',
-      'font-size': '3rem',
-      'line-height': '3.25rem'
-    });
+    if (jQuery(window).width() < 768) {
+      jQuery('.page-header').css({
+        'font-weight': '600',
+        'font-size': '2.125rem',
+        'line-height': '2.25rem'
+      });
+    } else {
+      jQuery('.page-header').css({
+        'font-weight': '600',
+        'font-size': '3rem',
+        'line-height': '3.25rem'
+      });
+    }
   } else {
     jQuery('.page-header').css({
       'font-style': 'normal',

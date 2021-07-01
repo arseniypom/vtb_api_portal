@@ -11,6 +11,12 @@
     position: relative;
 }
 
+.onboarding-highlited {
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+}
+
 .onboarding {
     color: #fff;
     position: relative;
@@ -145,6 +151,22 @@
     }
 }
 
+@media (max-width: 374px) {
+    .onboarding {
+        h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+            margin: 1.75rem 0 1rem;
+        }
+
+        h3 {
+            max-width: none;
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
+    }
+}
+
 // ANIMATED BUTTON
 .onboarding-button {
     width: auto;
@@ -152,6 +174,7 @@
     position: fixed;
     color: #fff !important;
     left: 10.5%;
+    right: auto;
     bottom: 15%;
     z-index: 4;
     
@@ -187,7 +210,8 @@
 @media (max-width: 425px) {
     .onboarding-button {
         width: 90%;
-        left: 5%;
+        left: auto;
+        right: 5%;
         bottom: 2.5rem;
     
         &-arrow {

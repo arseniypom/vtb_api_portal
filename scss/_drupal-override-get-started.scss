@@ -5,7 +5,19 @@
 
 .ibmapimGetStarted .getStartedContentWrapper .exploreDiv,
 .ibmapimGetStarted .getStartedContentWrapper .createAppDiv {
-  background-color: #505258;
+  background-color: #2B313B;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .startguide {
+    flex-flow: initial;
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .startguide {
+    flex-flow: column wrap;
+  }
 }

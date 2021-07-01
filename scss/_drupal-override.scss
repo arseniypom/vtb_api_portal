@@ -23,6 +23,13 @@ a:focus {
     outline: none;
 }
 
+// Область контента
+@media (max-width: 767px) {
+    .view-content {
+        padding: 0 1rem;
+    }
+}
+
 // Всевозможные окна с белой границей
 .route-apic-appcreate .main-container .row, .route-apic-appcreate-step-two .main-container .row, .route-applicationcreate .main-container .row, .route-applicationcreate-step-two .main-container .row, .route-apic-appverify-clientsecret .main-container .row, .route-apic-appcredentials-create .main-container .row, .route-apic-appreset-clientid .main-container .row, .route-apic-appreset-clientsecret .main-container .row, .route-apic-appcredentials-update .main-container .row, .route-apic-appcredentials-delete .main-container .row, .route-apic-appupdate .main-container .row, .route-apic-appdelete .main-container .row, .route-apic-apppromote .main-container .row, .route-apic-appimage-upload .main-container .row, .route-apic-appimage-delete .main-container .row, .route-consumerorgcreate .main-container .row, .route-consumerorgupdate .main-container .row, .route-consumerorgdelete .main-container .row, .route-consumerorgchangeowner .main-container .row, .route-consumerorginvite .main-container .row, .route-consumerorgremove-user .main-container .row, .route-consumerorgresend-invite .main-container .row, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form, .route-entityuseredit-form .main-container .row .user-form, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input, form.user-pass-reset, .apicForm, .apic-user-form {
     border: none;
@@ -134,7 +141,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border: 1px solid #7B7E86;
 }
 .bx--global-light-ui .bx--radio-button:checked+.bx--radio-button__appearance {
-    border: 4px solid #0062FF;
+    border: 4px solid $color-primary-60;
 
     &::before {
         display: none;
@@ -188,7 +195,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
     &:hover {
         background: transparent;
-        color: #0062ff;
+        color: $color-primary-60;
         text-decoration-line: underline;
         text-underline-offset: 3px;
     }
@@ -213,10 +220,10 @@ li.selectorg {
     background-color: inherit;
 }
 @media (max-width: 767px) {
-    .region-content {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
+    // .region-content {
+        // padding-right: 1rem;
+        // padding-left: 1rem;
+    // }
 }
 
 .apic-user-form {
@@ -327,14 +334,30 @@ li.dropit-trigger a {
     border: none;
 }
 
+// Страница входа -------------------------------------------------------
+@media (max-width: 374px) {
+    .apic-user-form {
+        margin-top: 0;
+        &-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-or-container {
+            padding: 0;
+        }
+        
+        &-registries {
+            padding-top: 0;
+        }
+    }
+}
+
 // Страница документации АПИ ------------------------------------------------
 // Верхняя секция
 .productApiWrapper header.titleSection {
     border-bottom: none;
     background: inherit;
-}
-.productName {
-    color: inherit;
 }
 
 // Левая секция
@@ -469,9 +492,10 @@ input#edit-title {
     border: 1px solid #505258;
     border-radius: 4px 0 0 4px;
     color: #7B7E86;
-    max-width: 100%;
+    width: 100%;
 }
-.view-filters.form-group input.form-text {
+.view-filters.form-group input.form-text,
+.bx--global-light-ui .view-filters.form-group input.form-text {
     width: 100%;
     max-width: 20rem;
 }
@@ -544,7 +568,7 @@ select.simpler-select.form-select {
 // Кнопки ----------------------------------------------------------------
 .bx--global-light-ui button, .bx--global-light-ui .form-actions .button.button--primary, .bx--global-light-ui .form-actions .btn.button--primary, .bx--global-light-ui .form-actions .button.btn-primary, .bx--global-light-ui .form-actions .btn.btn-primary, .bx--global-light-ui .button, .bx--global-light-ui .btn {
     color: #fff;
-    background-color: #0062FF;
+    background-color: $color-primary-60;
     font-family: $main-font;
     height: auto;
     padding: .2rem .5rem; 

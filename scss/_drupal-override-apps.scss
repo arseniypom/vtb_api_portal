@@ -16,6 +16,11 @@ a.button.apicNewApp {
 .masonry-item.views-row {
   margin-bottom: 1rem;
 }
+@media (max-width: 767px) {
+  .masonry-item.views-row {
+    width: 100%;
+  }
+}
 
 .masonry-layout-applications.form-group.masonry {
   display: flex;
@@ -101,6 +106,17 @@ a.button.apicNewApp {
 
 .analyticsWidgetContainer #appAnalyticsSummary {
   background-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .analyticsWidgetContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul.tabs--primary {
+    display: flex;
+  }
 }
 
 .applicationSubscriptions .subscriptionsTable .subscriptionsContent table tbody tr:nth-child(even) {

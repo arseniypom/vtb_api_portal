@@ -19,6 +19,12 @@
   position: static;
 }
 
+@media (max-width: 767px) {
+  .apiconnect-explorer .SplitPane:not(.showResponsiveMenu) {
+    margin-top: 1rem;
+  } 
+}
+
 // Левая колонка ------------------------------------------------
 .Pane.vertical.Pane1 {
   max-width: 17.5rem;
@@ -134,6 +140,15 @@ use {
   padding: 20px 0;
 }
 
+@media (max-width: 767px) {
+  .testToolSection:not(.testToolEndpoints) {
+    flex-direction: column;
+  }
+  .apiconnect-explorer .testTool .bx--text__input {
+    min-width: auto;
+  }
+}
+
 // Лэйблы
 .apiconnect-explorer .operationInformation .labelText {
   font-weight: 600;
@@ -148,6 +163,12 @@ use {
 }
 .apiEndpointType {
   max-width: 7rem;
+}
+
+@media (max-width: 767px) {
+  .apiEndpointUrl {
+    font-size: .6rem;
+  }
 }
 
 // Маркер "обязательный" / "необязательный" параметр
@@ -171,6 +192,13 @@ use {
 // Тип параметра
 .apiconnect-explorer .schema.parameterType {
   font-style: italic;
+}
+
+//Описание параметра
+@media (max-width: 767px) {
+  .apiconnect-explorer .parameterDescription.markdown p {
+    font-size: .7rem;
+  }
 }
 
 // Расширения API
@@ -251,7 +279,7 @@ use {
 
 // Методы ------------------------------------------------
 .bx--tabs__nav-item--selected {
-  border-bottom: 2px solid #0062FF;
+  border-bottom: 2px solid $color-primary-60;
 }
 
 .operationInformation.operationSummary {
@@ -276,8 +304,24 @@ use {
 }
 .operationTitle h2 {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+@media (max-width: 767px) {
+  .operationTags.tagsContainer span {
+    height: auto;
+    font-size: .7rem;
+    max-width: 6rem;
+    word-break: break-all;
+    padding: 0.5rem;
+  }
+  .operationTitle {
+    padding-right: .5rem;
+    h2 {
+      font-size: 1rem;
+      line-height: 1;
+    }
+  }
 }
 // разворачивающиеся пункты
 .apiconnect-explorer .bx--accordion__heading {
@@ -317,6 +361,12 @@ use {
   padding-left: 0;
   border-left: none;
 }
+@media (max-width: 767px) {
+  .bx--data-table-v2 th:last-of-type, .bx--data-table-v2 td:last-of-type {
+    padding: 0 0 0 .8rem;
+  }
+}
+
 .apiconnect-explorer .parameterNameContainer, .apiconnect-explorer .responseHeaderNameContainer {
   width: 23%;
 }
@@ -357,6 +407,14 @@ use {
   background: $color-light-grey-bg;
   border-radius: 8px;
 }
+@media (max-width: 767px) {
+  .apiconnect-explorer .definitionDisplay .body, .apiconnect-explorer .codeSnippetsDisplay .body, .apiconnect-explorer .testRequestBody .body, .apiconnect-explorer .testResponseBody .body, .apiconnect-explorer .apiexplorer--snippet--light {
+    border-top: none;
+    padding: .3rem;
+    background: $color-light-grey-bg;
+    border-radius: 8px;
+  }
+}
 
 .body.small > * {
   color: #F3F4F6;
@@ -391,6 +449,9 @@ li.bx--tabs__nav-item.bx--tabs__nav-item--selected {
 }
 .definitionDisplay .tab-content {
   padding: 0 0 1rem 1rem;
+}
+pre {
+  margin: 0;
 }
 
 // Ответы
@@ -549,6 +610,7 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 
 // Главный заголовок
 .productApiWrapper .titleInnerWrapper .leftTitle {
+  width: 100%;
   max-width: 50rem;
 }
 
@@ -561,7 +623,7 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
   position: absolute;
   top: -.5rem;
   left: 0;
-  background-color: #0062FF !important;
+  background-color: $color-primary-60 !important;
 
   & .line {
     background-color: #fff;
@@ -571,6 +633,10 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 // Табы "Сведения/попробовать"
 .bx--tabs-trigger {
   background-color: transparent;
+  box-shadow: none;
+}
+a.bx--tabs-trigger-text {
+  color: $color-primary-60;
 }
 
 .bx--tabs__nav--hidden {
@@ -579,7 +645,7 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 @media (max-width: 767px) {
   // Две колонки вместе
   .apicProduct .apicProductBody, .productApiWrapper #innerWrapper {
-    padding: 0 1rem 1rem;
+    padding: 0 .5rem 1rem;
   }
 
   .bx--global-light-ui .views-exposed-form {

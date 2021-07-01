@@ -2,7 +2,9 @@
 
 function vtb_theme_preprocess(&$variables, $hook) {
   $variables['base_path'] = base_path();
-  $variables['assets_path'] = $base_url . base_path() .drupal_get_path('theme', 'vtb_theme');
+  if ($base_url) {
+    $variables['assets_path'] = $base_url . base_path() .drupal_get_path('theme', 'vtb_theme');
+  }
   $variables['lang'] = \Drupal::languageManager()->getCurrentLanguage();
 }
 

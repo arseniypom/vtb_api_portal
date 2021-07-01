@@ -26,14 +26,14 @@
             </div>
         </header>
     {% endblock %}
-    
-    <div class="highlighted">
-        <div class="region region-highlighted" aria-label="highlighted">
-            <div data-drupal-messages-fallback="" class="hidden"></div>
-        </div>
-    </div>
+
 
         <div class="onboarding-bg blue-bg open-interface-bg" id="onboarding">
+                {% if page.highlighted %}
+                    {% block highlighted %}
+                        <div class="highlighted onboarding-highlited">{{ page.highlighted }}</div>
+                    {% endblock %}
+                {% endif %}
             <div class="container-medium onboarding">
                 <h3>Портал API ВТБ — тестирование и эксплуатация сервисов и данных банка</h3>
                 <h1>Получите доступ к банковским сервисам и используйте их </h1>
@@ -42,7 +42,6 @@
                     <img class="onboarding-image-arrow" src="{{ base_path ~ directory }}/images/arrow-down.png" alt="arrow">
                 </div>
             </div>
-            <!-- <button class="onboarding-button button-transparent button-transparent-big"><img src="{{ base_path ~ directory }}/images/plus.svg" alt="plus" class="plus-img"><p>Подключиться</p></button> -->
         </div>
 
         <a href="/vtb/test/connection" class="onboarding-button button-transparent button-transparent-big" id="action-button"><img src="{{ base_path ~ directory }}/images/plus.svg" alt="plus" class="plus-img"><p class="onboarding-button-text">Подключиться</p></a>
@@ -58,7 +57,7 @@
                           <img src="{{ base_path ~ directory }}/images/business-text.png" alt="business" class="target-audience-section-info-business-text-img">
                           <h1>/* Бизнесу</h1>
                           <ul class="target-audience-section-info-bullets">
-                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Финтех <p class="text-muted">— совершенствуйте ваши приложения, создавайте новые технологичные продукты и предоставляйте лучший сервис своим клиентам, используя подробную <a class="connect-instruction" href="{{ assets_path }}/documents/Guide_VTB_API.pdf" target="_blank">инструкцию</a></p></div></li>
+                              <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Финтех <p class="text-muted">— совершенствуйте ваши приложения, создавайте новые технологичные продукты и предоставляйте лучший сервис своим клиентам, используя подробную <a class="connect-instruction" href="{{ base_path ~ directory }}/documents/Guide_VTB_API.pdf" target="_blank">инструкцию</a></p></div></li>
                               <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Контроль, делегирование и аналитика <p class="text-muted">— подключайте своих сотрудников к API, следите за количеством вызовов, контролируйте ваши действия в личном кабинете</p></div></li>
                               <li><img src="{{ base_path ~ directory }}/images/li-marker.png" alt="li marker"><div>Простота и надежность <p class="text-muted">— регистрация для тестовых API или заявка на подключение к уникальным API занимает не больше минуты, а гарантия безопасной передачи данных и  шифрования по ГОСТу стопроцентное</p></div></li>
                           </ul>
@@ -341,9 +340,9 @@
                     <p>© ВТБ, 2021</p>
                 </div>
                 <div class="footer-info-links">
-                    <a class="link-primary" href="{{ assets_path }}/documents/user_agreement.docx" target="_blank">Пользовательское соглашение</a>
+                    <a class="link-primary" href="{{ base_path ~ directory }}/documents/user_agreement.docx" target="_blank">Пользовательское соглашение</a>
                     <a class="link-primary" href="https://www.vtb.ru/o-banke/">О Банке ВТБ</a>
-                    <a class="link-primary" href="{{ assets_path }}/documents/Obrabotka-pdn.pdf" target="_blank">Положение об организации обработки персональных данных в Банке ВТБ (ПАО)</a>
+                    <a class="link-primary" href="{{ base_path ~ directory }}/documents/Obrabotka-pdn.pdf" target="_blank">Положение об организации обработки персональных данных в Банке ВТБ (ПАО)</a>
                 </div>
             </div>
             <img src="{{ base_path ~ directory }}/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">

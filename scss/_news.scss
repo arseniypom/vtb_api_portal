@@ -108,8 +108,11 @@
 }
 
 @media (max-width: 1200px) {
+    .news {
+        margin-right: 0;
+    }
     .news-card {
         display: inline-block;
-        margin: 0 2rem 1rem;
+        margin: 0 1rem 1rem;
     }    
 }

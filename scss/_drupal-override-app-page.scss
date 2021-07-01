@@ -9,6 +9,11 @@
   max-width: 1220px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  .applicationWrapper {
+    margin: 0 1rem;
+  }
+}
 
 // Табы в разделе "Идентификационные данные"
 .applicationWrapper .titleSection .applicationTabs li a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li a, .applicationWrapper .titleSection .applicationTabs li, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li .apicMyOrg .titleSection .organizationTabs li a, .apicMyOrg .titleSection .organizationTabs li {

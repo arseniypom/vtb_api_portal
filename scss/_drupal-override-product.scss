@@ -13,6 +13,27 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 767px) {
+  .node--type-product.bx--card {
+    margin: 0 auto 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 374px) {
+  .node--type-product.bx--card {
+    width: 100%;
+  }
+
+  .views-element-container.form-group {
+    width: 100%;
+  }
+  
+  .apicProductApiList li {
+    min-width: auto;
+  }
+}
+
 // Название карточки
 .bx--card .apicProductCardMain .bx--about__title--name {
   width: auto;
@@ -28,6 +49,10 @@
 .bx--card .apicProductCardMain {
   margin-left: 0;
   width: 100%;
+}
+
+.bx--card .apicProductCardMain .apicProductName {
+  max-width: 100%;
 }
 
 .apicProductCardVersionAndRating {
@@ -111,6 +136,14 @@
 .productName {
   font-weight: 600;
   margin-bottom: 1rem;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .productName {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
 }
 
 .apicProductVersion {
@@ -239,8 +272,12 @@ article a.card-read_more.link-primary {
 .field.plans.footer-bg {
   align-items: initial;
   flex-direction: column;
-  // max-width: 1220px;
   padding: 3.75rem 2rem 0;
+}
+@media (max-width: 500px) {
+  .field.plans.footer-bg {
+    display: none;
+  }
 }
 
 h2.field__label.label.tariff-label {

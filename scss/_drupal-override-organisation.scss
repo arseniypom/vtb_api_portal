@@ -13,6 +13,11 @@
   border-radius: 8px;
   margin: .8rem 0;
 }
+@media (max-width: 767px) {
+  .apicMyOrgOwner {
+    margin: .8rem 1rem;
+  }
+}
 
 h1.orgName {
   font-weight: 600 !important;
@@ -25,15 +30,33 @@ h1.orgName {
   display: none;
 }
 
+// Раздел "Участники"
+@media (max-width: 767px) {
+  .apicMyOrg .field.organizationMembers .memberHeader {
+    margin: 1rem;
+  }
+}
+@media (max-width: 424px) {
+  .apicMyOrg .field.organizationMembers .memberHeader {
+    flex-direction: column;
+  }
+}
+
 // Кнопка приглашения участников
 .apicNewUser.orgInvite {
   background-color: transparent !important;
   color: #3A85FF !important;
 
   &:hover {
-    color: #0062ff !important;
+    color: $color-primary-60 !important;
   }
 }
+@media (max-width: 424px) {
+  .bx--global-light-ui a.button.apicMyOrg .memberHeader {
+    padding: .5rem 1rem .5rem 0;
+  }
+}
+
 
 // Заголовок "Участники"
 .apicMyOrg .memberHeader h3 {
@@ -49,6 +72,16 @@ h1.orgName {
   padding: 2rem 3rem 6rem;
 }
 
+@media (max-width: 767px) {
+  .apicMyOrg .field.organizationMembers {
+    padding: 2rem 0 6rem;
+  }
+
+  .apicMyOrgMembers {
+    overflow-x: scroll;
+  }
+}
+
 .apicMyOrg .apicMyOrgMembers table {
   border: none;
   border-collapse: separate;
@@ -56,6 +89,11 @@ h1.orgName {
 
   & thead {
     background: inherit;
+  }
+}
+@media (max-width: 767px) {
+  .apicMyOrg .apicMyOrgMembers table {
+    margin-left: 1rem;
   }
 }
 // Заголовок таблицы с участниками
@@ -161,6 +199,12 @@ legend {
 
   & .js-form-item {
     margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #edit-role {
+    flex-direction: column;
   }
 }
 
