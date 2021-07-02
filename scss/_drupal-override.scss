@@ -160,6 +160,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border-left: none;
 }
 // Пункты дропдаун меню
+.overflow-menu ul.dropit-submenu li {
+    white-space: normal;
+}
 .overflow-menu ul.dropit-submenu a, .overflow-menu ul.dropit-submenu a:visited {
     background-color: transparent;
     color: #E5E7EB;
@@ -175,6 +178,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     border: none;
     padding: 16px 16px;
     width: max-content;
+    max-width: 90vw;
     color: #7E8390;
     font-size: 14px;
     line-height: 16px;

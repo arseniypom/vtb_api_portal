@@ -130,5 +130,16 @@
         &-business {
             flex-direction: column-reverse;
         }
+        &-info {
+            h1 {
+                font-size: 2rem;
+            }
+            &-triangle {
+                top: -6rem;
+            }
+        }
+        &-info-1 {
+            margin-right: 0;
+        }
     }
 }

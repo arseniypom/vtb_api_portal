@@ -12,9 +12,10 @@
 }
 
 .onboarding-highlited {
+    width: 100%;
     position: absolute;
     top: 4rem;
-    width: 100%;
+    z-index: 10;
 }
 
 .onboarding {

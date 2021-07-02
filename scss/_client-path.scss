@@ -9,6 +9,11 @@ $fourth-step-indent: 51.625rem;
     position: relative;
     min-height: 37rem;
 }
+@media (max-width: 424px) {
+    .client-path-bg {
+        min-height: 32rem;
+    }
+}
 
 .client-path {
     width: 100%;

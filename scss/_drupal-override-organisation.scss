@@ -5,6 +5,12 @@
   padding: 2rem 3rem 0;
 }
 
+@media (max-width: 767px) {
+  .route-ibm-apimmyorg header.apicMyOrgHeader, .route-ibm-apimanalytics header.apicMyOrgHeader {
+    padding: 2rem 1.5rem 0 1rem;
+  }
+}
+
 // Владелец организации
 .apicMyOrgOwner {
   background: #2D2F35;
@@ -52,8 +58,8 @@ h1.orgName {
   }
 }
 @media (max-width: 424px) {
-  .bx--global-light-ui a.button.apicMyOrg .memberHeader {
-    padding: .5rem 1rem .5rem 0;
+  .bx--global-light-ui a.button.apicNewUser {
+    padding-left: 0;
   }
 }
 
@@ -92,7 +98,7 @@ h1.orgName {
   }
 }
 @media (max-width: 767px) {
-  .apicMyOrg .apicMyOrgMembers table {
+  .apicMyOrg .apicMyOrgMembers {
     margin-left: 1rem;
   }
 }

@@ -191,9 +191,15 @@ jQuery(function() {
     if (jQuery(window).width() < 768) {
       jQuery('.page-header').css({
         'font-weight': '600',
-        'font-size': '2.125rem',
+        'font-size': '2rem',
         'line-height': '2.25rem'
       });
+
+      if (jQuery(window).width() < 374) {
+        jQuery('.page-header').css({
+          'font-size': '1.75rem',
+        });
+      }
     } else {
       jQuery('.page-header').css({
         'font-weight': '600',
@@ -213,5 +219,50 @@ jQuery(function() {
   // Изменение текста кнопки на странице организации
   if (jQuery('.apicNewUserWrapper')) {
     jQuery('.orgInvite').html('<span>Пригласить участника</span>');
+  }
+});
+
+
+jQuery(function() {
+  const arrowRight = jQuery('.card-read_more-arrow').clone().css('position', 'static');
+  const scrollRight = jQuery(
+    "<div class='scroll-right'><p class='text-muted'>Скрольте вправо</p></div>"
+  );
+
+  if (jQuery('.apicMyOrgMembers').length === 1) {
+    jQuery('.organizationMembers').append(scrollRight);
+    if (arrowRight) {
+      jQuery('.scroll-right').append(arrowRight);
+    }
+
+    if (jQuery(window).width() < 768) {
+      jQuery('.scroll-right').css("display", "block");
+    } else {
+      jQuery('.scroll-right').css("display", "none");
+    }
+  }
+
+  if (jQuery('.client-path-bg').length === 1) {
+    jQuery('.client-path-bg').append(scrollRight.clone().css({
+      'position':'absolute',
+      'bottom':'2rem'
+    }));
+    jQuery('.news').append(scrollRight.clone());
+    if (jQuery(window).width() < 1023
+    ) {
+      jQuery('.scroll-right').css("display", "block");
+    } else {
+      jQuery('.scroll-right').css("display", "none");
+    }
+  }
+
+  if (jQuery('.subscriptionsTable').length === 1 && jQuery('.noSubsFound').length === 0) {
+    jQuery('.subscriptionsTable').append(scrollRight.clone());
+
+    if (jQuery(window).width() < 374) {
+      jQuery('.scroll-right').css("display", "block");
+    } else {
+      jQuery('.scroll-right').css("display", "none");
+    }
   }
 });

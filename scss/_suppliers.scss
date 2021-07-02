@@ -19,7 +19,6 @@
         position: absolute;
         right: 29.8%;
         top: -8.25rem;
-
     }
 
     &-item {
@@ -145,9 +144,20 @@
 
 @media (max-width: 767px) {
     .suppliers-list {
+        padding-left: .875rem;
         justify-content: center;
         &-item {
-            min-width: 20rem;
+            min-width: auto;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            h4 {
+                font-size: 1.1rem;
+            }
+        }
+        &-plus {
+            right: 0;
+            top: -4.25rem;
         }
     }
 
@@ -161,17 +171,10 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 374px) {
     .suppliers-list {
-        padding-left: .875rem;
-        &-item {
-            min-width: auto;
-            width: 100%;
-            margin-bottom: 1rem;
-
-            h4 {
-                font-size: 1.1rem;
-            }
+        &-plus {
+            right: -2.5rem;
         }
     }
 }

@@ -98,6 +98,10 @@ p {
     .title-text-green {
         margin: 0 .3rem;
     }
+
+    &.padding {
+        padding-left: 1rem;
+    }
 }
 
 .container-medium {
@@ -142,6 +146,15 @@ p {
     .container-large {
         margin: 1.5rem 1.94rem;
         max-width: none;
+    }
+}
+@media (max-width: 424px) {
+    .title-container {
+        max-width: none;
+
+        &-number {
+            margin-right: .5rem;
+        }
     }
 }
 
@@ -260,5 +273,13 @@ p {
 
     &:hover {
         background: transparent !important;
+    }
+}
+
+.scroll-right {
+    margin: 1rem 0 0 1rem;
+
+    p {
+        font-size: .9rem;
     }
 }

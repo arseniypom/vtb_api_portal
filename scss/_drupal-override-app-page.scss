@@ -1,10 +1,5 @@
 /* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR APP PAGE ----------------------- */
 
-// nav.tabs {
-//   max-width: 1220px;
-//   margin: 0 auto;
-// }
-
 .applicationWrapper {
   max-width: 1220px;
   margin: 0 auto;
@@ -12,12 +7,48 @@
 @media (max-width: 767px) {
   .applicationWrapper {
     margin: 0 1rem;
+
+    .titleInnerWrapper {
+      padding: 0 1rem;
+    }
   }
 }
 
 // Табы в разделе "Идентификационные данные"
 .applicationWrapper .titleSection .applicationTabs li a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li a, .applicationWrapper .titleSection .applicationTabs li, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li .apicMyOrg .titleSection .organizationTabs li a, .apicMyOrg .titleSection .organizationTabs li {
   color: $color-neutral-05;
+}
+
+// Добавление новых идентификационных данных
+.bx--global-light-ui .form-item {
+    margin: 1rem 0 .5rem;
+}
+@media (max-width: 767px) {
+  .route-apic-appcredentials-create .main-container .row {
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+  }
+}
+
+// Раздел "Подписки"
+@media (max-width: 767px) {
+  .applicationCredentials .credentialsTable .credentialsHeader {
+    .credentialsActions { 
+      display: flex;
+    }
+    .credentialsActions .credentialsActionsAdd {
+      padding-left: .9rem;
+    }
+  }
+
+  .subscriptionsContent {
+    overflow-x: scroll;
+  }
+}
+
+.clientIDContainer .bx--form-item.form-item.form-group {
+  width: 100%;
+  max-width: 25rem;
 }
 
 // Создание приложения ---------------------------------------------------------------
