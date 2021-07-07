@@ -1,0 +1,92 @@
+// Хэдэр, правая часть ------------------------------------------------
+.region-navigation-right {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.block-login {
+  margin-left: 1rem;
+}
+
+.menu--login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#block-vtb-theme-searchiconblock {
+  padding-right: 3.25rem;
+  margin-right: .5rem;
+  border-right: 1px solid #fff;
+}
+.ibmapimSearch .imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav.block-account, .block-consumer-organization-selection {
+  background: transparent;
+}
+li.dropit-trigger a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.block-consumer-organization-selection {
+  max-width: 15rem;
+  min-width: 7.25rem;
+  margin-left: .625rem;
+}
+// Меню выбора организации
+.consumerorgSelectBlock .orgmenu .dropit-trigger a {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .dropit-icon {
+    transform: rotate(0deg);
+  }
+
+  .orgHeading {
+    margin-left: .5rem;
+
+    .subTitle {
+      display: none;
+    }
+
+    .currentOrg {
+      color: #fff;
+      font-weight: normal;
+      font-size: .75rem;
+    }
+  }
+}
+
+// Меню аккаунта
+.account-menu .dropit-trigger {
+  .dropitmenu-submenu li {
+    &:last-child {
+      border-top: 1px solid $color-neutral-70;
+    }
+  }
+  .trigger .dropit-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  #block-vtb-theme-searchiconblock {
+      padding-right: .5rem;
+      margin-right: .5rem;
+  }
+
+  .block-login {
+      min-width: none;
+  }
+
+  .menu--login {
+      flex-direction: column;
+
+      &>li>a {
+          padding: .25rem 0;
+      }
+  }
+}

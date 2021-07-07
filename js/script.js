@@ -217,8 +217,16 @@ jQuery(function() {
   }
 
   // Изменение текста кнопки на странице организации
+  const inviteMemberSpan = jQuery(`
+    <span>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.54167 1.16667C7.54167 0.867513 7.29915 0.625 7 0.625C6.70085 0.625 6.45833 0.867513 6.45833 1.16667L6.45833 6.45833H1.16667C0.867512 6.45833 0.625 6.70085 0.625 7C0.625 7.29915 0.867512 7.54167 1.16667 7.54167H6.45833L6.45833 12.8333C6.45833 13.1325 6.70085 13.375 7 13.375C7.29915 13.375 7.54167 13.1325 7.54167 12.8333V7.54167H12.8333C13.1325 7.54167 13.375 7.29915 13.375 7C13.375 6.70085 13.1325 6.45833 12.8333 6.45833H7.54167V1.16667Z" fill="#3A85FF"/>
+      </svg>
+      <p>Пригласить участника</p>
+    </span>
+  `);
   if (jQuery('.apicNewUserWrapper')) {
-    jQuery('.orgInvite').html('<span>Пригласить участника</span>');
+    jQuery('.orgInvite').html(inviteMemberSpan);
   }
 });
 
@@ -264,5 +272,28 @@ jQuery(function() {
     } else {
       jQuery('.scroll-right').css("display", "none");
     }
+  }
+});
+
+jQuery(function() {
+  // Замена иконок в шапке профиля
+  const searchIconSvg = jQuery(`
+    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7C0 3.13 3.13 0 7 0C10.87 0 14 3.13 14 7C14 8.76212 13.3511 10.3708 12.2789 11.6005L15.7802 15.111C16.0337 15.3652 16.0332 15.7767 15.779 16.0302C15.5248 16.2837 15.1133 16.2832 14.8598 16.029L11.3373 12.4973C10.1453 13.4386 8.639 14 7 14C3.13 14 0 10.87 0 7ZM12.7 7C12.7 3.86 10.14 1.3 7 1.3C3.86 1.3 1.3 3.86 1.3 7C1.3 10.14 3.86 12.7 7 12.7C10.14 12.7 12.7 10.14 12.7 7Z" fill="white"/>
+    </svg>
+  `);
+  const dropitArrowSvg = jQuery(`
+    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.713751 0.996319C0.713751 0.816319 0.78375 0.64632 0.92375 0.51632C1.19375 0.27632 1.60375 0.29632 1.84375 0.55632L4.99001 4.04946L8.00782 0.560219C8.24782 0.290219 8.65782 0.280219 8.92782 0.520219C9.18782 0.760219 9.20782 1.17022 8.96782 1.44022L5.51001 5.41945C5.23001 5.72945 4.75001 5.72945 4.47001 5.41945L0.883749 1.43632C0.763749 1.30632 0.713751 1.15632 0.713751 0.996319Z" fill="white"/>
+    </svg>
+  `);
+  // const searchIcon = jQuery(
+  //   "<img alt='search'></img>"
+  // ).attr('src', '../images/search-icon.svg');
+  if (jQuery( ".ibmapimSearch > .imageContainer > a" ).length === 1) {
+    jQuery( ".ibmapimSearch > .imageContainer > a" ).html(searchIconSvg);
+  }
+  if (jQuery(".orgmenu.dropit > .dropit-trigger > a > .dropit-icon").length === 1) {
+    jQuery( ".orgmenu.dropit > .dropit-trigger > a > .dropit-icon").html(dropitArrowSvg);
   }
 });

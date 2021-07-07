@@ -1,4 +1,5 @@
 @import 'drupal-override-cookie';
+@import 'drupal-override-header';
 @import 'drupal-override-product';
 @import 'drupal-override-api-page';
 @import 'drupal-override-profile';
@@ -112,7 +113,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 // Кнопка копирования
 .apiconnect-copier .copy-icon {
-    fill: #3a85ff;
+    fill: $color-primary-50;
 }
 
 // Тултип / tooltip
@@ -168,7 +169,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     color: #E5E7EB;
 
     &:hover {
-        background-color: #3A85FF;
+        background-color: $color-primary-50;
         color: #fff;
     }
 }
@@ -188,13 +189,23 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+
+    li {
+        padding: .75rem 0;
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        a {
+            color: $color-primary-50;
+        }
+    }
 }
 .dropitmenu ul.dropit-submenu a,
 .dropitmenu ul.dropit-submenu a:visited {
     font-size: 1rem;
     color: #E5E7EB;
     line-height: 24px;
-    margin-bottom: .75rem;
     padding: 0;
 
     &:hover {
@@ -443,7 +454,7 @@ li.dropit-trigger a {
 
 // Ссылка-кнопка "Поделитесь своим мнением"
 .feedbackToggle {
-    color: #3A85FF;
+    color: $color-primary-50;
 
     &:hover, &:active {
         color: $color-primary-60;
@@ -463,10 +474,10 @@ li.dropit-trigger a {
 
 // Фильтрация ----------------------------------------------------------------
 .bx--global-light-ui .views-exposed-form .btn.view-filter-button svg {
-    fill: #3a85ff;
+    fill: $color-primary-50;
 }
 .has-glyphicons .select-wrapper:after {
-    color: #3a85ff;
+    color: $color-primary-50;
 }
 .form-control {
     color: #E5E7EB;
@@ -609,7 +620,7 @@ span.icon.glyphicon.glyphicon-envelope {
     margin: 0 auto;
 }
 .bx--global-light-ui .view-filters.form-group .form-actions button {
-    color: #3A85FF;
+    color: $color-primary-50;
     background-color: transparent;
     border: none;
     height: auto;
@@ -618,7 +629,7 @@ span.icon.glyphicon.glyphicon-envelope {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    border: 1px solid #3A85FF;
+    border: 1px solid $color-primary-50;
 
     &:hover {
         background: rgba(136, 136, 136, 0.08);

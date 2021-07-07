@@ -49,7 +49,7 @@ ul.apiContent {
   outline: none;
 }
 .bx--global-light-ui .apiconnect-explorer .explorer-toc a.selected {
-  color: #3A85FF;
+  color: $color-primary-50;
   border-left: 0;
 }
 
@@ -123,13 +123,13 @@ section.overviewHeader h2 {
 }
 
 .operationInformation.operationDownloadOpenApi .labelText {
-  color: #3A85FF;
+  color: $color-primary-50;
   font-weight: 500;
   line-height: 24px;
 }
 
 use {
-  fill: #3A85FF;
+  fill: $color-primary-50;
 }
 
 .apiconnect-explorer .operationInformation, .apiconnect-explorer .operationDisplay .testToolSection {
@@ -269,7 +269,7 @@ use {
 
 // Контакты
 .apiconnect-explorer a, .apiconnect-explorer .bx--link {
-  color: #3a85ff;
+  color: $color-primary-50;
 }
 
 // Поддержка / форум

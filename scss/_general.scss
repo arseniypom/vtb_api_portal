@@ -72,7 +72,7 @@ p {
 }
 
 .link-primary {
-    color: #3A85FF !important;
+    color: $color-primary-50 !important;
 
     &:hover, &:active {
         color: $color-primary-60 !important;

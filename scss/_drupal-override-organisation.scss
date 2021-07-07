@@ -36,6 +36,25 @@ h1.orgName {
   display: none;
 }
 
+// Меню для редактирования организация (справа от имени владельца)
+.apicMyOrgActions .organizationMenu .dropit-trigger a.trigger {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid $color-primary-50;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dropit-icon {
+    transform: rotate(90deg);
+
+    svg {
+      fill: $color-primary-50;
+    }
+  }
+}
+
 // Раздел "Участники"
 @media (max-width: 767px) {
   .apicMyOrg .field.organizationMembers .memberHeader {
@@ -51,7 +70,7 @@ h1.orgName {
 // Кнопка приглашения участников
 .apicNewUser.orgInvite {
   background-color: transparent !important;
-  color: #3A85FF !important;
+  color: $color-primary-50 !important;
 
   &:hover {
     color: $color-primary-60 !important;
@@ -140,7 +159,7 @@ h1.orgName {
 
 // Галочка роли участника
 .apicMyOrg .apicMyOrgMembers polygon {
-  fill: #3A85FF;
+  fill: $color-primary-50;
 }
 
 // Статус участника
@@ -156,7 +175,7 @@ h1.orgName {
 
 // Управление участниками
 .overflow-menu .dropit-icon svg:hover {
-  fill: #3A85FF;
+  fill: $color-primary-50;
 }
 .dropit-icon {
   transform: rotate(90deg);
@@ -164,12 +183,15 @@ h1.orgName {
 
 // Selected class
 .applicationWrapper .titleSection .applicationTabs li.selected a, .applicationWrapper .titleSection .applicationTabs li:hover a, .applicationWrapper .titleSection .applicationTabs li:focus a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li.selected a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li:hover a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li:focus a, .apicMyOrg .titleSection .organizationTabs li.selected a, .apicMyOrg .titleSection .organizationTabs li:hover a, .apicMyOrg .titleSection .organizationTabs li:focus a {
-  color: #3A85FF;
-  border-bottom: 2px solid #3A85FF;
+  color: $color-neutral-10;
+  border-bottom: 2px solid $color-primary-50;
 }
 
-.apicMyOrg .titleSection .organizationTabs li a {
-  color: #E5E7EB;
+.apicMyOrg .titleSection .organizationTabs {
+
+  li a {
+    color: #E5E7EB;
+  }
 }
 
 // Аналитика

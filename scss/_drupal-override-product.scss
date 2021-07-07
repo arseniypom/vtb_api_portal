@@ -1,4 +1,12 @@
 /* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR PRODUCTS ----------------------- */
+// Breadcrumb
+.applicationWrapper header.titleSection .breadcrumb a, .apiWrapper header.titleSection .breadcrumb a, .ibmapimGetStarted header .homepageLink.breadcrumb a, .apicProduct .breadcrumb a, .productApiWrapper .breadcrumb a, .breadcrumb a {
+  color: #9A9EA5;
+  font-size: .875rem;
+  line-height: 20px;
+  vertical-align: top;
+}
+
 // Карточка продукта в каталоге API ----------------------------------------------------
 .bx--card .apicProductCard {
   padding-left: 0;
