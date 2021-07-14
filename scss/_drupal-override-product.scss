@@ -82,7 +82,7 @@
 // Звезды (рейтинг)
 .br-widget a:after {
   content: '\e006';
-  color: #7B7E86 !important;
+  color: $color-neutral-50 !important;
 }
 .bx--card .votingapi-widgets .select-wrapper a {
   font-size: 19px;

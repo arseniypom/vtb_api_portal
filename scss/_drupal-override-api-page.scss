@@ -112,20 +112,36 @@ a.subscribeButton.button {
 }
 
 // Раздел "Обзор"
-section.overviewHeader h2 {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 32px;
+section.overviewHeader {
+  margin-bottom: 2rem;
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
 .apiconnect-explorer .labelText {
   font-size: 1rem;
 }
 
-.operationInformation.operationDownloadOpenApi .labelText {
-  color: $color-primary-50;
-  font-weight: 500;
-  line-height: 24px;
+.operationInformation.operationDownloadOpenApi {
+  width: fit-content;
+  padding: 12px 28px;
+  border: 1px solid #3A85FF;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  .labelText {
+    color: $color-primary-50;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0;
+    margin-left: .45rem;
+  }
 }
 
 use {
@@ -150,12 +166,17 @@ use {
 }
 
 // Лэйблы
-.apiconnect-explorer .operationInformation .labelText {
-  font-weight: 600;
-  font-size: 20px;
+.operationInformation .labelText {
+  font-weight: 400;
+  font-size: 1rem;
   line-height: 24px;
-  margin-bottom: 1.5rem;
 }
+// Текст справа от лэйблов
+.apiconnect-explorer .overviewBody .valueText {
+  display: flex;
+  align-items: center;
+}
+
 
 // Эндпоинты
 .apiEndpoint {
@@ -209,7 +230,7 @@ use {
 // Тип / эндпоинт
 .operationType .labelText,
 .operationEndpoints .labelText {
-  color: #7B7E86;
+  color: $color-neutral-50;
 }
 
 // Безопасность
@@ -243,7 +264,7 @@ use {
 }
 
 .securityTitle.keyValueDisplay {
-  color: #7B7E86;
+  color: $color-neutral-50;
   font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
@@ -347,7 +368,7 @@ use {
 .apiconnect-explorer .bx--text__input {
   font-weight: inherit;
   background-color: transparent;
-  color: #7B7E86;
+  color: $color-neutral-50;
   border: 1px solid #505258;
   border-radius: 4px;
 
@@ -584,7 +605,7 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
   color: #E5E7EB;
 }
 .clientIDContainer .field__label, .clientSecretContainer .field__label, .applicationCredentials .credentialsTable .credentialsContent .credentialsData .field__label {
-  color: #7B7E86;
+  color: $color-neutral-50;
 }
 .bx--global-light-ui .modal-header {
   padding: 1rem 3rem .5rem;

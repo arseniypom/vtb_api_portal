@@ -14,6 +14,35 @@
   }
 }
 
+// Меню для изменения приложения (справа от названия приложения)
+.applicationMenu .dropit-trigger a.trigger {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid $color-primary-50;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba(136, 136, 136, 0.08);
+  }
+  &:active {
+    background-color:  rgba(255, 255, 255, 0.2);
+  }
+  &:focus {
+    outline: none;
+  }
+
+  .dropit-icon {
+    transform: rotate(90deg);
+
+    svg {
+      fill: $color-primary-50;
+    }
+  }
+}
+
 // Табы в разделе "Идентификационные данные"
 .applicationWrapper .titleSection .applicationTabs li a, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li a, .applicationWrapper .titleSection .applicationTabs li, .applicationCredentials .credentialsTable .credentialsContent .credentialsTabs li .apicMyOrg .titleSection .organizationTabs li a, .apicMyOrg .titleSection .organizationTabs li {
   color: $color-neutral-05;
@@ -21,7 +50,7 @@
 
 // Добавление новых идентификационных данных
 .bx--global-light-ui .form-item {
-    margin: 1rem 0 .5rem;
+    // margin: 1rem 0 .5rem;
 }
 @media (max-width: 767px) {
   .route-apic-appcredentials-create .main-container .row {
@@ -57,6 +86,17 @@ div#drupal-modal--content {
   color: #E5E7EB;
 }
 
+.route-apic-appcreate .main-container .row {
+  background-color: $color-neutral-90;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.application-create-form-one .form-group .bx--form-item label {
+  color: $color-neutral-50;
+}
+
 .bx--global-light-ui .modal-body .form-item input, .bx--global-light-ui .modal-body .form-item input:hover, .bx--global-light-ui .modal-body .form-item textarea, .bx--global-light-ui .modal-body .form-item select {
   border: 1px solid #505258;
   box-sizing: border-box;
@@ -84,17 +124,31 @@ div#drupal-modal--content {
 }
 .field--name-application-redirect-endpoints .form-item .clearfix {
   border: none;
+  padding-left: 0;
 }
 
 .field--name-application-redirect-endpoints .field-multiple-table th.field-label {
   display: table-cell;
-  color: #E5E7EB !important;
+  color: $color-neutral-50 !important;
   line-height: normal;
   border-bottom: 0;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: normal;
   padding-left: 0;
 }
+
+.field--name-application-redirect-endpoints .field-multiple-table div.form-type-textfield {
+  margin-left: 0;
+}
+
+.bx--global-light-ui button.apicSecondary.field-add-more-submit {
+  border-color: $color-neutral-50;
+  color: $color-neutral-50;
+  font-size: 14px !important;
+  font-weight: normal;
+  padding: .5rem;
+}
+
 
 // Кнопка-крест
 .field--name-application-redirect-endpoints .field-multiple-table button.multiple-fields-remove-button {

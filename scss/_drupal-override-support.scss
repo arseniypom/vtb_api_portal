@@ -21,15 +21,27 @@
   flex-direction: column-reverse;
 }
 
+// Отключение фильтров
+.faqDiv #apic-view-filter {
+  display: none;
+}
+
 // Заголовок "Часто задаваемые вопросы"
 .bx--global-light-ui .view-faqs .views-exposed-form h2.viewTitle {
   font-weight: 600;
-  margin: 0 0 2.5rem;
+  margin: 2.5rem 0;
 }
 
 // Блок со сгруппированными вопросами
-.faq .content {
-  align-items: initial;
+article.faq {
+  margin-bottom: 2.5rem;
+  h2 a span {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .content {
+    align-items: initial;
+  }
 }
 
 // Вопрос
@@ -41,6 +53,16 @@
   border-top: 1px solid #505258;
   border-radius: 0;
 }
+.ui-accordion .ui-accordion-header.faqfield-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span.ui-accordion-header-icon {
+    display: none;
+  }
+}
+
 
 // Ответ
 .supportContentWrapper .views-element-container .view .ui-widget-content {
@@ -70,4 +92,43 @@
 // Форма с фидбэком
 #contact-message-feedback-form {
   padding-right: 1rem;
+}
+
+.contactFormDiv {
+  width: 100%;
+  max-width: 37rem;
+  padding: 1.5rem;
+  background-color: #2D2F35;
+  border-radius: 8px;
+}
+
+// Картинка капчи
+[data-drupal-selector="edit-captcha-image"] {
+  border-radius: 8px;
+}
+
+#contact-message-feedback-form {
+  .bx--label {
+    font-weight: normal;
+    font-size: 14px;
+    color: $color-neutral-50;
+  }
+}
+
+.reload-captcha {
+  font-weight: 500;
+  font-size: .875rem;
+  color: $color-primary-50;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: .375rem;
+  }
+
+  &:hover {
+    color: $color-primary-50;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }

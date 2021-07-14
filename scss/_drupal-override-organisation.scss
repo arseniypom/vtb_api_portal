@@ -46,6 +46,16 @@ h1.orgName {
   align-items: center;
   justify-content: center;
 
+  &:hover {
+    background: rgba(136, 136, 136, 0.08);
+  }
+  &:active {
+    background-color:  rgba(255, 255, 255, 0.2);
+  }
+  &:focus {
+    outline: none;
+  }
+
   .dropit-icon {
     transform: rotate(90deg);
 
@@ -71,6 +81,15 @@ h1.orgName {
 .apicNewUser.orgInvite {
   background-color: transparent !important;
   color: $color-primary-50 !important;
+
+  .invite-btn {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: .375rem;
+    }
+  }
 
   &:hover {
     color: $color-primary-60 !important;
@@ -206,12 +225,12 @@ h1.orgName {
 
 // Форма приглашение нового сотрудника
 .bx--global-light-ui .label, .bx--global-light-ui .form-item label, .bx--label {
-  color: #7B7E86;
+  color: $color-neutral-50;
   font-weight: 400;
 }
 
 legend {
-  color: #7B7E86;
+  color: $color-neutral-50;
   border-bottom: none;
 
   & span {
