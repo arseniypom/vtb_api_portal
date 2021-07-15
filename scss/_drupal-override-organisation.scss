@@ -229,9 +229,14 @@ h1.orgName {
   font-weight: 400;
 }
 
+.invite-user-text {
+  padding-bottom: 1.5rem;
+}
+
 legend {
   color: $color-neutral-50;
   border-bottom: none;
+  margin-bottom: 1rem;
 
   & span {
     font-weight: normal;
@@ -253,6 +258,11 @@ legend {
   #edit-role {
     flex-direction: column;
   }
+}
+
+.bx--global-light-ui .bx--form-item.form-type-radio label, .bx--global-light-ui .bx--form-item.form-type-radio label.option {
+  padding: 0;
+  margin-right: 1.5rem;
 }
 
 form#consumerorg-resend-invitation-form {

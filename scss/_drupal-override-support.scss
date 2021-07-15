@@ -94,6 +94,10 @@ article.faq {
   padding-right: 1rem;
 }
 
+.supportContentWrapper .contactDiv {
+  flex: none;
+}
+
 .contactFormDiv {
   width: 100%;
   max-width: 37rem;
@@ -102,9 +106,15 @@ article.faq {
   border-radius: 8px;
 }
 
+// Капча
+[data-drupal-selector="edit-captcha"] {
+  position: relative;
+}
+
 // Картинка капчи
 [data-drupal-selector="edit-captcha-image"] {
   border-radius: 8px;
+  margin-bottom: 1.25rem;
 }
 
 #contact-message-feedback-form {
@@ -113,6 +123,13 @@ article.faq {
     font-size: 14px;
     color: $color-neutral-50;
   }
+}
+
+.reload-captcha-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .625rem 1.5rem .625rem;
 }
 
 .reload-captcha {
@@ -131,4 +148,9 @@ article.faq {
     text-decoration: underline;
     text-underline-offset: 3px;
   }
+}
+
+// Подпись к капче
+#edit-captcha-response--description {
+  display: none;
 }

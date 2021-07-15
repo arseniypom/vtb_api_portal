@@ -194,6 +194,11 @@ jQuery(function() {
       'font-size': '1.25rem',
       'line-height': '24px'
     });
+
+    if (jQuery('.consumerorg-invite-user-form').length > 0) {
+      jQuery('.page-header').text('Приглашение участника');
+      jQuery('<p class="invite-user-text">Отправьте пользователю приглашение присоединиться к клиентской организации</p>').insertAfter('.page-header');
+    }
   } else {
     if (jQuery(window).width() < 768) {
       jQuery('.page-header').css({
@@ -361,4 +366,14 @@ jQuery(function() {
 jQuery(function() {
   // Удаление иконок на модальном окне создания приложения
   jQuery('.icon-before > span').hide();
+});
+
+jQuery(function() {
+  // Работа с капчей
+  if (jQuery('.form-item-captcha-response label').length > 0) {
+    jQuery('.form-item-captcha-response label').text('Введите код с картинки');
+
+    jQuery('.reload-captcha-wrapper a').text('Обновить картинку');
+    jQuery('.reload-captcha-wrapper').insertAfter(jQuery('[data-drupal-selector="edit-captcha-image"]'));
+  }
 });

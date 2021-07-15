@@ -1,5 +1,9 @@
 /* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR APP PAGE ----------------------- */
 
+.page-node-type-application .apicMainContent {
+  overflow: visible;
+}
+
 .applicationWrapper {
   max-width: 1220px;
   margin: 0 auto;
