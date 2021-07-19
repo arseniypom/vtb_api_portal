@@ -6,12 +6,20 @@
   margin: 0 auto;
 }
 
-.search-content
+// .search-content
 
-.node--view-mode-teaser, article.search-result {
-  background-color: $color-darkweb-bg;
+.node--view-mode-teaser, article.search-result,
+.teaser, .view-search-content article.faq {
+  background-color: $color-light-grey-bg;
+  color: #E5E7EB;
   border-radius: 8px;
   border: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  ul {
+    margin: 0;
+  }
 }
 
 .apicTeaserIcon {
@@ -21,7 +29,7 @@
 .apicApiTeaserMain h2 {
   margin-bottom: 0;
 
-  & a {
+  a {
     font-size: 1.5rem;
     font-weight: 600;
   }

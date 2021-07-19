@@ -154,3 +154,31 @@ article.faq {
 #edit-captcha-response--description {
   display: none;
 }
+
+// Отдельная страница с вопросами (открывается по клику на вопрос на странице поиска)
+article.faq.full {
+  margin-bottom: 2.5rem;
+  margin: 1rem auto 2.5rem;
+  max-width: 1220px;
+}
+// Вопрос
+.ui-accordion .ui-accordion-header.faqfield-question {
+  background-color: transparent;
+  border: none;
+  color: #E5E7EB;
+  width: 100%;
+  max-width: 45rem;
+  padding: .5rem;
+  font-weight: 600;
+}
+// Ответ
+.ui-accordion .ui-accordion-content {
+  background-color: transparent;
+  border: none;
+  padding: .5rem;
+  width: 100%;
+  max-width: 45rem;
+  height: auto !important;
+  color: #E5E7EB;
+  text-align: justify;
+}

@@ -41,7 +41,7 @@
 
     &-title {
         display: flex;
-        align-items:baseline;
+        align-items: center;
         &-icon {
             display: flex;
             align-items: center;
@@ -115,11 +115,5 @@
 
     .connection-section {
         flex-direction: column;
-
-        &-title {
-            h3 {
-                margin-left: 0;
-            }
-        }
     }
 }

@@ -134,6 +134,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 // Чекбокс
 .bx--global-light-ui .bx--checkbox-appearance {
   background-color: transparent;
+  border-radius: 4px;
+}
+.bx--global-light-ui .bx--checkbox:checked+.bx--checkbox-appearance, .bx--global-light-ui .bx--checkbox:checked+.bx--checkbox-label .bx--checkbox-appearance {
+  border-color: #0062FF;
+  background-color: #0062FF;
+  border-radius: 4px;
 }
 // Чекбокс радио
 .bx--global-light-ui .bx--radio-button__appearance {

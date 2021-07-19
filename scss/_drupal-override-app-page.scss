@@ -88,6 +88,8 @@
 div#drupal-modal--content {
   background-color: $color-light-grey-bg;
   color: #E5E7EB;
+  width: 100%;
+  max-width: 40rem;
 }
 
 .route-apic-appcreate .main-container .row {
@@ -110,7 +112,6 @@ div#drupal-modal--content {
 // Модальное окно
 .bx--global-light-ui .modal-content {
   border-radius: 4px;
-  border-top: none;
 }
 
 .modal-content {
@@ -121,6 +122,7 @@ div#drupal-modal--content {
 
 .bx--global-light-ui .modal-body {
   overflow-y: scroll;
+  padding: 1.25rem 1.5rem;
 }
 
 .field--name-application-redirect-endpoints .field-multiple-table tbody {

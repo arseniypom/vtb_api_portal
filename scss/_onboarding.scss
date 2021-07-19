@@ -154,16 +154,58 @@
 
 @media (max-width: 374px) {
     .onboarding {
+        margin: 5rem 1rem 0;
         h1 {
             font-size: 2rem;
             line-height: 2rem;
-            margin: 1.75rem 0 1rem;
+            margin: 1rem 0 1rem;
         }
 
         h3 {
             max-width: none;
             font-size: 1rem;
             line-height: 1.3rem;
+        }
+
+        &-image {
+            height: 5rem;
+            width: 4rem;
+            top: -6rem;
+        
+            &-arrow {
+                width: 3rem;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 424px) and (max-height: 500px) {
+    .onboarding {
+        margin: 3rem 1rem 0;
+        h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+            margin: 1rem 0 1rem;
+        }
+
+        h3 {
+            max-width: none;
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
+
+        &-image {
+            height: 5rem;
+            width: 4rem;
+            top: -6rem;
+        
+            &-arrow {
+                width: 3rem;
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
 }

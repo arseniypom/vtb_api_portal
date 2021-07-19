@@ -278,8 +278,32 @@ p {
 
 .scroll-right {
     margin: 1rem 0 0 1rem;
+    display: none;
+    align-items: center;
 
     p {
         font-size: .9rem;
+        margin-right: .5rem;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .scroll-right.client-path-arrow {
+        display: flex;
+        position: absolute;
+        bottom: 2rem;
+    }
+    .scroll-right.news {
+        display: flex;
+    }
+}
+@media screen and (max-width: 768px) {
+    .scroll-right.my-org {
+        display: flex;
+    }
+}
+@media screen and (max-width: 374px) {
+    .scroll-right.subscriptions {
+        display: flex;
     }
 }

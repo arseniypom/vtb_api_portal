@@ -125,7 +125,7 @@ section.overviewHeader {
   font-size: 1rem;
 }
 
-.operationInformation.operationDownloadOpenApi {
+.apiconnect-explorer .operationInformation.operationDownloadOpenApi {
   width: fit-content;
   padding: 12px 28px;
   border: 1px solid #3A85FF;
@@ -141,6 +141,16 @@ section.overviewHeader {
     line-height: 24px;
     padding: 0;
     margin-left: .45rem;
+  }
+
+  &:hover {
+    background: rgba(136, 136, 136, 0.08);
+  }
+  &:active {
+    background-color:  rgba(255, 255, 255, 0.2);
+  }
+  &:focus {
+    outline: none;
   }
 }
 
