@@ -9,11 +9,22 @@
 .supportContentWrapper {
   max-width: 1220px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
+
 .apicMainContent .supportContentWrapper .views-element-container .view {
   background-color: inherit;
   background: inherit;
   border: none;
+  padding: 0;
+}
+
+.supportContentWrapper .faqDiv {
+  width: 100%;
+  max-width: 37rem;
+  flex: none;
+  padding-right: 0;
 }
 
 // Блок с заголовком "Часто задаваемые вопросы" и фильтром
@@ -21,16 +32,21 @@
   flex-direction: column-reverse;
 }
 
+// Заголовок "Часто задаваемые вопросы"
+.bx--global-light-ui .view-faqs .view-filters.form-group {
+  padding: 0;
+
+  .views-exposed-form h2.viewTitle {
+    font-weight: 600;
+    margin: 0 0 2.5rem;
+  }
+}
+
 // Отключение фильтров
 .faqDiv #apic-view-filter {
   display: none;
 }
 
-// Заголовок "Часто задаваемые вопросы"
-.bx--global-light-ui .view-faqs .views-exposed-form h2.viewTitle {
-  font-weight: 600;
-  margin: 2.5rem 0;
-}
 
 // Блок со сгруппированными вопросами
 article.faq {
@@ -100,7 +116,7 @@ article.faq {
 
 .contactFormDiv {
   width: 100%;
-  max-width: 37rem;
+  max-width: 30.5rem;
   padding: 1.5rem;
   background-color: #2D2F35;
   border-radius: 8px;
@@ -155,10 +171,20 @@ article.faq {
   display: none;
 }
 
+// Кнопка отправки сообщения
+.contact-message-feedback-form .form-group.form-actions {
+  flex-direction: row;
+  justify-content: flex-start;
+
+  .button--primary {
+    margin: 0;
+  }
+}
+
 // Отдельная страница с вопросами (открывается по клику на вопрос на странице поиска)
 article.faq.full {
   margin-bottom: 2.5rem;
-  margin: 1rem auto 2.5rem;
+  margin: 0 auto 2.5rem;
   max-width: 1220px;
 }
 // Вопрос

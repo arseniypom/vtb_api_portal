@@ -264,19 +264,24 @@ jQuery(function() {
   }
 
   // Замена стрелки дропменю в шапке профиля и добавление такой же стрелки в раздел поддержки FAQ
-  const dropitArrowCreate = (color) => {
+  const dropitArrowCreate = (color, addClass) => {
     return (jQuery(`
-    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class=${addClass} width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.713751 0.996319C0.713751 0.816319 0.78375 0.64632 0.92375 0.51632C1.19375 0.27632 1.60375 0.29632 1.84375 0.55632L4.99001 4.04946L8.00782 0.560219C8.24782 0.290219 8.65782 0.280219 8.92782 0.520219C9.18782 0.760219 9.20782 1.17022 8.96782 1.44022L5.51001 5.41945C5.23001 5.72945 4.75001 5.72945 4.47001 5.41945L0.883749 1.43632C0.763749 1.30632 0.713751 1.15632 0.713751 0.996319Z" fill="${color}"/>
     </svg>
   `));
   }
 
-  if (jQuery(".orgmenu.dropit > .dropit-trigger > a > .dropit-icon").length > 0) {
+  if (jQuery(".dropit-icon").length > 0) {
     jQuery( ".orgmenu.dropit > .dropit-trigger > a > .dropit-icon").html(dropitArrowCreate('white'));
   }
   if (jQuery(".faqfield-question").length > 0) {
     jQuery( ".faqfield-question").append(dropitArrowCreate('#7B7E86'));
+  }
+  // Замена стрелок в селектах
+  if (jQuery('.bx--select__arrow').length > 0) {
+    jQuery('.bx--select__arrow').remove();
+    jQuery('.bx--select').append(dropitArrowCreate('#7B7E86', 'bx--select__arrow'));
   }
 
   const spinningArrowsSvg = jQuery(`
@@ -349,5 +354,25 @@ jQuery(function() {
     const iconContainers = jQuery('.connection-section-title-icon');
     jQuery(iconContainers[0]).html(icon1);
     jQuery(iconContainers[1]).html(icon2);
+  }
+
+
+  // Реогранизация отображения ролей
+  if (jQuery('.apicMyOrg').length > 0 && jQuery('.apicMyOrgNoMembers').length === 0) {
+    const membersArray = jQuery("tr[class^='member']");
+    membersArray.each((i, member) => {
+      const tdWithRole = jQuery(member).find('td > span.apicMyOrgMemberRoleEnabled');
+      const role = tdWithRole.attr( "title" ).split('_').slice(-1)[0];
+      const emptyTds = jQuery(member).find('td').filter((i, td) => {
+        // return jQuery(td).text() === ' ';
+        // console.log(jQuery(td).contents());
+      });
+      // console.log(emptyTds);
+    });
+  }
+
+  // Добавление слова "ver." на страницу документации АПИ
+  if (jQuery('.apiconnect-explorer').length > 0) {
+    jQuery('.apicProductVersion.apiVersion').prepend('ver. ')
   }
 });

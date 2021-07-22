@@ -1,10 +1,19 @@
 /* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR PRODUCTS ----------------------- */
 // Breadcrumb
+.apicProduct .apicProductHeader .breadcrumb, .productApiWrapper header.titleSection .breadcrumb {
+  display: flex;
+  align-items: center;
+  color: $color-neutral-40;
+}
 .applicationWrapper header.titleSection .breadcrumb a, .apiWrapper header.titleSection .breadcrumb a, .ibmapimGetStarted header .homepageLink.breadcrumb a, .apicProduct .breadcrumb a, .productApiWrapper .breadcrumb a, .breadcrumb a {
-  color: #9A9EA5;
+  color: $color-neutral-40;
   font-size: .875rem;
   line-height: 20px;
-  vertical-align: top;
+  margin: 0 .5rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 // Карточка продукта в каталоге API ----------------------------------------------------
@@ -50,11 +59,6 @@
   }
 }
 
-// Заголовок карточки АПИ
-.bx--card .apicProductCardMain .bx--about__title--name {
-  width: 100%;
-  height: auto;
-}
 
 .bx--card .apicApiCount {
   border-top: none;
@@ -195,6 +199,7 @@
 
 // Лэйблы "API" и "Тарифные планы"
 h2.field__label.label {
+  color: $color-neutral-10;
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 32px;
@@ -224,12 +229,33 @@ h2.field__label.label {
   padding: .625rem 0;
 }
 
+// Обертка карточек API
+.apicProductApiList {
+  margin-bottom: 2.5rem;
+  & > .views-element-container.form-group {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.block-column, .blazy.block-column, .item-list>.block-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Обертка карточкИ API
+.main-container .apicProductApiList li {
+  display: inline-flex;
+}
+
+
 // Карточка API
 .node--type-api.node--view-mode-embedded.bx--card {
   min-height: 8rem;
   border: none;
   padding: 1.25rem;
   position: relative;
+  width: 17.5rem;
 }
 
 article a.card-read_more.link-primary {
@@ -255,9 +281,13 @@ article a.card-read_more.link-primary {
 
 .bx--card .apicApiCardMain {
   margin-left: 0;
+  width: 100%;
 }
 
+// Заголовок карточки АПИ
 .bx--about__title--name {
+  width: 100%;
+  height: auto;
   padding: 0;
 }
 
@@ -276,7 +306,7 @@ article a.card-read_more.link-primary {
 // Тарифные планы
 .subHeading {
   display: flex;
-  padding: 10px 0 20px 0;
+  padding: 20px 0;
   max-width: 1220px;
   margin: 0 auto;
   width: 100%;
@@ -296,7 +326,7 @@ article a.card-read_more.link-primary {
 h2.field__label.label.tariff-label {
   width: 100%;
   max-width: 1220px;
-  margin: 0 auto 10px;
+  margin: 0 auto;
 }
 
 

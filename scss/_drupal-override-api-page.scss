@@ -6,7 +6,7 @@
 
 // Две колонки вместе
 .apicProduct .apicProductBody, .productApiWrapper #innerWrapper {
-  padding: 0 3rem 1rem;
+  padding: 0;
   max-width: 1220px;
   margin: 0 auto;
 }
@@ -74,6 +74,15 @@ section.swaggerValidationErrors {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0;
+}
+
+.apiconnect-explorer .operation-section .operationHeader {
+  flex-direction: column;
+}
+
+// Тэг под названием метода
+.operationTags.tagsContainer {
+  margin-top: 1rem;
 }
 
 .apiconnect-explorer .operation-section .operationDisplay section.tab-content {
@@ -332,11 +341,18 @@ use {
 
 .apiconnect-explorer .operation-section .operationDisplay .bx--tabs.op-tabs {
   padding: 0;
+  min-height: auto;
+  border-bottom: 2px solid #37383C;
 }
-.operationTitle h2 {
-  font-weight: 600;
-  font-size: 1.75rem;
-  line-height: 2rem;
+
+.operationTitle {
+  padding-right: 0;
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
 }
 @media (max-width: 767px) {
   .operationTags.tagsContainer span {
@@ -347,7 +363,6 @@ use {
     padding: 0.5rem;
   }
   .operationTitle {
-    padding-right: .5rem;
     h2 {
       font-size: 1rem;
       line-height: 1;
@@ -371,6 +386,7 @@ use {
 }
 .bx--accordion__item:last-child {
   border-bottom: none;
+  border-top: 1px solid $color-neutral-80;
 }
 
 
@@ -408,14 +424,19 @@ use {
   border-right: none;
 }
 .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading:focus, .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading:hover, .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading:active {
-  background: rgba(136, 136, 136, 0.08);
+  // background: rgba(136, 136, 136, 0.08);
+  background: transparent;
   border: none;
   border-top: 0;
+}
+.bx--accordion__heading:focus .bx--accordion__arrow {
+  outline: none;
 }
 
 .bx--data-table-v2 th, .bx--data-table-v2 td {
   font-size: .875rem;
-  border-top: 1px solid #37383C;
+  // border-top: 1px solid #37383C;
+  border: none;
   padding-left: .75rem;
   vertical-align: middle;
   text-align: left;
@@ -543,33 +564,34 @@ tr.bx--expandable-row-v2:hover+tr[data-child-row]>td {
 }
 .apiconnect-explorer .bx--tabs__nav {
   position: unset;
-  background: #22242A;
-  color: #E5E7EB;;
-  border-radius: 16px;
+  color: #7B7E86;
   width: fit-content;
-  height: 2rem;
   display: flex;
   align-items: center;
-  padding: 4px;
-}
-@media (max-width: 767px) {
-  .apiconnect-explorer .bx--tabs__nav {
-    height: auto;
-  }
+  margin-bottom: -2px;
 }
 
 li.bx--tabs__nav-item.bx--tabs__nav-item {
-  padding: 2px 16px;
+  padding: 0 1rem .5rem;
   background-color: transparent;
+  margin: 0;
+
+  a {
+    color: inherit;
+    font-weight: 400;
+    line-height: 1.25rem;
+    padding-right: 0;
+  }
 
   &--selected {
-    border-bottom: none;
-    color: #E5E7EB;
-    background-color: #505258;
-    border-radius: 22px;
     display: flex;
     align-items: center;
-    height: 24px;
+    border-bottom: 2px solid $color-primary-60;
+
+    a {
+      color: $color-neutral-10;
+      // font-weight: 400;
+    }
   }
 }
 
@@ -669,10 +691,14 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 a.bx--tabs-trigger-text {
   color: $color-primary-60;
 }
-
-.bx--tabs__nav--hidden {
-  display: none !important;
+// Отключение рамки у контента под табами
+.apiconnect-explorer .operation-section .operationDisplay .tab-content {
+  border: none;
 }
+
+// .bx--tabs__nav--hidden {
+//   display: none !important;
+// }
 @media (max-width: 767px) {
   // Две колонки вместе
   .apicProduct .apicProductBody, .productApiWrapper #innerWrapper {

@@ -40,7 +40,7 @@ h1.orgName {
 .apicMyOrgMemberDetails .orgApicUser {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 20rem 20rem;
   width: auto;
   max-width: 65rem;
 }
@@ -75,11 +75,6 @@ h1.orgName {
 }
 
 // Раздел "Участники"
-@media (max-width: 767px) {
-  .apicMyOrg .field.organizationMembers .memberHeader {
-    margin: 2.5rem 0 .7rem;
-  }
-}
 @media (max-width: 424px) {
   .apicMyOrg .field.organizationMembers .memberHeader {
     flex-direction: column;
@@ -112,12 +107,16 @@ h1.orgName {
 
 
 // Заголовок "Участники"
-.apicMyOrg .memberHeader h3 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 32px;
-  color: #F3F4F6;
+.apicMyOrg .memberHeader {
+  margin: 2.5rem 0 .7rem;
+
+  h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    color: #F3F4F6;
+  }
 }
 
 // Список участников
@@ -186,7 +185,6 @@ h1.orgName {
 }
 
 // Роль участника
-// [a^=”1”]
 .apicMyOrg .apicMyOrgMembers polygon {
   fill: $color-primary-50;
 }
