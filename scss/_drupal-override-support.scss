@@ -69,6 +69,12 @@ article.faq {
   border-top: 1px solid #505258;
   border-radius: 0;
 }
+.views-element-container .view.view-faqs .ui-state-default > svg {
+  transition: transform .3s linear;
+}
+.views-element-container .view.view-faqs .ui-state-active > svg {
+  transform: rotate(180deg);
+}
 .ui-accordion .ui-accordion-header.faqfield-question {
   display: flex;
   align-items: center;

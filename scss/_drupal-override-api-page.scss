@@ -384,7 +384,7 @@ use {
     line-height: 20px;
   }
 }
-.bx--accordion__item:last-child {
+.bx--accordion__item {
   border-bottom: none;
   border-top: 1px solid $color-neutral-80;
 }
@@ -435,7 +435,7 @@ use {
 
 .bx--data-table-v2 th, .bx--data-table-v2 td {
   font-size: .875rem;
-  // border-top: 1px solid #37383C;
+  border-top: none !important;
   border: none;
   padding-left: .75rem;
   vertical-align: middle;
@@ -546,8 +546,18 @@ select#operationResponses {
   font-weight: 700;
   border-right: none;
 }
+.bx--data-table-v2 tr {
+  border-bottom: 1px solid #37383C;
+}
+.bx--data-table-v2 tr:hover td {
+  background-color: transparent;
+  border: none !important;
+}
+tr.bx--parent-row-v2.bx--expandable-row-v2 {
+  border-bottom: none;
+}
 .bx--data-table-v2 th, .bx--data-table-v2 td {
-  border-top: 1px solid #37383c !important;
+  border-top: none;
 }
 .bx--data-table-v2--zebra tbody tr:nth-child(even) {
   background-color: transparent;
@@ -602,7 +612,18 @@ tr.bx--expandable-row-v2+tr[data-child-row] td {
 .apiconnect-explorer .parameterTable.bx--data-table-v2 tbody tr:hover td, .apiconnect-explorer .definitionsBody .bx--data-table-v2 tbody tr:hover td {
   border: none;
 }
-
+// Стрелки в определениях
+.bx--table-expand-v2__svg {
+  fill: $color-neutral-50;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.bx--table-expand-v2[data-previous-value='collapsed'] .bx--table-expand-v2__svg {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
 // Отключение аутлайна стрелок по клику (focus)
 .bx--table-expand-v2__button:focus svg {
   -webkit-box-shadow: none;

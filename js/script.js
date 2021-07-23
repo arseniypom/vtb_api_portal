@@ -284,6 +284,16 @@ jQuery(function() {
     jQuery('.bx--select').append(dropitArrowCreate('#7B7E86', 'bx--select__arrow'));
   }
 
+  // Перестановка стрелок на странице документации апи в разделе "Определение"
+  if (jQuery('.definitionsBody').length > 0) {
+    jQuery('.definitionsBody > div > table > thead > tr > th')[0].remove()
+    const definitionsArray = jQuery("tr.definitionRow");
+    definitionsArray.each((i, definition) => {
+      const arrayTd = jQuery(definition).find('.bx--table-expand-v2');
+      arrayTd.appendTo(definition)
+    });
+  }
+
   const spinningArrowsSvg = jQuery(`
     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M7.98267 4.87419C7.87334 4.77149 7.81003 4.63197 7.81096 4.47277C7.81924 4.17184 8.06532 3.93424 8.36018 3.93682L10.1538 3.92331L10.1625 3.91397C9.28852 3.23656 8.19135 2.83334 7 2.83334C4.14653 2.83334 1.83333 5.14653 1.83333 8.00001C1.83333 8.1535 1.84003 8.30544 1.85314 8.45553C1.87741 8.73341 1.71656 9.0017 1.44939 9.08185C1.14137 9.17426 0.818361 8.98213 0.784676 8.66231C0.761753 8.44468 0.75 8.22371 0.75 8.00001C0.75 4.54823 3.54822 1.75001 7 1.75001C8.47021 1.75001 9.82185 2.25764 10.8892 3.1072L10.7338 1.41018C10.7067 1.11036 10.9346 0.855634 11.2344 0.828583C11.5285 0.807606 11.7889 1.02939 11.816 1.32922L12.0558 4.37231C12.0843 4.71925 11.8104 5.01079 11.4624 5.00397L8.34691 5.02199C8.19948 5.0207 8.07985 4.96548 7.98267 4.87419Z" fill="#3A85FF"/>
@@ -357,22 +367,62 @@ jQuery(function() {
   }
 
 
-  // Реогранизация отображения ролей
+  // Реогранизация отображения ролей владельца и участников
   if (jQuery('.apicMyOrg').length > 0 && jQuery('.apicMyOrgNoMembers').length === 0) {
+    // Владелец
+    const ownerMail = jQuery('.apicMyOrgOwner .apicMyOrgMemberDetails').find('.apicUserMail').text();
+    jQuery('.apicMyOrgOwner .apicMyOrgMemberDetails').find('.ownerTag').remove();
+    jQuery(`<div><p>${ownerMail}</p></div><div><p>Владелец</p></div>`).insertAfter('.apicMyOrgOwner .apicMyOrgMemberDetails .orgApicUser');
+    jQuery('.apicMyOrgOwner .apicMyOrgMemberDetails').find('.apicUserMail').remove();
+    // Участники
     const membersArray = jQuery("tr[class^='member']");
     membersArray.each((i, member) => {
+      // Захват роли
       const tdWithRole = jQuery(member).find('td > span.apicMyOrgMemberRoleEnabled');
+      console.log(tdWithRole);
       const role = tdWithRole.attr( "title" ).split('_').slice(-1)[0];
-      const emptyTds = jQuery(member).find('td').filter((i, td) => {
-        // return jQuery(td).text() === ' ';
-        // console.log(jQuery(td).contents());
-      });
-      // console.log(emptyTds);
+      // Захват всех ячеек строки члена организации и удаление тех, что отвечают за роли
+      const tds = jQuery(member).find('td')
+      for (let i = 1; i <=3; i++) {
+        jQuery(tds)[i].remove()
+      }
+      // Определение текста для роли
+      let roleName;
+      switch (role) {
+        case 'administrator':
+          roleName = 'Администратор'
+          break;
+        case 'developer':
+          roleName = 'Разработчик'
+          break;
+        case 'viewer':
+          roleName = 'Наблюдатель'
+          break;
+        default:
+          roleName = 'Участник'
+          break;
+      }
+      // Захват почты
+      const emailSpan = jQuery(member).find('.apicUserMail');
+      // Добавление роли
+      jQuery( `<td></td><td><p>${emailSpan.text()}</p></td><td><p>${roleName}</p></td>` ).insertAfter(tds[0]);
+      // Удаление спана с имейлом
+      emailSpan.remove()
     });
+  }
+
+  // Удаление таблицы, если участников нет
+  if (jQuery('.apicMyOrgNoMembers').length > 0) {
+    jQuery('.apicMyOrgMembers').html('<p>Пригласите участников для совместной работы</p>')
   }
 
   // Добавление слова "ver." на страницу документации АПИ
   if (jQuery('.apiconnect-explorer').length > 0) {
     jQuery('.apicProductVersion.apiVersion').prepend('ver. ')
+  }
+
+  // Выделение ссылки открытого раздела в хэдере
+  if (jQuery('.catalog-info-public-cards-item').length > 0 || jQuery('.apicProductApiList').length > 0 || jQuery('.apiconnect-explorer-menu').length > 0) {
+    jQuery('.header-menu-links-item:contains("Каталог API")').addClass('header-menu-links-item-active')
   }
 });
