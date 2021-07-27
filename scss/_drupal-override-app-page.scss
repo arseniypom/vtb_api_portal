@@ -113,6 +113,9 @@ div#drupal-modal--content {
 .bx--global-light-ui .modal-content {
   border-radius: 4px;
 }
+.bx--global-light-ui .modal-header .close {
+  background-color: transparent;
+}
 
 .modal-content {
   background-color: $color-light-grey-bg;

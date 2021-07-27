@@ -54,6 +54,13 @@
 // Название карточки
 .bx--card .apicProductCardMain {
   width: 100%;
+
+  // Заголовок
+  .bx--about__title--name {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
   .apicProductName {
     max-width: 100%;
   }
@@ -279,17 +286,15 @@ article a.card-read_more.link-primary {
   grid-template-columns: none;
 }
 
+.bx--about__title--name {
+  width: 100%;
+}
+
 .bx--card .apicApiCardMain {
   margin-left: 0;
   width: 100%;
 }
 
-// Заголовок карточки АПИ
-.bx--about__title--name {
-  width: 100%;
-  height: auto;
-  padding: 0;
-}
 
 .apicApiCardVersion {
   font-size: .75rem;

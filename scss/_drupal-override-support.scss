@@ -126,6 +126,10 @@ article.faq {
   padding: 1.5rem;
   background-color: #2D2F35;
   border-radius: 8px;
+
+  h2 {
+    font-weight: 600;
+  }
 }
 
 // Капча
@@ -137,6 +141,12 @@ article.faq {
 [data-drupal-selector="edit-captcha-image"] {
   border-radius: 8px;
   margin-bottom: 1.25rem;
+}
+
+@media (max-width: 767px) {
+  [data-drupal-selector="edit-captcha-image"] {
+    margin-bottom: .5rem;
+  }
 }
 
 #contact-message-feedback-form {
@@ -169,6 +179,13 @@ article.faq {
     color: $color-primary-50;
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reload-captcha-wrapper {
+    position: static;
+    padding: .625rem 0 .625rem;
   }
 }
 

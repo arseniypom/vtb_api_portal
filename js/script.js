@@ -188,7 +188,7 @@ jQuery(function() {
       'line-height': '24px'
     });
 
-    if (jQuery('.consumerorg-invite-user-form').length > 0) {
+    if (jQuery('.consumerorg-invite-user-form').length) {
       jQuery('.page-header').text('Приглашение участника');
       jQuery('<p class="invite-user-text">Отправьте пользователю приглашение присоединиться к клиентской организации</p>').insertAfter('.page-header');
     }
@@ -238,17 +238,14 @@ jQuery(function() {
       </div>`
     );
   }
-
-  if (jQuery('.apicMyOrgMembers').length > 0) {
+  if (jQuery('.apicMyOrgMembers').length) {
     jQuery('.organizationMembers').append(scrollRight('my-org'));
   }
-
-  if (jQuery('.client-path-bg').length > 0) {
+  if (jQuery('.client-path-bg').length) {
     jQuery('.client-path-bg').append(scrollRight('client-path-arrow'));
     jQuery('.news').append(scrollRight('news'));
   }
-
-  if (jQuery('.subscriptionsTable').length > 0 && jQuery('.noSubsFound').length === 0) {
+  if (jQuery('.subscriptionsTable').length && jQuery('.noSubsFound').length === 0) {
     jQuery('.subscriptionsTable').append(scrollRight('subscriptions'));
   }
 
@@ -259,33 +256,32 @@ jQuery(function() {
       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7C0 3.13 3.13 0 7 0C10.87 0 14 3.13 14 7C14 8.76212 13.3511 10.3708 12.2789 11.6005L15.7802 15.111C16.0337 15.3652 16.0332 15.7767 15.779 16.0302C15.5248 16.2837 15.1133 16.2832 14.8598 16.029L11.3373 12.4973C10.1453 13.4386 8.639 14 7 14C3.13 14 0 10.87 0 7ZM12.7 7C12.7 3.86 10.14 1.3 7 1.3C3.86 1.3 1.3 3.86 1.3 7C1.3 10.14 3.86 12.7 7 12.7C10.14 12.7 12.7 10.14 12.7 7Z" fill="white"/>
     </svg>
   `);
-  if (jQuery( ".ibmapimSearch > .imageContainer > a" ).length > 0) {
+  if (jQuery( ".ibmapimSearch > .imageContainer > a" ).length) {
     jQuery( ".ibmapimSearch > .imageContainer > a" ).html(searchIconSvg);
   }
 
   // Замена стрелки дропменю в шапке профиля и добавление такой же стрелки в раздел поддержки FAQ
   const dropitArrowCreate = (color, addClass) => {
     return (jQuery(`
-    <svg class=${addClass} width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0.713751 0.996319C0.713751 0.816319 0.78375 0.64632 0.92375 0.51632C1.19375 0.27632 1.60375 0.29632 1.84375 0.55632L4.99001 4.04946L8.00782 0.560219C8.24782 0.290219 8.65782 0.280219 8.92782 0.520219C9.18782 0.760219 9.20782 1.17022 8.96782 1.44022L5.51001 5.41945C5.23001 5.72945 4.75001 5.72945 4.47001 5.41945L0.883749 1.43632C0.763749 1.30632 0.713751 1.15632 0.713751 0.996319Z" fill="${color}"/>
-    </svg>
-  `));
+      <svg class=${addClass} width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.713751 0.996319C0.713751 0.816319 0.78375 0.64632 0.92375 0.51632C1.19375 0.27632 1.60375 0.29632 1.84375 0.55632L4.99001 4.04946L8.00782 0.560219C8.24782 0.290219 8.65782 0.280219 8.92782 0.520219C9.18782 0.760219 9.20782 1.17022 8.96782 1.44022L5.51001 5.41945C5.23001 5.72945 4.75001 5.72945 4.47001 5.41945L0.883749 1.43632C0.763749 1.30632 0.713751 1.15632 0.713751 0.996319Z" fill="${color}"/>
+      </svg>
+    `));
   }
-
-  if (jQuery(".dropit-icon").length > 0) {
+  if (jQuery(".dropit-icon").length) {
     jQuery( ".orgmenu.dropit > .dropit-trigger > a > .dropit-icon").html(dropitArrowCreate('white'));
   }
-  if (jQuery(".faqfield-question").length > 0) {
+  if (jQuery(".faqfield-question").length) {
     jQuery( ".faqfield-question").append(dropitArrowCreate('#7B7E86'));
   }
   // Замена стрелок в селектах
-  if (jQuery('.bx--select__arrow').length > 0) {
+  if (jQuery('.bx--select__arrow').length) {
     jQuery('.bx--select__arrow').remove();
     jQuery('.bx--select').append(dropitArrowCreate('#7B7E86', 'bx--select__arrow'));
   }
 
   // Перестановка стрелок на странице документации апи в разделе "Определение"
-  if (jQuery('.definitionsBody').length > 0) {
+  if (jQuery('.definitionsBody').length) {
     jQuery('.definitionsBody > div > table > thead > tr > th')[0].remove()
     const definitionsArray = jQuery("tr.definitionRow");
     definitionsArray.each((i, definition) => {
@@ -300,8 +296,7 @@ jQuery(function() {
       <path d="M5.57521 10.7447C5.68453 10.8474 5.74784 10.9869 5.74692 11.1461C5.73863 11.447 5.49255 11.6846 5.1977 11.682L3.40407 11.6955L3.39702 11.7031C4.32775 12.6088 5.59873 13.1667 7 13.1667C9.85347 13.1667 12.1667 10.8535 12.1667 8.00001C12.1667 7.68164 12.1379 7.37 12.0827 7.06754C12.0314 6.78582 12.1757 6.49671 12.4449 6.39885C12.7393 6.29177 13.0655 6.45424 13.1273 6.76142C13.2078 7.16176 13.25 7.57595 13.25 8.00001C13.25 11.4518 10.4518 14.25 7 14.25C5.31819 14.25 3.79153 13.5857 2.66808 12.5052L2.82411 14.2087C2.85116 14.5085 2.6233 14.7632 2.32348 14.7903C2.02936 14.8112 1.76893 14.5895 1.74188 14.2896L1.5021 11.2465C1.47358 10.8996 1.74746 10.6081 2.0955 10.6149L5.21097 10.5969C5.3584 10.5981 5.47803 10.6534 5.57521 10.7447Z" fill="#3A85FF"/>
     </svg>
   `);
-
-  if (jQuery('.reload-captcha').length > 0) {
+  if (jQuery('.reload-captcha').length) {
     jQuery('.reload-captcha').prepend(spinningArrowsSvg);
   }
 
@@ -313,7 +308,7 @@ jQuery(function() {
     </svg>
   `);
 
-  if (jQuery( ".swaggerDownload" ).length > 0) {
+  if (jQuery( ".swaggerDownload" ).length) {
     jQuery( ".swaggerDownload" ).html(downloadIconSvg);
 
     // Захват ссылки на скачивание апи и других атрибутов
@@ -331,16 +326,23 @@ jQuery(function() {
     divDownload.replaceWith(jQuery(buttonDownload));
   }
 
+  // Изменение крестика закрытия модального окна
+  const crossSvg = jQuery(`
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.40942 0.490063C1.15558 0.236222 0.744026 0.236222 0.490185 0.490063C0.236344 0.743904 0.236344 1.15546 0.490185 1.4093L6.0808 6.99991L0.590648 12.4901C0.336807 12.7439 0.336808 13.1555 0.590649 13.4093C0.844489 13.6631 1.25605 13.6631 1.50989 13.4093L7.00004 7.91915L12.4902 13.4093C12.744 13.6631 13.1556 13.6631 13.4094 13.4093C13.6633 13.1555 13.6633 12.7439 13.4094 12.4901L7.91928 6.99991L13.5099 1.4093C13.7637 1.15546 13.7637 0.743904 13.5099 0.490063C13.256 0.236222 12.8445 0.236222 12.5906 0.490063L7.00004 6.08068L1.40942 0.490063Z" fill="#7B7E86"/>
+    </svg>
+  `)
+  if (jQuery( "button.close" ).length) {
+    jQuery( "button.close > span" ).html(crossSvg)
+  }
+
   // Изменение высоты textarea в разделе поддержки
-  if (jQuery(".form-textarea").length > 0) {
+  if (jQuery(".form-textarea").length) {
     jQuery( ".form-textarea").attr('rows', '6');
   }
 
-  // Удаление иконок на модальном окне создания приложения
-  jQuery('.icon-before > span').hide();
-
   // Работа с капчей
-  if (jQuery('.form-item-captcha-response label').length > 0) {
+  if (jQuery('.form-item-captcha-response label').length) {
     jQuery('.form-item-captcha-response label').text('Введите код с картинки');
 
     jQuery('.reload-captcha-wrapper a').text('Обновить картинку');
@@ -360,15 +362,40 @@ jQuery(function() {
       <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333496 4C0.333496 1.79086 2.12436 0 4.3335 0H12.9739C13.9902 0 14.9683 0.386803 15.7097 1.08185L20.4026 5.48145C21.2092 6.23764 21.6668 7.29396 21.6668 8.39959V20C21.6668 22.2091 19.876 24 17.6668 24H4.3335C2.12436 24 0.333499 22.2091 0.333497 20L0.333496 4ZM19.2069 7.99999C19.6226 7.99999 19.8308 7.49732 19.5368 7.20334L14.4635 2.12998C14.1695 1.836 13.6668 2.04421 13.6668 2.45996V6.09972C13.6668 7.14922 14.4644 8 15.4484 8L19.2069 7.99999ZM11.0003 8C11.4789 8 11.867 8.38802 11.867 8.86667V12H15.0003C15.4789 12 15.867 12.388 15.867 12.8667C15.867 13.3453 15.4789 13.7333 15.0003 13.7333H11.867V16.8667C11.867 17.3453 11.4789 17.7333 11.0003 17.7333C10.5216 17.7333 10.1336 17.3453 10.1336 16.8667V13.7333L7.00029 13.7333C6.52165 13.7333 6.13363 13.3453 6.13363 12.8667C6.13363 12.388 6.52165 12 7.00029 12H10.1336V8.86667C10.1336 8.38802 10.5216 8 11.0003 8Z" fill="#0062FF"/>
     </svg>
   `)
-  if (jQuery('.connection-section-title-icon').length > 0) {
+  if (jQuery('.connection-section-title-icon').length) {
     const iconContainers = jQuery('.connection-section-title-icon');
     jQuery(iconContainers[0]).html(icon1);
     jQuery(iconContainers[1]).html(icon2);
   }
 
+  // Замена иконок стрелок в пагинации
+  const arrowPrevSvg = () => {
+    return (jQuery(
+      `<svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.67828 0.765202C8.0841 1.13981 8.10941 1.77246 7.7348 2.17829L2.36091 8L7.7348 13.8217C8.10941 14.2275 8.0841 14.8602 7.67828 15.2348C7.27246 15.6094 6.6398 15.5841 6.2652 15.1783L0.265197 8.67828C-0.0883988 8.29522 -0.0883988 7.70479 0.265197 7.32172L6.2652 0.821725C6.6398 0.415904 7.27246 0.390598 7.67828 0.765202Z" fill="#576375"/>
+      </svg>`
+    ))
+  }
+  if (jQuery('.pagination')) {
+    jQuery('a[rel="prev"] > span').html(arrowPrevSvg())
+    jQuery('a[rel="next"] > span').html(arrowPrevSvg().css('transform', 'rotate(180deg)'))
+  }
+
+  // Замена иконки фильтра
+  const filterButton = jQuery(
+    `<svg class="filter-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.119629 8.40003C0.119629 8.58003 0.189628 8.75003 0.329628 8.88003C0.599628 9.12003 1.00963 9.10003 1.24963 8.84003L6.98993 2.47089L12.5399 8.88005C12.7799 9.15005 13.1899 9.16005 13.4599 8.92005C13.7199 8.68005 13.7399 8.27005 13.4999 8.00005L7.50993 1.10089C7.22993 0.790893 6.74993 0.790893 6.46993 1.10089L0.289627 7.96003C0.169627 8.09003 0.119629 8.24003 0.119629 8.40003Z" fill="#3A85FF"/>
+    </svg>
+    <p class="filter-text"> Фильтр</p>`
+  )
+
+  if (jQuery('.view-filter-button').length) {
+    jQuery('.view-filter-button').html(filterButton)
+  }
+
 
   // Реогранизация отображения ролей владельца и участников
-  if (jQuery('.apicMyOrg').length > 0 && jQuery('.apicMyOrgNoMembers').length === 0) {
+  if (jQuery('.apicMyOrg').length && jQuery('.apicMyOrgNoMembers').length === 0) {
     // Владелец
     const ownerMail = jQuery('.apicMyOrgOwner .apicMyOrgMemberDetails').find('.apicUserMail').text();
     jQuery('.apicMyOrgOwner .apicMyOrgMemberDetails').find('.ownerTag').remove();
@@ -412,17 +439,31 @@ jQuery(function() {
   }
 
   // Удаление таблицы, если участников нет
-  if (jQuery('.apicMyOrgNoMembers').length > 0) {
+  if (jQuery('.apicMyOrgNoMembers').length) {
     jQuery('.apicMyOrgMembers').html('<p>Пригласите участников для совместной работы</p>')
   }
 
   // Добавление слова "ver." на страницу документации АПИ
-  if (jQuery('.apiconnect-explorer').length > 0) {
+  if (jQuery('.apiconnect-explorer').length) {
     jQuery('.apicProductVersion.apiVersion').prepend('ver. ')
   }
 
   // Выделение ссылки открытого раздела в хэдере
-  if (jQuery('.catalog-info-public-cards-item').length > 0 || jQuery('.apicProductApiList').length > 0 || jQuery('.apiconnect-explorer-menu').length > 0) {
+  if (jQuery('.catalog-info-public-cards-item').length || jQuery('.apicProductApiList').length || jQuery('.apiconnect-explorer-menu').length) {
     jQuery('.header-menu-links-item:contains("Каталог API")').addClass('header-menu-links-item-active')
+  } else if (jQuery('.connection').length) {
+    jQuery('.header-menu-links-item:contains("Подключение")').addClass('header-menu-links-item-active')
+  } else if (jQuery('.application-view').length || jQuery('.applicationWrapper').length || jQuery('.applicationWrapper').length) {
+    jQuery('.header-menu-links-item:contains("Приложения")').addClass('header-menu-links-item-active')
+  } else if (jQuery('.ibmapimSupport').length) {
+    jQuery('.header-menu-links-item:contains("Поддержка")').addClass('header-menu-links-item-active')
+  } else if (jQuery('.view-blog').length) {
+    jQuery('.header-menu-links-item:contains("Блог")').addClass('header-menu-links-item-active')
+  }
+
+  // Стрница с приложениями
+  // Перемещение кнопки создания нового приложения
+  if (jQuery('.apicNewAppWrapper').length) {
+    jQuery('.apicNewAppWrapper').insertAfter('.page-header')
   }
 });

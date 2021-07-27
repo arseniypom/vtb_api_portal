@@ -10,6 +10,31 @@ a.button.apicNewApp {
   margin: 0 auto;
 }
 
+// Кнопка "создать новое приложение"
+.apicNewAppWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 1220px;
+  display: flex;
+  justify-content: flex-end;
+
+  .apicNewApp {
+    margin-top: .5rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  .apicNewAppWrapper {
+    right: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .apicNewAppWrapper {
+    position: static;
+    justify-content: flex-start;
+  }
+}
 
 
 // Карточки приложений ------------------------------------------------------------------------------------------------------

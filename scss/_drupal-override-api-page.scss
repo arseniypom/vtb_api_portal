@@ -19,11 +19,6 @@
   position: static;
 }
 
-@media (max-width: 767px) {
-  .apiconnect-explorer .SplitPane:not(.showResponsiveMenu) {
-    margin-top: 1rem;
-  } 
-}
 
 // Левая колонка ------------------------------------------------
 .Pane.vertical.Pane1 {
@@ -190,6 +185,11 @@ use {
   font-size: 1rem;
   line-height: 24px;
 }
+.operationParms .labelText {
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding-bottom: 1.5rem;
+}
 // Текст справа от лэйблов
 .apiconnect-explorer .overviewBody .valueText {
   display: flex;
@@ -324,6 +324,7 @@ use {
 
 .operationInformation.operationSummary {
   flex-direction: column;
+  padding-bottom: 0;
 }
 
 .apiconnect-explorer .labelText.method {
@@ -337,6 +338,7 @@ use {
 
 .apiconnect-explorer .testTool ul.bx--accordion .bx--accordion__content {
   background-color: transparent;
+  // padding-top: 0rem;
 }
 
 .apiconnect-explorer .operation-section .operationDisplay .bx--tabs.op-tabs {
@@ -377,6 +379,9 @@ use {
 }
 .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading {
   color: #E5E7EB;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 
   & > * {
     font-weight: 600;
@@ -384,7 +389,7 @@ use {
     line-height: 20px;
   }
 }
-.bx--accordion__item {
+.bx--accordion__item, .bx--accordion__item:last-child {
   border-bottom: none;
   border-top: 1px solid $color-neutral-80;
 }
@@ -402,11 +407,17 @@ use {
     border: 1px solid #505258;
   }
 }
+span.input-group-addon {
+  display: none;
+}
 
 // Контент из 2х колонок
 .bx--data-table-v2 th:first-of-type, .bx--data-table-v2 td:first-of-type {
-  padding-left: 0;
+  padding-left: 1rem;
   border-left: none;
+}
+.bx--data-table-v2 th:last-of-type, .bx--data-table-v2 td:last-of-type {
+  padding-right: 1rem;
 }
 @media (max-width: 767px) {
   .bx--data-table-v2 th:last-of-type, .bx--data-table-v2 td:last-of-type {
@@ -431,6 +442,12 @@ use {
 }
 .bx--accordion__heading:focus .bx--accordion__arrow {
   outline: none;
+}
+.bx--accordion__item>.bx--accordion__heading>.bx--accordion__arrow {
+  transform: rotate(90deg);
+}
+.bx--accordion__item--active>.bx--accordion__heading>.bx--accordion__arrow {
+  transform: rotate(-90deg);
 }
 
 .bx--data-table-v2 th, .bx--data-table-v2 td {
@@ -546,9 +563,9 @@ select#operationResponses {
   font-weight: 700;
   border-right: none;
 }
-.bx--data-table-v2 tr {
-  border-bottom: 1px solid #37383C;
-}
+// .bx--data-table-v2 tr {
+//   border-bottom: 1px solid #37383C;
+// }
 .bx--data-table-v2 tr:hover td {
   background-color: transparent;
   border: none !important;
@@ -690,6 +707,13 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 
 .apiconnect-explorer .SplitPane:not(.showResponsiveMenu) {
   background-color: transparent;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .apiconnect-explorer .SplitPane:not(.showResponsiveMenu) {
+    margin-top: 1rem;
+  } 
 }
 
 // Кнопка открытия меню с методами (левая колонка)

@@ -50,6 +50,10 @@ a:focus {
   }
 }
 
+.bx--global-light-ui .views-exposed-form .form-item{
+  margin: 0 2rem 1.25rem 0;
+}
+
 .form-required::after {
   display: none;
 }
@@ -88,14 +92,8 @@ a:focus {
 
   border: 1px solid #505258;
   box-sizing: border-box;
-  // border-bottom-left-radius: 4px;
-  // border-top-left-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px !important;
   background-color: transparent;
-
-  // &:only-child {
-  //   border-radius: 4px;
-  // }
 }
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
@@ -120,8 +118,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .tooltip {
   background-color: transparent;
 }
+.tooltip.right .tooltip-arrow,
+.tooltip.left .tooltip-arrow,
 .tooltip.bottom .tooltip-arrow {
-  // border-bottom-color: #000;
+  border-left-color: #000;
   border: none;
 }
 .tooltip-inner {
@@ -197,16 +197,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   box-shadow: none;
 
   li {
-      margin-bottom: .75rem;
+      padding: .5rem 0;
       &:first-child {
         padding-top: 0;
       }
       &:last-child {
         padding-bottom: 0;
-      }
-
-      a {
-        color: $color-primary-50;
       }
   }
 }
@@ -219,7 +215,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
   &:hover {
       background: transparent;
-      color: $color-primary-60;
+      // color: $color-primary-60;
       text-decoration-line: underline;
       text-underline-offset: 3px;
   }
@@ -243,11 +239,11 @@ li.selectorg {
 .region-content {
   background-color: inherit;
 }
-@media (max-width: 1220px) {
-  .region-content {
-    padding: 0 1rem;
-  }
-}
+// @media (max-width: 1220px) {
+//   .region-content {
+//     padding: 0 1rem;
+//   }
+// }
 
 .apic-user-form {
   border: none;
@@ -381,6 +377,9 @@ li.dropit-trigger a {
 .productApiWrapper header.titleSection {
   border-bottom: none;
   background: inherit;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 // Левая секция
@@ -481,9 +480,7 @@ li.dropit-trigger a {
 
 
 // Фильтрация ----------------------------------------------------------------
-.bx--global-light-ui .views-exposed-form .btn.view-filter-button svg {
-  fill: $color-primary-50;
-}
+
 .has-glyphicons .select-wrapper:after {
   color: $color-primary-50;
 }
@@ -500,27 +497,49 @@ li.dropit-trigger a {
       box-shadow: none;
   }
 }
-
+// Раздел с фильтрами и кнопкой их открытия
+.bx--global-light-ui .views-exposed-form {
+  flex-direction: column;
+  align-items: flex-start;
+}
+// Кнопка открытия фильтра
 .bx--global-light-ui .views-exposed-form .btn.view-filter-button {
-  margin: 1rem 0 1.5rem 1rem;
-  padding: 6px;
+  margin: 0 0 1.25rem;
   line-height: initial;
   background-color: transparent;
-  max-height: 2.25rem;
+  fill: $color-primary-50;
+}
+.bx--global-light-ui .views-exposed-form .btn.view-filter-button[aria-expanded="true"] {
+  .filter-icon {  
+    transform: rotate(0deg);
+    transition: all .4s ease;
+  }
+}
+.bx--global-light-ui .views-exposed-form .btn.view-filter-button[aria-expanded="false"] {
+  .filter-icon {  
+    transform: rotate(-180deg);
+    transition: all .4s ease;
+  }
+}
+.filter-text {
+  margin-left: .5rem;
+  color: $color-primary-50;
 }
 
 // Инпут "Заголовок"
 input#edit-title {
   background-color: transparent;
   border: 1px solid #505258;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   color: $color-neutral-50;
   width: 100%;
+  height: 2.5rem;
 }
 .view-filters.form-group input.form-text,
 .bx--global-light-ui .view-filters.form-group input.form-text {
   width: 100%;
   max-width: 20rem;
+  height: 2.5rem;
 }
 span.input-group-addon {
   background-color: transparent;
@@ -550,6 +569,10 @@ select, .select-wrapper select, .bx--select-input {
   height: auto;
   padding: .5rem 3rem .5rem 1rem;
   box-shadow: none;
+}
+// Селект в фильтре
+.bx--global-light-ui .view-filters.form-group .select-wrapper select {
+  height: 2.5rem;
 }
 // Стрелка внутри селекта
 .bx--select__arrow {
@@ -634,6 +657,10 @@ select.simpler-select.form-select {
 span.icon.glyphicon.glyphicon-envelope {
   display: none;
 }
+// Скрытие других иконок в кнопках
+.icon-before > .icon {
+  display: none;
+}
 
 .form-group.form-actions {
   margin: 2.5rem 0 0;
@@ -644,16 +671,23 @@ span.icon.glyphicon.glyphicon-envelope {
   display: inline-flex;
   flex-direction: row;
 }
-.view-filters.form-group {
+@media (max-width: 768px) {
+  .bx--global-light-ui .view-filters.form-group .form-actions {
+    margin: 0 0 1rem;
+  }
+}
+
+.bx--global-light-ui .view-filters.form-group {
   max-width: 1220px;
   margin: 0 auto;
+  padding: 0;
 }
 .bx--global-light-ui .view-filters.form-group .form-actions button {
   color: $color-primary-50;
   background-color: transparent;
   border: none;
   height: auto;
-  margin: 0 0 0 .5rem;
+  margin: 0;
   padding: .625rem 1.5rem;
   font-weight: 500;
   font-size: 14px;
@@ -735,9 +769,14 @@ svg.bx--inline-notification__close-icon,
 // Переключатели страниц внизу
 .pagination>li>a,
 .pagination>li>span {
-  color: $color-neutral-05;
-  background-color: $color-light-grey-bg;
+  color: $color-darkweb-text-primary;
+  background-color: transparent;
   border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pagination>.active>a,
 .pagination>.active>span,
@@ -747,19 +786,26 @@ svg.bx--inline-notification__close-icon,
 .pagination>.active>span:focus,
 .pagination>li>a:hover {
   border: none;
-  color: $color-neutral-05;
-  background-color: $color-primary-50;
+  color: $color-darkweb-text-primary;
+  background-color: $color-darkweb-basic-primary;
+  border-radius: 50%;
 }
 
-.pagination>li:last-child>a,
-.pagination>li:last-child>span {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-.pagination>li:first-child>a,
-.pagination>li:first-child>span {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+// .pagination>li:last-child>a,
+// .pagination>li:last-child>span {
+//   border-top-right-radius: 4px;
+//   border-bottom-right-radius: 4px;
+// }
+// .pagination>li:first-child>a,
+// .pagination>li:first-child>span {
+//   border-top-left-radius: 4px;
+//   border-bottom-left-radius: 4px;
+// }
+
+// Переходы на 1 и последнюю страницы
+a[rel="first"],
+a[rel="last"] {
+  display: none !important;
 }
 
 
