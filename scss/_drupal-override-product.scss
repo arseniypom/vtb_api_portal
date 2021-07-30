@@ -1,4 +1,4 @@
-/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR PRODUCTS ----------------------- */
+/* ----------------------- замена DRUPAL DEFAULTS FOR PRODUCTS ----------------------- */
 // Breadcrumb
 .apicProduct .apicProductHeader .breadcrumb, .productApiWrapper header.titleSection .breadcrumb {
   display: flex;
@@ -52,15 +52,14 @@
 }
 
 // Название карточки
+.bx--card .apicProductCardMain .bx--about__title--name {
+  width: 100%;
+  height: auto;
+  padding-bottom: 0;
+}
 .bx--card .apicProductCardMain {
   width: 100%;
 
-  // Заголовок
-  .bx--about__title--name {
-    width: 100%;
-    height: auto;
-    padding: 0;
-  }
   .apicProductName {
     max-width: 100%;
   }
@@ -288,6 +287,8 @@ article a.card-read_more.link-primary {
 
 .bx--about__title--name {
   width: 100%;
+  height: auto;
+  padding: 0 0 10px;
 }
 
 .bx--card .apicApiCardMain {

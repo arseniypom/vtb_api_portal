@@ -1,4 +1,4 @@
-/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR API PAGE ----------------------- */
+/* ----------------------- замена DRUPAL DEFAULTS FOR API PAGE ----------------------- */
 // Верх страницы ------------------------------------------------
 .productApiWrapper #innerWrapper>article:not(.apiprotocol-graphql) {
   border-top: none;
@@ -188,7 +188,7 @@ use {
 .operationParms .labelText {
   font-weight: 600;
   font-size: 1.25rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 // Текст справа от лэйблов
 .apiconnect-explorer .overviewBody .valueText {
@@ -327,6 +327,10 @@ use {
   padding-bottom: 0;
 }
 
+.apiconnect-explorer .operationInformation .operationDescription {
+  padding-top: 0;
+}
+
 .apiconnect-explorer .labelText.method {
   font-weight: 600;
   font-size: 28px;
@@ -389,9 +393,16 @@ use {
     line-height: 20px;
   }
 }
-.bx--accordion__item, .bx--accordion__item:last-child {
+.bx--accordion__item {
   border-bottom: none;
   border-top: 1px solid $color-neutral-80;
+
+  &:last-child {
+    border-bottom: 1px solid $color-neutral-80;
+  }
+  &:only-child {
+    border-bottom: none;
+  }
 }
 
 
@@ -524,7 +535,8 @@ pre {
 }
 
 // Ответы
-.operationInformation.operationSummary.responseSelection {
+.operationInformation.operationSummary.responseSelection,
+.operationInformation.operationSummary.exampleRequest {
   flex-direction: column;
 
   & .labelText {
@@ -563,9 +575,6 @@ select#operationResponses {
   font-weight: 700;
   border-right: none;
 }
-// .bx--data-table-v2 tr {
-//   border-bottom: 1px solid #37383C;
-// }
 .bx--data-table-v2 tr:hover td {
   background-color: transparent;
   border: none !important;
@@ -597,8 +606,13 @@ tr.bx--expandable-row-v2:hover+tr[data-child-row]>td {
   align-items: center;
   margin-bottom: -2px;
 }
+.definitionsBody table thead,
+.definitionsBody table tr {
+  border-bottom: 1px solid $color-neutral-80;
+}
 
-li.bx--tabs__nav-item.bx--tabs__nav-item {
+
+li.bx--tabs__nav-item {
   padding: 0 1rem .5rem;
   background-color: transparent;
   margin: 0;
@@ -618,6 +632,38 @@ li.bx--tabs__nav-item.bx--tabs__nav-item {
     a {
       color: $color-neutral-10;
       // font-weight: 400;
+    }
+  }
+}
+
+// Табы внутри выпадающих определений
+.definitionDisplay ul.bx--tabs__nav {
+  background-color: $color-neutral-90;
+  border-radius: 16px;
+  margin-bottom: 0;
+  padding: 4px;
+  li.bx--tabs__nav-item {
+    padding: 2px 2rem;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 16px;
+  
+    a {
+      color: inherit;
+      font-weight: 400;
+      line-height: 1.25rem;
+      padding-right: 0;
+    }
+  
+    &.bx--tabs__nav-item--selected {
+      display: flex;
+      align-items: center;
+      border-bottom: none;
+      background-color: $color-neutral-70;
+  
+      a {
+        color: $color-neutral-10;
+      }
     }
   }
 }

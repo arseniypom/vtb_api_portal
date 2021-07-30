@@ -1,4 +1,4 @@
-/* ----------------------- OVERRIDE DRUPAL DEFAULTS FOR ORGANISATION PAGE ----------------------- */
+/* ----------------------- замена DRUPAL DEFAULTS FOR ORGANISATION PAGE ----------------------- */
 
 .route-ibm-apimmyorg header.apicMyOrgHeader, .route-ibm-apimanalytics header.apicMyOrgHeader {
   background-color: transparent;
@@ -37,7 +37,7 @@ h1.orgName {
 }
 
 // Блок владельца и участника
-.apicMyOrgOwner .apicMyOrgMemberDetails .orgApicUser {
+.apicMyOrgOwner .apicMyOrgMemberDetails {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 2.05fr 3.75fr 1fr;
@@ -282,4 +282,9 @@ form#consumerorg-resend-invitation-form {
   font-size: 16px;
   line-height: 24px;
   text-align: justify;
+}
+
+// Кнопка "Отправить"
+#consumerorg-invite-user-form button#edit-submit {
+  margin-left: 1rem;
 }

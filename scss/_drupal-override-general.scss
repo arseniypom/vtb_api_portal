@@ -50,7 +50,8 @@ a:focus {
   }
 }
 
-.bx--global-light-ui .views-exposed-form .form-item{
+.bx--global-light-ui .views-exposed-form .form-item {
+  // height: 3.875rem;
   margin: 0 2rem 1.25rem 0;
 }
 
@@ -252,7 +253,7 @@ li.selectorg {
 
 .masonry {
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 1220px;
 }
 
 .container {
@@ -480,7 +481,9 @@ li.dropit-trigger a {
 
 
 // Фильтрация ----------------------------------------------------------------
-
+.bx--global-light-ui .views-exposed-form .btn.view-filter-button svg {
+  fill: $color-darkweb-basic-primary;
+}
 .has-glyphicons .select-wrapper:after {
   color: $color-primary-50;
 }
@@ -569,6 +572,10 @@ select, .select-wrapper select, .bx--select-input {
   height: auto;
   padding: .5rem 3rem .5rem 1rem;
   box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 // Селект в фильтре
 .bx--global-light-ui .view-filters.form-group .select-wrapper select {
@@ -667,15 +674,19 @@ span.icon.glyphicon.glyphicon-envelope {
 }
 
 .bx--global-light-ui .view-filters.form-group .form-actions {
-  margin: 1rem 0;
+  // height: 3.875rem;
+  width: 100%;
+  margin: .5rem 0 2.5rem;
   display: inline-flex;
   flex-direction: row;
+  align-items: flex-end;
+
 }
-@media (max-width: 768px) {
-  .bx--global-light-ui .view-filters.form-group .form-actions {
-    margin: 0 0 1rem;
-  }
-}
+// @media (max-width: 768px) {
+//   .bx--global-light-ui .view-filters.form-group .form-actions {
+//     margin: 0 0 1rem;
+//   }
+// }
 
 .bx--global-light-ui .view-filters.form-group {
   max-width: 1220px;
@@ -704,8 +715,9 @@ span.icon.glyphicon.glyphicon-envelope {
       outline: none;
   }
 }
-button#edit-reset {
-  border: none;
+[data-drupal-selector='edit-reset']{
+  border: none !important;
+  margin-left: 1rem !important;
 }
 
 .bx--global-light-ui .button.apicSecondary, .bx--global-light-ui button.apicSecondary {
@@ -768,15 +780,19 @@ svg.bx--inline-notification__close-icon,
 
 // Переключатели страниц внизу
 .pagination>li>a,
-.pagination>li>span {
+.pagination>li>span,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
   color: $color-darkweb-text-primary;
   background-color: transparent;
   border: none;
   height: 2.5rem;
   width: 2.5rem;
+  margin: 0 .1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50% !important;
 }
 .pagination>.active>a,
 .pagination>.active>span,
@@ -788,24 +804,20 @@ svg.bx--inline-notification__close-icon,
   border: none;
   color: $color-darkweb-text-primary;
   background-color: $color-darkweb-basic-primary;
-  border-radius: 50%;
 }
 
-// .pagination>li:last-child>a,
-// .pagination>li:last-child>span {
-//   border-top-right-radius: 4px;
-//   border-bottom-right-radius: 4px;
-// }
-// .pagination>li:first-child>a,
-// .pagination>li:first-child>span {
-//   border-top-left-radius: 4px;
-//   border-bottom-left-radius: 4px;
-// }
 
 // Переходы на 1 и последнюю страницы
 a[rel="first"],
 a[rel="last"] {
   display: none !important;
+}
+
+// Появляющийся текст об успешном копировании блока кода по кнопке "копировать"
+.apiconnect-copier .copyNotifier {
+  border: none;
+  background: transparent;
+  color: $color-primary-50;
 }
 
 

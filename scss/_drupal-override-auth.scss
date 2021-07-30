@@ -1,0 +1,10 @@
+/* ----------------------- замена DRUPAL DEFAULTS для REGISTRATION/LOGIN PAGE ----------------------- */
+.apic-user-form-inner-wrapper {
+  padding-top: 2rem;
+}
+
+@media (max-width: 424px) {
+  .apic-user-form-inner-wrapper {
+    padding-top: 0 !important;
+  }
+}
