@@ -60,6 +60,10 @@ li.dropit-trigger a {
     }
   }
 }
+// Подсвечивание выбранной организации
+.consumerorg[selected="true"] a {
+  color: $color-primary-50 !important;
+}
 
 // Меню аккаунта
 .account-menu .dropit-trigger {

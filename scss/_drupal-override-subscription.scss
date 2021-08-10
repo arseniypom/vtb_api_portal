@@ -1,0 +1,187 @@
+
+// Контейнер всех шагов
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+// Один шаг
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  min-width: 7rem;
+  max-width: 304px;
+  transition: 250ms all cubic-bezier(0.5,0,.1,1);
+  overflow: visible;
+  padding-top: .75rem;
+}
+@media (max-width: 767px) {
+  .route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step {
+    padding-right: 1rem;
+    min-width: auto;
+  }
+}
+
+
+// Линия прогресса
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-line, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-line, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-line, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-line, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  border: 1px inset transparent;
+}
+
+// Линия прогресса у первого шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step:first-child .bx--progress-line {
+  display: initial;
+}
+
+// Линия прогресса текущего шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-line {
+  background-color: $color-primary-50;
+}
+// Линия прогресса выполненного шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-line {
+  background-color: $color-primary-50;
+}
+
+// Круг шага
+span.bx--progress-circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: $color-neutral-80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+}
+// Круг выполненного шага
+.bx--progress-step--complete {
+  span.bx--progress-circle {
+    background-color: $color-primary-50;
+  }
+}
+// Круг ткущего шага
+.bx--progress-step--current {
+  span.bx--progress-circle {
+    background-color: $color-primary-50;
+  }
+}
+// Галочка внутри выполненного шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step svg, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step svg, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step svg, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step svg, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step svg {
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 0;
+}
+
+// Текст-название выполненного шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label {
+  color: $color-primary-50;
+  position: absolute;
+  left: 1.75rem;
+  top: 14px;
+}
+// Текст-название текущего шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label {
+  color: $color-neutral-10;
+  position: absolute;
+  left: 1.75rem;
+  top: 14px;
+}
+// Текст-название неактивного (будущего) шага
+.route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label {
+  color: $color-neutral-10;
+  position: absolute;
+  left: 1.75rem;
+  top: 14px;
+}
+
+@media (max-width: 767px) {
+  // Текст-название выполненного шага
+  .route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--complete .bx--progress-label {
+    position: initial;
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+  // Текст-название текущего шага
+  .route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--current .bx--progress-label {
+    position: initial;
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+  // Текст-название неактивного (будущего) шага
+  .route-ibm-apimsubscription-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-ibm-apimsubscription-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersproduct-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersproduct-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersplan-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersplan-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersapi-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersapi-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersall-wizard .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label, .route-mail-subscribersall-wizardstep .apicMainContent .wizard-trail .bx--progress-step--incomplete .bx--progress-label {
+    position: initial;
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+}
+
+
+// Шаг с выбором тарифного плана -----------------------------------------
+h3.field__label.label {
+  color: $color-neutral-10;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 32px;
+}
+
+.planSubscribe button {
+  line-height: initial;
+}
+
+// Шаг с выбором приложения -----------------------------------------
+.route-ibm-apimsubscription-wizardstep .apicMainContent .apicWizardHeader {
+  color: $color-neutral-05;
+  border-bottom: none;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 32px;
+}
+
+.route-ibm-apimsubscription-wizardstep .apicMainContent .apicWizardMain.apicSubscribeChooseApp {
+  padding: 0;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+// Карточка приложения
+.apicSubAppCard .node--type-application.bx--card {
+  height: 9.5rem;
+  .apicAppCardMain .bx--about__title--name {
+    font-weight: 600;
+  }
+}
+
+// Предпоследний шаг – подписаться
+.apicForm .apicFormHeader {
+  color: $color-neutral-05;
+}
+
+// Последний шаг – обзор
+.apicSubscribeSummary {
+  display: none;
+}
+
+// Кнопки
+.route-ibm-apimsubscription-wizardstep .apicMainContent .apicSubscribeResultFollowup {
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .route-ibm-apimsubscription-wizardstep .apicMainContent .apicSubscribeResultFollowup {
+    flex-direction: column;
+  }
+}

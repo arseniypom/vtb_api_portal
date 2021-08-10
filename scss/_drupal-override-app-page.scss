@@ -62,13 +62,18 @@
     margin-top: 1rem;
   }
 }
-
 // Раздел "Подписки"
+.credentialsActions { 
+  display: flex;
+  margin-right: 1rem;
+  padding: 0 1rem;
+
+  .credentialsActionsAdd .addCredential svg:hover {
+    fill: $color-neutral-50;
+  }
+}
 @media (max-width: 767px) {
   .applicationCredentials .credentialsTable .credentialsHeader {
-    .credentialsActions { 
-      display: flex;
-    }
     .credentialsActions .credentialsActionsAdd {
       padding-left: .9rem;
     }
@@ -84,10 +89,20 @@
   max-width: 25rem;
 }
 
+// Проверка пароля
+.application-verify-clientsecret-form .form-actions .form-submit {
+  margin-left: 1rem !important;
+}
+
+// Сброс всех креденшалов
+.application-reset-clientid-form .form-actions .form-submit {
+  margin-left: 1rem !important;
+}
+
 // Создание приложения ---------------------------------------------------------------
 div#drupal-modal--content {
   background-color: $color-light-grey-bg;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   width: 100%;
   max-width: 40rem;
 }
@@ -98,7 +113,9 @@ div#drupal-modal--content {
   border: none;
   border-radius: 8px;
 }
-
+.application-create-form-one .form-group .form-submit {
+  margin-left: 1rem !important;
+}
 .application-create-form-one .form-group .bx--form-item label {
   color: $color-neutral-50;
 }
@@ -177,4 +194,26 @@ div#drupal-modal--content {
 .panel-default>.panel-heading {
   color: #F3F4F6;
   background-color: transparent;
+}
+
+// Модалка добавления новых идентификационных данных ---------------------------------------------------------------
+.application-create-credentials-form {
+  .form-actions .form-submit {
+    margin-left: 1rem !important;
+  }
+}
+
+// Отмена подписки ---------------------------------------------------------------
+.application-unsubscribe-form {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  .form-group.form-actions {
+    justify-content: flex-start;
+    flex-direction: row;
+
+    button.form-submit {
+      margin-right: 1rem !important;
+    }
+  }
 }

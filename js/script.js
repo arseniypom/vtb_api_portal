@@ -185,7 +185,8 @@ jQuery(function() {
       'font-style': 'normal',
       'font-weight': '600',
       'font-size': '1.25rem',
-      'line-height': '24px'
+      'line-height': '24px',
+      'padding': '0'
     });
 
     if (jQuery('.consumerorg-invite-user-form').length) {
@@ -243,7 +244,7 @@ jQuery(function() {
   }
   if (jQuery('.client-path-bg').length) {
     jQuery('.client-path-bg').append(scrollRight('client-path-arrow'));
-    jQuery('.news').append(scrollRight('news'));
+    jQuery('.news').append(scrollRight('news-scroll'));
   }
   if (jQuery('.subscriptionsTable').length && jQuery('.noSubsFound').length === 0) {
     jQuery('.subscriptionsTable').append(scrollRight('subscriptions'));
@@ -328,7 +329,7 @@ jQuery(function() {
     jQuery('.reload-captcha').prepend(spinningArrowsSvg);
   }
 
-  // Замена иконки загрузки документа опенапи на странице документации апи
+  // Замена кнопки и иконки загрузки документа опенапи на странице документации апи
   const downloadIconSvg = jQuery(`
     <svg class="download-arrow" aria-labelledby="swaggerDownloadTitle">
       <path d="M2.21885 7.25218C2.21885 7.07218 2.28885 6.90218 2.42885 6.77218C2.69885 6.53218 3.10885 6.55218 3.34885 6.81218L7.351 10.6386L7.351 0.65C7.351 0.291015 7.64201 0 8.001 0C8.35998 0 8.651 0.291015 8.651 0.65V10.5752L12.2988 6.73217C12.5388 6.46217 12.9488 6.45217 13.2188 6.69217C13.4788 6.93217 13.4988 7.34217 13.2588 7.61217L8.52099 12.63C8.24099 12.94 7.761 12.94 7.481 12.63L2.38885 7.69218C2.26885 7.56218 2.21885 7.41218 2.21885 7.25218Z" fill="#3A85FF"/>
@@ -349,6 +350,7 @@ jQuery(function() {
     buttonDownload.download = downloadAttr;
     buttonDownload.title = "Загрузить документ Open API";
     const divDownload = jQuery('.operationDownloadOpenApi');
+    jQuery(divDownload).find('.labelText').text('Скачать Swagger-файл')
     buttonDownload.innerHTML = divDownload.html();
     // Замена div на ссылку
     divDownload.replaceWith(jQuery(buttonDownload));
@@ -496,7 +498,7 @@ jQuery(function() {
 
   // Стрница с приложениями
   // Перемещение кнопки создания нового приложения
-  if (jQuery('.apicNewAppWrapper').length) {
-    jQuery('.apicNewAppWrapper').insertAfter('.page-header')
-  }
+  // if (jQuery('.apicNewAppWrapper').length) {
+  //   jQuery('.apicNewAppWrapper').insertAfter('.page-header')
+  // }
 });

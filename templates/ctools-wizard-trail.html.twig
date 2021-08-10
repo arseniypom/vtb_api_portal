@@ -1,0 +1,59 @@
+{% if trail %}
+  {% set complete_class = [
+  'bx--progress-step--complete',
+  ] %}
+  {% set current_class = [
+  'bx--progress-step--current',
+  ] %}
+  {% set incomplete_class = [
+  'bx--progress-step--incomplete',
+  ] %}
+
+  <div class="wizard-trail">
+    <ul data-progress data-progress-current class="bx--progress">
+      {% set classes = [
+      'bx--progress-step',
+      'bx--progress-step--complete',
+      ] %}
+      {%- set attributes = attributes.addClass(classes) -%}
+      {% for key, value in trail %}
+        {# {% if key is same as("chooseapp") %}
+          {%- set stepNumber = 2 -%}
+        {% else %}
+          {%- set stepNumber = 0 -%}
+        {% endif %} #}
+        {% if key is same as(step) %}
+          {# Текущий шаг #}
+          {%- set attributes = attributes.removeClass(complete_class) -%}
+          {%- set attributes = attributes.addClass(current_class) -%}
+          <li {{ attributes }}>
+            <span class="bx--progress-circle">{{ stepNumber }}</span>
+            <p class="bx--progress-label">{{ value }}</p>
+            <span class="bx--progress-line"></span>
+          </li>
+          {%- set attributes = attributes.removeClass(current_class) -%}
+          {%- set attributes = attributes.addClass(incomplete_class) -%}
+        {% else %}
+          <li {{ attributes }}>
+            {% if attributes.hasClass('bx--progress-step--complete') %}
+            {# Выполненный шаг #}
+              <span class="bx--progress-circle">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.50987 7.74995C3.83448 8.09333 4.36777 8.08107 4.68079 7.72542L9.80503 1.83884C10.0833 1.50772 10.0601 1.00491 9.75866 0.71058C9.45723 0.416251 8.97031 0.428514 8.69207 0.759634L4.06635 6.08208L1.28396 3.13879C0.994125 2.8322 0.507207 2.8322 0.217374 3.13879C-0.0724581 3.44539 -0.0724581 3.96046 0.217374 4.26705L3.50987 7.74995Z" fill="#E5E7EB"/>
+                </svg>
+              </span>
+            {% else %}
+            {# Будущий, не начатый шаг #}
+              <span class="bx--progress-circle"></span>
+            {% endif %}
+            {# Общая часть для выполненного и будущего шагов #}
+            <p class="bx--progress-label">{{ value }}</p>
+            <span class="bx--progress-line"></span>
+          </li>
+        {% endif %}
+        {% if value is not same as(trail|last) %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

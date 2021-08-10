@@ -90,13 +90,16 @@ view_mode ? ('node--view-mode-' ~ view_mode)|clean_class,
       {% endif %}
     </div>
   </div> #}
-    {% if content.apic_summary['#items'][0].value is defined and content.apic_summary['#items'][0].value is not empty %}
+
+  {# БЛОК С ОПИСАНИЕМ ПРОДУКТА -------------------------- #}
+    {# {% if content.apic_summary['#items'][0].value is defined and content.apic_summary['#items'][0].value is not empty %}
       <div class="catalog-info-public-cards-item-description"
            title="{{- content.apic_summary['#items'][0].value|striptags -}}">{{ content.apic_summary }}</div>
     {% else %}
       <div class="catalog-info-public-cards-item-description"
            title="{{- content.apic_description['#items'][0].value|striptags -}}">{{ content.apic_description }}</div>
-    {% endif %}
-  {# <p class="catalog-info-public-cards-item-description">Обменные курсы валют и комиссии для граждан зарубежных стран в офисах и банкоматах ВТБ</p> #}
+    {% endif %} #}
+    {# КОНЕЦ БЛОКА С ОПИСАНИЕМ ПРОДУКТА -------------------------- #}
+
   <a href="{{- path('product.view', {'prodNode': prodNode}) -}}" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
 </article>

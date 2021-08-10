@@ -11,7 +11,7 @@
 .node--view-mode-teaser, article.search-result,
 .teaser, .view-search-content article.faq {
   background-color: $color-light-grey-bg;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   border-radius: 8px;
   border: none;
   margin-bottom: 1rem;
@@ -32,5 +32,12 @@
   a {
     font-size: 1.5rem;
     font-weight: 600;
+  }
+}
+
+// Пагинация
+.view-search-content {
+  .pager__item.pager__item--next {
+    display: none;
   }
 }

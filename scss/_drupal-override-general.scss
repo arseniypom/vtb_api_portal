@@ -15,7 +15,7 @@ a:focus {
 // Область контента
 @media (max-width: 767px) {
   .view-content {
-      padding: 0 1rem;
+    max-width: 97%;
   }
 }
 
@@ -50,6 +50,11 @@ a:focus {
   }
 }
 
+// Кнопки в формах
+.bx--global-light-ui .form-actions .button, .bx--global-light-ui .form-actions .btn {
+  margin: 0;
+}
+
 .bx--global-light-ui .views-exposed-form .form-item {
   // height: 3.875rem;
   margin: 0 2rem 1.25rem 0;
@@ -61,14 +66,14 @@ a:focus {
 
 .route-apic-appcreate .main-container .row .form-item input, .route-apic-appcreate-step-two .main-container .row .form-item input, .route-applicationcreate .main-container .row .form-item input, .route-applicationcreate-step-two .main-container .row .form-item input, .route-apic-appverify-clientsecret .main-container .row .form-item input, .route-apic-appcredentials-create .main-container .row .form-item input, .route-apic-appreset-clientid .main-container .row .form-item input, .route-apic-appreset-clientsecret .main-container .row .form-item input, .route-apic-appcredentials-update .main-container .row .form-item input, .route-apic-appcredentials-delete .main-container .row .form-item input, .route-apic-appupdate .main-container .row .form-item input, .route-apic-appdelete .main-container .row .form-item input, .route-apic-apppromote .main-container .row .form-item input, .route-apic-appimage-upload .main-container .row .form-item input, .route-apic-appimage-delete .main-container .row .form-item input, .route-consumerorgcreate .main-container .row .form-item input, .route-consumerorgupdate .main-container .row .form-item input, .route-consumerorgdelete .main-container .row .form-item input, .route-consumerorgchangeowner .main-container .row .form-item input, .route-consumerorginvite .main-container .row .form-item input, .route-consumerorgremove-user .main-container .row .form-item input, .route-consumerorgresend-invite .main-container .row .form-item input, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form .form-item input, .route-entityuseredit-form .main-container .row .user-form .form-item input, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input .form-item input, form.user-pass-reset .form-item input, .apicForm .form-item input, .apic-user-form .form-item input, .route-apic-appcreate .main-container .row .form-item input:hover, .route-apic-appcreate-step-two .main-container .row .form-item input:hover, .route-applicationcreate .main-container .row .form-item input:hover, .route-applicationcreate-step-two .main-container .row .form-item input:hover, .route-apic-appverify-clientsecret .main-container .row .form-item input:hover, .route-apic-appcredentials-create .main-container .row .form-item input:hover, .route-apic-appreset-clientid .main-container .row .form-item input:hover, .route-apic-appreset-clientsecret .main-container .row .form-item input:hover, .route-apic-appcredentials-update .main-container .row .form-item input:hover, .route-apic-appcredentials-delete .main-container .row .form-item input:hover, .route-apic-appupdate .main-container .row .form-item input:hover, .route-apic-appdelete .main-container .row .form-item input:hover, .route-apic-apppromote .main-container .row .form-item input:hover, .route-apic-appimage-upload .main-container .row .form-item input:hover, .route-apic-appimage-delete .main-container .row .form-item input:hover, .route-consumerorgcreate .main-container .row .form-item input:hover, .route-consumerorgupdate .main-container .row .form-item input:hover, .route-consumerorgdelete .main-container .row .form-item input:hover, .route-consumerorgchangeowner .main-container .row .form-item input:hover, .route-consumerorginvite .main-container .row .form-item input:hover, .route-consumerorgremove-user .main-container .row .form-item input:hover, .route-consumerorgresend-invite .main-container .row .form-item input:hover, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form .form-item input:hover, .route-entityuseredit-form .main-container .row .user-form .form-item input:hover, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input .form-item input:hover, form.user-pass-reset .form-item input:hover, .apicForm .form-item input:hover, .apic-user-form .form-item input:hover, .route-apic-appcreate .main-container .row .form-item textarea, .route-apic-appcreate-step-two .main-container .row .form-item textarea, .route-applicationcreate .main-container .row .form-item textarea, .route-applicationcreate-step-two .main-container .row .form-item textarea, .route-apic-appverify-clientsecret .main-container .row .form-item textarea, .route-apic-appcredentials-create .main-container .row .form-item textarea, .route-apic-appreset-clientid .main-container .row .form-item textarea, .route-apic-appreset-clientsecret .main-container .row .form-item textarea, .route-apic-appcredentials-update .main-container .row .form-item textarea, .route-apic-appcredentials-delete .main-container .row .form-item textarea, .route-apic-appupdate .main-container .row .form-item textarea, .route-apic-appdelete .main-container .row .form-item textarea, .route-apic-apppromote .main-container .row .form-item textarea, .route-apic-appimage-upload .main-container .row .form-item textarea, .route-apic-appimage-delete .main-container .row .form-item textarea, .route-consumerorgcreate .main-container .row .form-item textarea, .route-consumerorgupdate .main-container .row .form-item textarea, .route-consumerorgdelete .main-container .row .form-item textarea, .route-consumerorgchangeowner .main-container .row .form-item textarea, .route-consumerorginvite .main-container .row .form-item textarea, .route-consumerorgremove-user .main-container .row .form-item textarea, .route-consumerorgresend-invite .main-container .row .form-item textarea, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form .form-item textarea, .route-entityuseredit-form .main-container .row .user-form .form-item textarea, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input .form-item textarea, form.user-pass-reset .form-item textarea, .apicForm .form-item textarea, .apic-user-form .form-item textarea, .route-apic-appcreate .main-container .row .form-item select, .route-apic-appcreate-step-two .main-container .row .form-item select, .route-applicationcreate .main-container .row .form-item select, .route-applicationcreate-step-two .main-container .row .form-item select, .route-apic-appverify-clientsecret .main-container .row .form-item select, .route-apic-appcredentials-create .main-container .row .form-item select, .route-apic-appreset-clientid .main-container .row .form-item select, .route-apic-appreset-clientsecret .main-container .row .form-item select, .route-apic-appcredentials-update .main-container .row .form-item select, .route-apic-appcredentials-delete .main-container .row .form-item select, .route-apic-appupdate .main-container .row .form-item select, .route-apic-appdelete .main-container .row .form-item select, .route-apic-apppromote .main-container .row .form-item select, .route-apic-appimage-upload .main-container .row .form-item select, .route-apic-appimage-delete .main-container .row .form-item select, .route-consumerorgcreate .main-container .row .form-item select, .route-consumerorgupdate .main-container .row .form-item select, .route-consumerorgdelete .main-container .row .form-item select, .route-consumerorgchangeowner .main-container .row .form-item select, .route-consumerorginvite .main-container .row .form-item select, .route-consumerorgremove-user .main-container .row .form-item select, .route-consumerorgresend-invite .main-container .row .form-item select, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form .form-item select, .route-entityuseredit-form .main-container .row .user-form .form-item select, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input .form-item select, form.user-pass-reset .form-item select, .apicForm .form-item select, .apic-user-form .form-item select {
   background-color: transparent;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   border: 1px solid #505258;
   border-radius: 4px;
   max-width: 40rem;
 }
 
 .bx--global-light-ui .form-item input, .bx--global-light-ui .form-item input:hover, .bx--global-light-ui .form-item input:focus {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   font-size: .875rem;
   border-top-color: initial;
   border-top-style: initial;
@@ -100,7 +105,7 @@ a:focus {
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
   border: inherit;
   box-shadow: 0 0 0px 1000px #2d2f35 inset;
-  -webkit-text-fill-color: #e5e7eb;
+  -webkit-text-fill-color: $color-neutral-10;
   -webkit-box-shadow: 0 0 0px 1000px #2d2f35 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -126,7 +131,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   border: none;
 }
 .tooltip-inner {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   background-color: #000;
   font-size: 16px;
   line-height: 24px;
@@ -173,7 +178,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .overflow-menu ul.dropit-submenu a, .overflow-menu ul.dropit-submenu a:visited {
   background-color: transparent;
-  color: #E5E7EB;
+  color: $color-neutral-10;
 
   &:hover {
       background-color: $color-primary-50;
@@ -210,7 +215,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .dropitmenu ul.dropit-submenu a,
 .dropitmenu ul.dropit-submenu a:visited {
   font-size: 1rem;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   line-height: 24px;
   padding: 0;
 
@@ -347,6 +352,12 @@ li.dropit-trigger a {
   margin: 0 auto;
 }
 
+@media (max-width: 1220px) {
+  .page-header {
+    padding: 0 1rem;
+  }
+}
+
 // Карточки АПИ
 .bx--card {
   background-color: $color-light-grey-bg;
@@ -381,6 +392,11 @@ li.dropit-trigger a {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0;
+}
+@media (max-width: 1220px) {
+  .productApiWrapper header.titleSection {
+    max-width: 97%;
+  }
 }
 
 // Левая секция
@@ -488,7 +504,7 @@ li.dropit-trigger a {
   color: $color-primary-50;
 }
 .form-control {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   background-color: transparent;
   border: 1px solid #505258;
   border-radius: 4px;
@@ -693,6 +709,11 @@ span.icon.glyphicon.glyphicon-envelope {
   margin: 0 auto;
   padding: 0;
 }
+@media (max-width: 1220px) {
+  .bx--global-light-ui .view-filters.form-group {
+    max-width: 97%;
+  }
+}
 .bx--global-light-ui .view-filters.form-group .form-actions button {
   color: $color-primary-50;
   background-color: transparent;
@@ -816,7 +837,8 @@ a[rel="last"] {
 // Появляющийся текст об успешном копировании блока кода по кнопке "копировать"
 .apiconnect-copier .copyNotifier {
   border: none;
-  background: transparent;
+  border-radius: 8px;
+  background: $color-light-grey-bg;
   color: $color-primary-50;
 }
 

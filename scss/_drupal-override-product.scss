@@ -15,6 +15,11 @@
     margin-left: 0;
   }
 }
+@media (max-width: 767px) {
+  .apicProduct .apicProductHeader .breadcrumb, .productApiWrapper header.titleSection .breadcrumb {
+    display: initial;
+  }
+}
 
 // Карточка продукта в каталоге API ----------------------------------------------------
 .bx--card .apicProductCard {
@@ -62,6 +67,13 @@
 
   .apicProductName {
     max-width: 100%;
+    
+    span {
+      display: block;
+      white-space: break-spaces;
+      max-height: 6rem;
+      overflow: hidden;
+    }
   }
 }
 
@@ -146,13 +158,14 @@
 .apicProductTitle {
   display: flex;
   align-items: flex-start;
-
+  flex-direction: column;
 }
 
 .apicProductTitleText {
   display: flex;
   flex-direction: column;
-  width: 50rem;
+  width: 100%;
+  max-width: 50rem;
   word-break: break-word;
 }
 
@@ -196,10 +209,22 @@
 
 .apicProductTitleDescription {
   max-width: 37rem;
-  margin-top: 4.875rem;
+  // margin-top: 4.875rem;
+  margin-top: 1rem;
 
   p {
     margin-bottom: 1.5rem;
+  }
+}
+
+// Описание / обзор
+.field--name-apic-summary {
+  .field--label {
+    display: none;
+  }
+  
+  .field--item {
+    line-height: 1.5rem;
   }
 }
 
@@ -212,9 +237,11 @@ h2.field__label.label {
 }
 
 // Секция API
-
-.apicProduct {
-  margin: 0 2rem;
+@media (max-width: 1220px) {
+  .apicProduct {
+    max-width: 97%;
+    margin: 0 auto;
+  }
 }
 
 .apicProduct .apicProductBody {
@@ -261,7 +288,8 @@ h2.field__label.label {
   border: none;
   padding: 1.25rem;
   position: relative;
-  width: 17.5rem;
+  width: 100%;
+  max-width: 17.5rem;
 }
 
 article a.card-read_more.link-primary {
@@ -323,9 +351,20 @@ article a.card-read_more.link-primary {
   flex-direction: column;
   padding: 3.75rem 2rem 0;
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .field.plans.footer-bg {
-    display: none;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .planComparisonTable {
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 500px) {
+  .planComparisonTable {
+    display: initial;
   }
 }
 
@@ -365,7 +404,8 @@ h2.field__label.label.tariff-label {
     color: $color-neutral-50;
 
     &-free {
-      max-width: 17.5rem;
+      max-width: 17rem;
+      margin-right: 1rem;
     }
     &-paid {
       max-width: 50rem;
@@ -383,12 +423,13 @@ h2.field__label.label.tariff-label {
 .tariff-plans {
   display: flex;
   background: #111215;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   justify-content: flex-start;
 }
 
 .tariff-plan {
-  max-width: 17.5rem; 
+  max-width: 17.5rem;
+  min-width: 11rem;
   
   &-title {
     margin-bottom: .5rem;

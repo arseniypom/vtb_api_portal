@@ -267,7 +267,7 @@ p {
 }
 
 .button-transparent:disabled, .button-transparent[disabled] {
-    border-color: #e5e7eb !important;
+    border-color: $color-neutral-10 !important;
     color: #b1b5bb !important;
     cursor: not-allowed;
 
@@ -293,13 +293,17 @@ p {
         position: absolute;
         bottom: 2rem;
     }
-    .scroll-right.news {
+    .scroll-right.news-scroll {
         display: flex;
     }
 }
 @media screen and (max-width: 768px) {
     .scroll-right.my-org {
         display: flex;
+    }
+    .scroll-right.tariff {
+        display: flex;
+        margin: 0 0 1rem;
     }
 }
 @media screen and (max-width: 374px) {

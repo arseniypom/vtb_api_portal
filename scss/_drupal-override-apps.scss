@@ -10,17 +10,19 @@ a.button.apicNewApp {
   margin: 0 auto;
 }
 
-// Кнопка "создать новое приложение"
-.apicNewAppWrapper {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  max-width: 1220px;
-  display: flex;
-  justify-content: flex-end;
-
-  .apicNewApp {
-    margin-top: .5rem;
+// Обертка заголовка "Приложения" и кнопка "создать новое приложение"
+.views-exposed-form {
+  .apicNewAppWrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1220px;
+    display: flex;
+    justify-content: flex-end;
+  
+    .apicNewApp {
+      margin-top: .5rem;
+    }
   }
 }
 
@@ -61,6 +63,7 @@ a.button.apicNewApp {
   max-width: 17.5rem;
   margin: 0;
   padding: 1.25rem;
+  position: relative;
 }
 
 .bx--card .apicAppCard {
@@ -72,7 +75,7 @@ a.button.apicNewApp {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #E5E7EB;
+  color: $color-neutral-10;
 }
 
 .apicAppDesc.apicFade {
@@ -95,13 +98,17 @@ a.button.apicNewApp {
 
 .bx--card-footer {
   background-color: $color-light-grey-bg;
-  border-radius: 8px;
   color: $color-neutral-10;
   padding: 0;
   position: absolute;
-  bottom: 0;
+  bottom: 1.25rem;
+  left: 1.25rem;
   height: auto;
-  margin-bottom: 1rem;
+
+  button {
+    padding: 10px 24px !important;
+    line-height: unset;
+  }
 }
 
 .bx--card-footer__app-status {

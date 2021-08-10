@@ -59,8 +59,22 @@
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {% set custom_container = is_front ? '' : 'drupal-container' %}
 {% set background = is_front ? '' : 'dark-gradient-bg' %}
-{# Header #}
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+    ym(83740273, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/83740273" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  {# Header #}
   {% block header %}
       <header class="header-bg" id="navbar">
           <div class="header">
@@ -157,21 +171,21 @@
 {% endblock %}
 
 
-{% if page.footer %}
-  <footer class="footer-bg" id="footer">
-      <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
-      <div class="footer-info">
-          <div class="footer-info-text">
-              <p>Дегтярный переулок, д.11, лит. А, г. Санкт-Петербург, 191144</p>
-              <p>Генеральная лицензия Банка России №1000</p>
-              <p>© ВТБ, 2021</p>
-          </div>
-          <div class="footer-info-links">
-              <a class="link-primary" href="{{ assets_path }}/documents/user_agreement.docx" target="_blank">Пользовательское соглашение</a>
-              <a class="link-primary" href="https://www.vtb.ru/o-banke/" target="_blank">О Банке ВТБ</a>
-              <a class="link-primary" href="{{ assets_path }}/documents/Obrabotka-pdn.pdf" target="_blank">Положение об организации обработки персональных данных в Банке ВТБ (ПАО)</a>
-          </div>
-      </div>
-      <img src="{{ base_path ~ directory }}/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">
-  </footer>
-{% endif %}
+    {% if page.footer %}
+        <footer class="footer-bg" id="footer">
+            <a class="header-logo" href="{{ front_page }}"><img src="{{ base_path ~ directory }}/images/logo.png" alt="VTB" class="header-logo-img"/></a>
+            <div class="footer-info">
+                <div class="footer-info-text">
+                    <p>Дегтярный переулок, д.11, лит. А, г. Санкт-Петербург, 191144</p>
+                    <p>Генеральная лицензия Банка России №1000</p>
+                    <p>© ВТБ, 2021</p>
+                </div>
+                <div class="footer-info-links">
+                    <a class="link-primary" href="{{ base_path ~ directory }}/documents/user_agreement.docx" target="_blank">Пользовательское соглашение</a>
+                    <a class="link-primary" href="https://www.vtb.ru/o-banke/">О Банке ВТБ</a>
+                    <a class="link-primary" href="{{ base_path ~ directory }}/documents/Obrabotka-pdn.pdf" target="_blank">Положение об организации обработки персональных данных в Банке ВТБ (ПАО)</a>
+                </div>
+            </div>
+            <img src="{{ base_path ~ directory }}/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">
+        </footer>
+    {% endif %}

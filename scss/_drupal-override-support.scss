@@ -19,6 +19,11 @@
   border: none;
   padding: 0;
 }
+@media (max-width: 1220px) {
+  .apicMainContent .supportContentWrapper .views-element-container .view {
+    padding: 0 1rem;
+  }
+}
 
 .supportContentWrapper .faqDiv {
   width: 100%;
@@ -51,9 +56,13 @@
 // Блок со сгруппированными вопросами
 article.faq {
   margin-bottom: 2.5rem;
-  h2 a span {
-    font-weight: 600;
-    font-size: 1.25rem;
+  h2 {
+    padding-bottom: 1.25rem;
+
+    a span {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
   }
   .content {
     align-items: initial;
@@ -63,11 +72,13 @@ article.faq {
 // Вопрос
 .views-element-container .view.view-faqs .ui-state-default,
 .views-element-container .view.view-faqs .ui-state-active {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   font-weight: 600;
   line-height: 20px;
   border-top: 1px solid #505258;
   border-radius: 0;
+  outline: none;
+  padding: 14px 16px;
 }
 .views-element-container .view.view-faqs .ui-state-default > svg {
   transition: transform .3s linear;
@@ -88,10 +99,17 @@ article.faq {
 
 // Ответ
 .supportContentWrapper .views-element-container .view .ui-widget-content {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   height: auto !important;
-  text-align: justify;
+  padding: 0 1rem 1rem;
+  text-align: left;
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
+
 
 // Создание материала Вопросы и ответы
 .table-striped>tbody>tr:nth-of-type(odd) {
@@ -109,6 +127,7 @@ article.faq {
 // Блок с соц. сетями
 .socialDiv {
   display: none;
+  padding: 20px;
 }
 
 // Форма с фидбэком
@@ -118,6 +137,17 @@ article.faq {
 
 .supportContentWrapper .contactDiv {
   flex: none;
+  padding: 0;
+}
+@media (max-width: 1220px) {
+  .supportContentWrapper .contactDiv {
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 1023px) {
+  .supportContentWrapper .contactDiv {
+    padding: 0 1rem;
+  }
 }
 
 .contactFormDiv {
@@ -214,7 +244,7 @@ article.faq.full {
 .ui-accordion .ui-accordion-header.faqfield-question {
   background-color: transparent;
   border: none;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   width: 100%;
   max-width: 45rem;
   padding: .5rem;
@@ -228,6 +258,6 @@ article.faq.full {
   width: 100%;
   max-width: 45rem;
   height: auto !important;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   text-align: justify;
 }

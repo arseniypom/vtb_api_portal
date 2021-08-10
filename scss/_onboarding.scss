@@ -198,9 +198,37 @@
 
         &-image {
             height: 5rem;
-            width: 4rem;
+            width: 3rem;
             top: -6rem;
         
+            &-arrow {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-height: 450px) {
+    .onboarding {
+        margin: 1.5rem 1rem 0;
+
+        h1 {
+            font-size: 1.5rem;
+            line-height: 1.7rem;
+        }
+
+        h3 {
+            font-size: .9rem;
+            line-height: 1.2rem;
+        }
+
+        &-image {
+            height: 3.5rem;
+            width: 2rem;
+            top: -4rem;
+    
             &-arrow {
                 width: 3rem;
                 position: absolute;

@@ -10,6 +10,11 @@
   max-width: 1220px;
   margin: 0 auto;
 }
+@media (max-width: 1220px) {
+  .apicProduct .apicProductBody, .productApiWrapper #innerWrapper {
+    max-width: 97%;
+  }
+}
 
 // Отображение контента целиком без прокрутки
 .SplitPane.vertical {
@@ -215,7 +220,7 @@ use {
 .parameterIn {
   font-size: 12px;
   line-height: 16px;
-  color: #E5E7EB;
+  color: $color-neutral-10;
   background-color: #505258;
   width: fit-content;
   max-width: 100%;
@@ -225,7 +230,7 @@ use {
 }
 // "Обязательный" параметр
 .requiredHighlight {
-  color: #E5E7EB !important;
+  color: $color-neutral-10 !important;
   background-color: #591C04;
 }
 
@@ -287,6 +292,10 @@ use {
   font-size: 1rem;
   line-height: 24px;
   font-weight: 400;
+
+  .key.securityTitle:last-child {
+    display: none;
+  }
 }
 
 .securityNameAndType.keyValueDisplay {
@@ -300,11 +309,27 @@ use {
   padding: 0;
 }
 
+// .apiconnect-explorer .operationDisplay .testToolSecurity {
+
+// }
 .bx--module .bx--module__inner {
   background-color: transparent;
 }
+.bx--module .bx--module__header {
+  padding: 0;
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
 .apiconnect-explorer .bx--module .bx--module__title {
   color: inherit;
+  line-height: 100%;
+}
+.bx--module .bx--module__content {
+  padding: 0%;
+
+  .clientID .labelText {
+    display: none;
+  }
 }
 
 // Контакты
@@ -350,6 +375,11 @@ use {
   min-height: auto;
   border-bottom: 2px solid #37383C;
 }
+@media (max-width: 767px) {
+  .apiconnect-explorer .operation-section .operationDisplay .bx--tabs.op-tabs {
+    max-width: 10rem;
+  }
+}
 
 .operationTitle {
   padding-right: 0;
@@ -382,7 +412,7 @@ use {
   border-top: 0;
 }
 .bx--global-light-ui .apiconnect-explorer button.bx--accordion__heading {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -495,6 +525,9 @@ span.input-group-addon {
     border-radius: 8px;
   }
 }
+.apiconnect-explorer .definitionDisplay .body.small {
+  padding: 0 1rem 0 0;
+}
 
 .body.small > * {
   color: #F3F4F6;
@@ -505,15 +538,15 @@ code span, .json-schema-view * {
 }
 // Переключалка (напр. сведения/попробовать)
 li.bx--tabs__nav-item.bx--tabs__nav-item--selected {
-  border-bottom: none;
+  // border-bottom: none;
 
   & a {
-    color: #E5E7EB;
+    color: $color-neutral-10;
   }
 }
 @media screen and (min-width: 768px) {
   .bx--tabs__nav-item--selected .bx--tabs__nav-link:focus, .bx--tabs__nav-item:hover .bx--tabs__nav-link {
-    color: #E5E7EB;
+    color: $color-neutral-10;
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
@@ -530,8 +563,9 @@ li.bx--tabs__nav-item.bx--tabs__nav-item--selected {
 .definitionDisplay .tab-content {
   padding: 0 0 1rem 1rem;
 }
-pre {
+.apiconnect-explorer pre {
   margin: 0;
+  padding-right: 2rem;
 }
 
 // Ответы
@@ -551,10 +585,10 @@ select#operationResponses {
   border-bottom: none;
   border: 1px solid #505258;
   border-radius: 4px;
-  color: #E5E7EB;
+  color: $color-neutral-10;
 }
 .apiconnect-explorer .responsesContainer .responseDescription {
-  color: #E5E7EB;
+  color: $color-neutral-10;
   padding-top: 0;
   padding-left: 1rem;
   font-style: italic;
@@ -601,10 +635,21 @@ tr.bx--expandable-row-v2:hover+tr[data-child-row]>td {
 .apiconnect-explorer .bx--tabs__nav {
   position: unset;
   color: #7B7E86;
-  width: fit-content;
   display: flex;
   align-items: center;
   margin-bottom: -2px;
+}
+@media (max-width: 767px) {
+  .apiconnect-explorer .bx--tabs__nav {
+    background-color: transparent;
+    align-items: flex-start;
+  }
+  .bx--tabs__nav.bx--tabs__nav--hidden {
+    display: none;
+  }
+  .bx--tabs__nav-link {
+    padding: .35rem 0;
+  }
 }
 .definitionsBody table thead,
 .definitionsBody table tr {
@@ -642,6 +687,7 @@ li.bx--tabs__nav-item {
   border-radius: 16px;
   margin-bottom: 0;
   padding: 4px;
+  width: fit-content;
   li.bx--tabs__nav-item {
     padding: 2px 2rem;
     background-color: transparent;
@@ -718,7 +764,7 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 
 // Модалка
 .modalAppResultContainer.modal-dialog {
-  color: #E5E7EB;
+  color: $color-neutral-10;
 }
 .clientIDContainer .field__label, .clientSecretContainer .field__label, .applicationCredentials .credentialsTable .credentialsContent .credentialsData .field__label {
   color: $color-neutral-50;
@@ -732,8 +778,42 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
   background-color: transparent;
 }
 // Развернутые планы
-.apicTableFixedColumn tbody tr.api-odd {
+.apicTableFixedColumn tbody tr.api-odd,
+.apicTableFixedColumn tbody tr.api-even {
   background-color: transparent;
+}
+// Окончание подписки
+.apicForm {
+  .apicFormHeader {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 24px;
+    padding: 0;
+  }
+  .apicFormText {
+    padding: 0;
+    margin: 1rem 0;
+  }
+}
+.apicSubscribedProduct {
+  padding: 0 !important;
+  margin-bottom: 1rem !important;
+  .apicCardIcon {
+    display: none;
+  }
+  .apicSubProductCard {
+    margin-left: 0 !important;
+  }
+}
+.apicSubscribedApp {
+  padding: 0 !important;
+  .apicCardIcon {
+    display: none;
+  }
+  .bx--about__title--name {
+    margin-left: 0 !important;
+  }
 }
 
 
@@ -775,7 +855,7 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 }
 
 // Табы "Сведения/попробовать"
-.bx--tabs-trigger {
+.bx--tabs-trigger, .bx--tabs-trigger:focus {
   background-color: transparent;
   box-shadow: none;
 }
