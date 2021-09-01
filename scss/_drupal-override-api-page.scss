@@ -681,6 +681,19 @@ li.bx--tabs__nav-item {
   }
 }
 
+@media (max-width: 767px) {
+  li.bx--tabs__nav-item {
+    padding: 0 0 0 1rem;
+    background-color: $color-light-grey-bg;
+    margin: 0;
+
+    &--selected {
+      border-bottom: none;
+      background-color: #0062FF;
+    }
+  }
+}
+
 // Табы внутри выпадающих определений
 .definitionDisplay ul.bx--tabs__nav {
   background-color: $color-neutral-90;
@@ -829,6 +842,11 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 .productApiWrapper .titleInnerWrapper .leftTitle {
   width: 100%;
   max-width: 50rem;
+}
+@media (max-width: 767px) {
+  .productApiWrapper .titleInnerWrapper .leftTitle {
+    max-width: 12rem;
+  }
 }
 
 .apiconnect-explorer .SplitPane:not(.showResponsiveMenu) {

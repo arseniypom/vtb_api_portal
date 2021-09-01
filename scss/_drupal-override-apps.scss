@@ -33,8 +33,9 @@ a.button.apicNewApp {
 }
 @media (max-width: 767px) {
   .apicNewAppWrapper {
-    position: static;
-    justify-content: flex-start;
+    position: static !important;
+    justify-content: flex-start !important;
+    margin: 0 1rem 1rem .5rem;
   }
 }
 

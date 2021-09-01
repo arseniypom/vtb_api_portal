@@ -180,7 +180,7 @@ jQuery(function() {
   }
 
   // Отмена стилей большого заголовка в форме приглашения участников организации
-  if (jQuery('.route-apic-appcreate .main-container .row, .route-apic-appcreate-step-two .main-container .row, .route-applicationcreate .main-container .row, .route-applicationcreate-step-two .main-container .row, .route-apic-appverify-clientsecret .main-container .row, .route-apic-appcredentials-create .main-container .row, .route-apic-appreset-clientid .main-container .row, .route-apic-appreset-clientsecret .main-container .row, .route-apic-appcredentials-update .main-container .row, .route-apic-appcredentials-delete .main-container .row, .route-apic-appupdate .main-container .row, .route-apic-appdelete .main-container .row, .route-apic-apppromote .main-container .row, .route-apic-appimage-upload .main-container .row, .route-apic-appimage-delete .main-container .row, .route-consumerorgcreate .main-container .row, .route-consumerorgupdate .main-container .row, .route-consumerorgdelete .main-container .row, .route-consumerorgchangeowner .main-container .row, .route-consumerorginvite .main-container .row, .route-consumerorgremove-user .main-container .row, .route-consumerorgresend-invite .main-container .row, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form, .route-entityuseredit-form .main-container .row .user-form, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input, form.user-pass-reset, .apicForm, .apic-user-form').length === 1) {
+  if (jQuery('.route-apic-appcreate .main-container .row, .route-apic-appcreate-step-two .main-container .row, .route-applicationcreate .main-container .row, .route-applicationcreate-step-two .main-container .row, .route-apic-appverify-clientsecret .main-container .row, .route-apic-appcredentials-create .main-container .row, .route-apic-appreset-clientid .main-container .row, .route-apic-appreset-clientsecret .main-container .row, .route-apic-appcredentials-update .main-container .row, .route-apic-appcredentials-delete .main-container .row, .route-apic-appupdate .main-container .row, .route-apic-appdelete .main-container .row, .route-apic-apppromote .main-container .row, .route-apic-appimage-upload .main-container .row, .route-apic-appimage-delete .main-container .row, .route-consumerorgcreate .main-container .row, .route-consumerorgupdate .main-container .row, .route-consumerorgdelete .main-container .row, .route-consumerorgchangeowner .main-container .row, .route-consumerorginvite .main-container .row, .route-consumerorgremove-user .main-container .row, .route-consumerorgresend-invite .main-container .row, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form, .route-entityuseredit-form .main-container .row .user-form, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input, form.user-pass-reset, .apicForm, .apic-user-form, .consumerorg-change-member-role-form').length === 1) {
     jQuery('.page-header').css({
       'font-style': 'normal',
       'font-weight': '600',
@@ -251,16 +251,6 @@ jQuery(function() {
   }
 
 
-  // Замена иконки поиска в шапке профиля
-  const searchIconSvg = jQuery(`
-    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7C0 3.13 3.13 0 7 0C10.87 0 14 3.13 14 7C14 8.76212 13.3511 10.3708 12.2789 11.6005L15.7802 15.111C16.0337 15.3652 16.0332 15.7767 15.779 16.0302C15.5248 16.2837 15.1133 16.2832 14.8598 16.029L11.3373 12.4973C10.1453 13.4386 8.639 14 7 14C3.13 14 0 10.87 0 7ZM12.7 7C12.7 3.86 10.14 1.3 7 1.3C3.86 1.3 1.3 3.86 1.3 7C1.3 10.14 3.86 12.7 7 12.7C10.14 12.7 12.7 10.14 12.7 7Z" fill="white"/>
-    </svg>
-  `);
-  if (jQuery( ".ibmapimSearch > .imageContainer > a" ).length) {
-    jQuery( ".ibmapimSearch > .imageContainer > a" ).html(searchIconSvg);
-  }
-
   // Замена стрелки дропменю в шапке профиля и добавление такой же стрелки в раздел поддержки FAQ
   const dropitArrowCreate = (color, addClass) => {
     return (jQuery(`
@@ -290,34 +280,6 @@ jQuery(function() {
       arrayTd.appendTo(definition)
     });
   }
-
-  // if (jQuery('.apiconnect-explorer').length) {
-  //   jQuery('.definitionsBody').ready(() => {
-  //     jQuery('.definitionsBody > div > table > thead > tr > th')[0].remove()
-  //     const definitionsArray = jQuery("tr.definitionRow");
-  //     definitionsArray.each((i, definition) => {
-  //       const arrayTd = jQuery(definition).find('.bx--table-expand-v2');
-  //       arrayTd.appendTo(definition)
-  //     });
-  //   })
-  // }
-
-  // let observer = new MutationObserver(() => {
-  //   if (jQuery('.definitionsBody').length) {
-  //     jQuery('.definitionsBody > div > table > thead > tr > th')[0].remove()
-  //     const definitionsArray = jQuery("tr.definitionRow");
-  //     definitionsArray.each((i, definition) => {
-  //       const arrayTd = jQuery(definition).find('.bx--table-expand-v2');
-  //       arrayTd.appendTo(definition)
-  //     });
-  //   }
-  // });
-  // const apiconnectExplorerNode = document.getElementByClassName('Pane2')
-  // console.log(apiconnectExplorerNode);
-  // observer.observe(apiconnectExplorerNode, {
-  //   childList: true, // наблюдать за непосредственными детьми
-  //   subtree: true, // и более глубокими потомками
-  // });
 
   const spinningArrowsSvg = jQuery(`
     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -25,11 +25,23 @@
   }
 }
 
+@media (max-width: 767px) {
+  .apicMyOrg header.titleSection .leftTitle {
+    max-width: 12rem;
+  } 
+}
+
 h1.orgName {
   font-weight: 600 !important;
   font-size: 48px;
   line-height: 52px;
   color: #F3F4F6;
+}
+@media (max-width: 767px) {
+  h1.orgName {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
 }
 
 .memberIcon {
@@ -43,6 +55,16 @@ h1.orgName {
   grid-template-columns: 2.05fr 3.75fr 1fr;
   width: auto;
   max-width: 65rem;
+}
+@media (max-width: 767px) {
+  .apicMyOrgOwner .apicMyOrgMemberDetails {
+    display: flex;
+    flex-direction: column;
+
+    .orgApicUser {
+      padding-left: 0;
+    }
+  }
 }
 
 // Меню для редактирования организация (справа от имени владельца)
@@ -221,6 +243,35 @@ h1.orgName {
 
   li a {
     color: $color-neutral-10;
+  }
+}
+
+// Форма изменить роль участника
+.consumerorg-change-member-role-form {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  div#edit-new-role {
+    display: flex;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1220px) {
+  .consumerorg-change-member-role-form {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .consumerorg-change-member-role-form {
+    div#edit-new-role {
+      display: block;
+    }
   }
 }
 

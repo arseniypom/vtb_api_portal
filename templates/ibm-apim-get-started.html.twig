@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the getting started page
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="ibmapimGetStarted">
+  <div id="get-started-wrapper">
+    <h1 class="page-header">{{ 'Get Started'|t }}</h1>
+    <div class="getStartedContentWrapper startguide">
+      {% if userHasAppManage and show_register_app %}
+        <div class="getStartedCard">
+          <div class="getStartedCardImg">
+            <img src="{{ base_path ~ directory }}/images/round_plus.svg" alt="plus">
+          </div>
+          <div class="getStartedCardText">
+            <h3>{{ 'Create a new App'|t }}</h3>
+            <p>{{ 'Create an App so you can subscribe to our API Products and start building your application.'|t }}</p>
+          </div>
+          <div class="getStartedCardButton"><a href="{{ path('apic_app.create') }}" class="btn button button-transparent">{{ 'Create an App'|t }}</a></div>
+        </div>
+      {% endif %}
+      <div class="getStartedCard">
+        <div class="getStartedCardImg">
+          <img src="{{ base_path ~ directory }}/images/list.svg" alt="plus">
+        </div>
+        <div class="getStartedCardText">
+          <h3>{{ 'Explore API Products'|t }}</h3>
+          <p>{{ 'Take a look at our API products and quickly find the APIs you need.'|t }}</p>
+        </div>
+        <div class="getStartedCardButton"><a href="{{ path('view.products.page_1') }}" class="btn button button-transparent">{{ 'Start Exploring'|t }}</a></div>
+      </div>
+    </div>
+  </div>
+</div>
