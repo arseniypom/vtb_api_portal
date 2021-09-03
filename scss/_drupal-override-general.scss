@@ -35,7 +35,7 @@ a:focus {
   align-items: center;
 }
 
-// Формы
+// Формы / модалки
 .route-apic-appcreate .main-container .row, .route-apic-appcreate-step-two .main-container .row, .route-applicationcreate .main-container .row, .route-applicationcreate-step-two .main-container .row, .route-apic-appverify-clientsecret .main-container .row, .route-apic-appcredentials-create .main-container .row, .route-apic-appreset-clientid .main-container .row, .route-apic-appreset-clientsecret .main-container .row, .route-apic-appcredentials-update .main-container .row, .route-apic-appcredentials-delete .main-container .row, .route-apic-appupdate .main-container .row, .route-apic-appdelete .main-container .row, .route-apic-apppromote .main-container .row, .route-apic-appimage-upload .main-container .row, .route-apic-appimage-delete .main-container .row, .route-consumerorgcreate .main-container .row, .route-consumerorgupdate .main-container .row, .route-consumerorgdelete .main-container .row, .route-consumerorgchangeowner .main-container .row, .route-consumerorginvite .main-container .row, .route-consumerorgremove-user .main-container .row, .route-consumerorgresend-invite .main-container .row, .route-change-pwd-pagechange-password-form .main-container .row .apic-change-pwd-form, .route-entityuseredit-form .main-container .row .user-form, .route-ibm-apimsubscription-wizardnoplan .modal-dialog .form-item input, form.user-pass-reset, .apicForm, .apic-user-form {
   background-color: $color-neutral-90;
   border: 0;
@@ -51,19 +51,69 @@ a:focus {
   }
 }
 
-// Кнопки в формах
+// Сообщение об ошибке под вводом
+.form-item--error-message {
+  border: none;
+  color: $color-error-50;
+  font-size: 14px;
+  padding: .5rem 0;
+  max-width: fit-content;
+}
+
+// Шапка
+.bx--global-light-ui .modal-header {
+  padding: 0 1.5rem 1rem;
+}
+
+// Основной контент
+div#drupal-modal--content {
+  background-color: $color-neutral-90;
+  color: $color-neutral-10;
+  width: 100%;
+  max-width: 37rem;
+}
+.bx--global-light-ui .modal-content {
+  border-radius: 8px;
+  border: none;
+}
+.bx--global-light-ui .modal-body {
+  padding: 0 1.5rem;
+}
+
+.bx--global-light-ui .form-item {
+  margin: 0;
+}
+
+// Кнопки внизу
+.bx--global-light-ui .modal-footer {
+  padding: 1.5rem;
+}
+.bx--global-light-ui .modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
 .bx--global-light-ui .form-actions .button, .bx--global-light-ui .form-actions .btn {
   margin: 0;
 }
 
 .bx--global-light-ui .views-exposed-form .form-item {
-  // height: 3.875rem;
   margin: 0 2rem 1.25rem 0;
 }
 
 .form-required::after {
   display: none;
 }
+
+
+// Подложка модального окна
+.bx--global-light-ui .modal-backdrop {
+  background-color: #000;
+
+  &.in {
+    opacity: .6;
+  }
+}
+
 
 // Форма регистрации, капча
 .apic-user-form-register .captcha {
@@ -566,7 +616,7 @@ input#edit-title {
 .view-filters.form-group input.form-text,
 .bx--global-light-ui .view-filters.form-group input.form-text {
   width: 100%;
-  max-width: 20rem;
+  max-width: none;
   height: 2.5rem;
 }
 span.input-group-addon {
@@ -699,7 +749,6 @@ span.icon.glyphicon.glyphicon-envelope {
 }
 
 .bx--global-light-ui .view-filters.form-group .form-actions {
-  // height: 3.875rem;
   width: 100%;
   margin: .5rem 0 2.5rem;
   display: inline-flex;
@@ -707,11 +756,6 @@ span.icon.glyphicon.glyphicon-envelope {
   align-items: flex-end;
 
 }
-// @media (max-width: 768px) {
-//   .bx--global-light-ui .view-filters.form-group .form-actions {
-//     margin: 0 0 1rem;
-//   }
-// }
 
 .bx--global-light-ui .view-filters.form-group {
   max-width: 1220px;
@@ -779,6 +823,20 @@ span.icon.glyphicon.glyphicon-envelope {
 
 }
 
+// Кнопка возврата
+.goback-button {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: .75rem;
+  }
+
+  p {
+    color: $color-neutral-40;
+  }
+}
+
 // Алерты наверху страницы -------------------------------------------------------
 .alert {
   color: $color-darkweb-text-primary;
@@ -838,10 +896,10 @@ svg.bx--inline-notification__close-icon,
 
 
 // Переходы на 1 и последнюю страницы
-a[rel="first"],
-a[rel="last"] {
-  display: none !important;
-}
+// a[rel="first"],
+// a[rel="last"] {
+//   display: none !important;
+// }
 
 // Появляющийся текст об успешном копировании блока кода по кнопке "копировать"
 .apiconnect-copier .copyNotifier {

@@ -1,14 +1,35 @@
 /* ----------------------- замена DRUPAL DEFAULTS FOR GET STARTED PAGE ----------------------- */
 .ibmapimGetStarted {
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
   max-width: 1220px;
+
+  position: relative;
+
+  .decorativeImg {
+    position: absolute;
+    right: 2.5rem;
+    top: 1rem;
+  }
+
+  .getStartedContentWrapper {
+    display: flex;
+    margin-top: 2.5rem;
+    justify-content: unset;
+  }
 }
 
 // Карточка с информацией
 .getStartedCard {
   width: 100%;
   max-width: 30.5rem;
+
+  &:first-child {
+    margin-right: 8.5rem;
+  }
+  &:only-child {
+    margin-right: 0;
+  }
 }
 
 // Изображение на карточках
@@ -44,6 +65,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .ibmapimGetStarted {
+    .decorativeImg {
+      display: none;
+    }
+  }
   .startguide {
     flex-flow: initial;
     padding: 0 1rem;
@@ -52,5 +78,18 @@
 @media screen and (max-width: 767px) {
   .startguide {
     flex-flow: column wrap;
+  }
+
+  .getStartedCard {
+    width: 100%;
+    max-width: 30.5rem;
+  
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    &:only-child {
+      margin-bottom: 0;
+    }
   }
 }

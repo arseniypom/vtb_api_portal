@@ -17,17 +17,12 @@
       ] %}
       {%- set attributes = attributes.addClass(classes) -%}
       {% for key, value in trail %}
-        {# {% if key is same as("chooseapp") %}
-          {%- set stepNumber = 2 -%}
-        {% else %}
-          {%- set stepNumber = 0 -%}
-        {% endif %} #}
         {% if key is same as(step) %}
           {# Текущий шаг #}
           {%- set attributes = attributes.removeClass(complete_class) -%}
           {%- set attributes = attributes.addClass(current_class) -%}
           <li {{ attributes }}>
-            <span class="bx--progress-circle">{{ stepNumber }}</span>
+            <span class="bx--progress-circle">{{ loop.index }}</span>
             <p class="bx--progress-label">{{ value }}</p>
             <span class="bx--progress-line"></span>
           </li>
@@ -44,7 +39,7 @@
               </span>
             {% else %}
             {# Будущий, не начатый шаг #}
-              <span class="bx--progress-circle"></span>
+              <span class="bx--progress-circle">{{ loop.index }}</span>
             {% endif %}
             {# Общая часть для выполненного и будущего шагов #}
             <p class="bx--progress-label">{{ value }}</p>

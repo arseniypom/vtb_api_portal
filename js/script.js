@@ -360,19 +360,6 @@ jQuery(function() {
     jQuery(iconContainers[1]).html(icon2);
   }
 
-  // Замена иконок стрелок в пагинации
-  // const arrowPrevSvg = () => {
-  //   return (jQuery(
-  //     `<svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //       <path fill-rule="evenodd" clip-rule="evenodd" d="M7.67828 0.765202C8.0841 1.13981 8.10941 1.77246 7.7348 2.17829L2.36091 8L7.7348 13.8217C8.10941 14.2275 8.0841 14.8602 7.67828 15.2348C7.27246 15.6094 6.6398 15.5841 6.2652 15.1783L0.265197 8.67828C-0.0883988 8.29522 -0.0883988 7.70479 0.265197 7.32172L6.2652 0.821725C6.6398 0.415904 7.27246 0.390598 7.67828 0.765202Z" fill="#576375"/>
-  //     </svg>`
-  //   ))
-  // }
-  // if (jQuery('.pagination')) {
-  //   jQuery('a[rel="prev"] > span').html(arrowPrevSvg())
-  //   jQuery('a[rel="next"] > span').html(arrowPrevSvg().css('transform', 'rotate(180deg)'))
-  // }
-
   // Замена иконки фильтра
   const filterButton = jQuery(
     `<svg class="filter-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -396,8 +383,7 @@ jQuery(function() {
 
 
     if (jQuery('.apicMyOrgNoMembers').length) {
-      // Удаление таблицы, если участников нет
-      jQuery('.apicMyOrgMembers').html('<p>Пригласите участников для совместной работы</p>')
+
     } else {
       // Реорганизация таблицы
       // Участники

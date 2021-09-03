@@ -6,7 +6,19 @@
   margin: 0 auto;
 }
 
-// .search-content
+.form-type-search-api-autocomplete {
+  max-width: 30.5rem;
+}
+
+// Обертка фильтров
+.view-search-content #apic-view-filter {
+  width: 100%;
+
+  .form-inline .input-group {
+    width: 100% !important;
+  }
+}
+
 
 .node--view-mode-teaser, article.search-result,
 .teaser, .view-search-content article.faq {
@@ -32,12 +44,5 @@
   a {
     font-size: 1.5rem;
     font-weight: 600;
-  }
-}
-
-// Пагинация
-.view-search-content {
-  .pager__item.pager__item--next {
-    display: none;
   }
 }

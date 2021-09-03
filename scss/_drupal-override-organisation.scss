@@ -335,6 +335,10 @@ form#consumerorg-resend-invitation-form {
   text-align: justify;
 }
 
+#consumerorg-invite-user-form .form-actions {
+  margin: 0;
+}
+
 // Кнопка "Отправить"
 #consumerorg-invite-user-form button#edit-submit {
   margin-left: 1rem;

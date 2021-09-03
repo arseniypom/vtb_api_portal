@@ -35,20 +35,32 @@
                   <ul class="dropitmenu-submenu">
                     {% if myorg_can_rename_org %}
                       <li class="editOrganizationName">
-                        <a href="{{ url('consumerorg.update') }}" title="{{ 'Edit organization'|t }}">
+                        <a href="{{ url('consumerorg.update') }}" title="{{ 'Edit organization'|t }}"
+                          class="use-ajax"
+                          data-dialog-type="modal"
+                          data-dialog-options="{&quot;width&quot;:&quot;auto&quot;}"
+                        >
                           {{ 'Edit organization'|t }}
                         </a>
                       </li>
                     {% endif %}
                     {% if myorg_can_transfer_owner and myorg_members|length > 0 %}
                       <li class="changeOrganizationOwner">
-                        <a href="{{ url('consumerorg.changeowner') }}" title="{{ 'Change organization owner'|t }}">
+                        <a href="{{ url('consumerorg.changeowner') }}" title="{{ 'Change organization owner'|t }}"
+                          class="use-ajax"
+                          data-dialog-type="modal"
+                          data-dialog-options="{&quot;width&quot;:&quot;auto&quot;}"
+                        >
                           {{ 'Change organization owner'|t }}</a>
                       </li>
                     {% endif %}
                     {% if myorg_can_delete_org %}
                       <li class="deleteOrganization">
-                        <a href="{{ url('consumerorg.delete') }}" title="{{ 'Delete organization'|t }}">
+                        <a href="{{ url('consumerorg.delete') }}" title="{{ 'Delete organization'|t }}"
+                          class="use-ajax"
+                          data-dialog-type="modal"
+                          data-dialog-options="{&quot;width&quot;:&quot;auto&quot;}"
+                        >
                           {{ 'Delete organization'|t }}</a>
                       </li>
                     {% endif %}
@@ -108,8 +120,10 @@
         <h3>{{ 'Members'|t }}</h3>
         {% if edit_mode and myorg_has_member_manage_perm %}
           <div class="apicNewUserWrapper">
-            <a class="button apicNewUser orgInvite" href="{{ url('consumerorg.invite') }}"
-               title="{{ 'Invite other users to join your consumer organization'|t }}">
+            <a class="button apicNewUser orgInvite use-ajax" href="{{ url('consumerorg.invite') }}"
+              title="{{ 'Invite other users to join your consumer organization'|t }}"
+              data-dialog-type="modal"
+              data-dialog-options="{&quot;width&quot;:&quot;auto&quot;}">
               <span>{{ 'Invite'|t }}</span>
             </a>
           </div>
@@ -130,16 +144,9 @@
           </thead>
           <tbody>
           {% if myorg_members is empty %}
-            <tr class="member-even">
-              <td colspan="7">
-                <div class="apicMyOrgNoMembers">
-                  <span>
-                    {% include images_path ~ '/images/members-placeholder.svg' %}
-                  </span>
-                  {{ 'Members will be listed here'|t }}
-                </div>
-              </td>
-            </tr>
+            <div class="apicMyOrgNoMembers">
+              <p>Пригласите участников для совместной работы</p>
+            </div>
           {% else %}
 
             {% for member in myorg_members %}
@@ -242,13 +249,21 @@
                             {% if member.state == 'Pending' %}
                               <li class="resendInvitation">
                                 <a href="{{ url('consumerorg.resend_invite', {'inviteId': member.id}) }}"
-                                   title="{{ 'Resend invitation'|t }}">
+                                  title="{{ 'Resend invitation'|t }}"
+                                  class="use-ajax"
+                                  data-dialog-type="modal"
+                                  data-dialog-options="{&quot;width&quot;:&quot;auto&quot;}"   
+                                >
                                   {{ 'Resend invitation'|t }}
                                 </a>
                               </li>
                               <li class="removeInvitation">
                                 <a href="{{ url('consumerorg.delete_invite', {'inviteId': member.id}) }}"
-                                   title="{{ 'Delete invitation'|t }}">
+                                  title="{{ 'Delete invitation'|t }}"
+                                  class="use-ajax"
+                                  data-dialog-type="modal"
+                                  data-dialog-options="{&quot;width&quot;:&quot;auto&quot;}" 
+                                >
                                   {{ 'Delete invitation'|t }}
                                 </a>
                               </li>

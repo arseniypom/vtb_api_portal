@@ -20,19 +20,14 @@
 <article id="node-{{ node.id }}" {{ attributes.addClass(classes) }} aria-label="{{ node.title[0].value }}">
   <div class="apicProduct">
     <header class="node__header--has-meta node__header apicProductHeader">
-      <div class="breadcrumb">
+      {# <div class="breadcrumb">
         <a href="{{ path('view.products.page_1') }}">{{ 'All Products'|t }}</a> /
-      </div>
+      </div> #}
+      <a class="goback-button" href="{{ path('view.products.page_1') }}">
+        <img src="{{ base_path ~ directory }}/images/arrow-left.svg" alt="arrow back" class="arrow-back">
+        <p>Назад</p>
+      </a>
       <div class="apicProductTitle">
-        {# {% if content.apic_image is defined and content.apic_image|render|trim is not empty %} #}
-          {# <div class="apicProductIcon">
-            {{ content.apic_image }}
-          </div> #}
-        {# {% elseif showPlaceholders %}
-          <div class="apicProductIcon">
-            <img src="{{- placeholderUrl -}}" alt=""/>
-          </div>
-        {% endif %} #}
         <div class="apicProductTitleText">
           <h1 class="productName">
                 <span id="node-{{ node.id }}-title"
@@ -41,7 +36,6 @@
           {% if showVersions %}
             <span class="apicProductVersion"><p class="apicProductVersionText">ver. </p> {{- content.apic_version -}}</span>
           {% endif %}
-          {# {{ content.apic_rating }} #}
         </div>
         <div class="apicProductTitleDescription">
           {% if content.apic_summary['#items'][0].value is defined and content.apic_summary['#items'][0].value is not empty %}

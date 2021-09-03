@@ -21,8 +21,12 @@
           {% else %}
             {% set prodNode = product.nid %}
           {% endif %}
-          <div class="breadcrumb"><a href="{{ path('view.products.page_1') }}">
-              {{ 'All Products'|t }}</a> / <a href="{{- path('product.view', {'prodNode': prodNode}) }}">{{- product.title -}}</a></div>
+          {# <div class="breadcrumb"><a href="{{ path('view.products.page_1') }}">
+              {{ 'All Products'|t }}</a> / <a href="{{- path('product.view', {'prodNode': prodNode}) }}">{{- product.title -}}</a></div> #}
+            <a class="goback-button" href="{{- path('product.view', {'prodNode': prodNode}) }}">
+              <img src="{{ base_path ~ directory }}/images/arrow-left.svg" alt="arrow back" class="arrow-back">
+              <p>{{- product.title -}}</p>
+            </a>
         {% endif %}
         <div class="apicProductTitle apicApiTitle">
           {% if api.image_url is defined and api.image_url is not empty %}
