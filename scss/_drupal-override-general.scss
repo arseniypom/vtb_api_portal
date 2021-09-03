@@ -64,6 +64,9 @@ a:focus {
 .bx--global-light-ui .modal-header {
   padding: 0 1.5rem 1rem;
 }
+.bx--global-light-ui .modal-header .close {
+  background-color: transparent;
+}
 
 // Основной контент
 div#drupal-modal--content {
@@ -87,10 +90,25 @@ div#drupal-modal--content {
 // Кнопки внизу
 .bx--global-light-ui .modal-footer {
   padding: 1.5rem;
+
+  .btn+.btn {
+    margin-left: 0;
+  }
+
+  .form-submit {
+    margin-left: 1rem;
+  }
 }
 .bx--global-light-ui .modal-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+
+  .apicsecondary {
+    font-size: .875rem !important;
+    color: $color-primary-50 !important;
+    border-color: $color-primary-50 !important;
+  }
 }
 .bx--global-light-ui .form-actions .button, .bx--global-light-ui .form-actions .btn {
   margin: 0;
@@ -227,6 +245,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   background-color: #000000;
   border-radius: 4px;
   border: none;
+  right: 2rem;
+  top: -7rem;
 }
 .overflow-menu ul.dropit-submenu:before {
   background-color: transparent;
@@ -827,6 +847,7 @@ span.icon.glyphicon.glyphicon-envelope {
 .goback-button {
   display: flex;
   align-items: center;
+  width: fit-content;
 
   img {
     margin-right: .75rem;

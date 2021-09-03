@@ -663,7 +663,7 @@ li.bx--tabs__nav-item {
   margin: 0;
 
   a {
-    color: inherit;
+    color: $color-neutral-10;
     font-weight: 400;
     line-height: 1.25rem;
     padding-right: 0;
@@ -781,9 +781,6 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 }
 .clientIDContainer .field__label, .clientSecretContainer .field__label, .applicationCredentials .credentialsTable .credentialsContent .credentialsData .field__label {
   color: $color-neutral-50;
-}
-.bx--global-light-ui .modal-header {
-  padding: 1rem 3rem .5rem;
 }
 
 // Планы

@@ -143,12 +143,12 @@ h1.orgName {
 
 // Список участников
 .apicMyOrg .field.organizationMembers {
-  padding: 2rem 3rem 6rem;
+  padding: 2rem 3rem 10rem;
 }
 
 @media (max-width: 767px) {
   .apicMyOrg .field.organizationMembers {
-    padding: 2rem 0 6rem;
+    padding: 2rem 0 8rem;
   }
 
   .apicMyOrgMembers {
