@@ -422,9 +422,11 @@ h2.field__label.label.tariff-label {
 
 .tariff-plans {
   display: flex;
-  background: #111215;
-  // flex-wrap: wrap;
   justify-content: flex-start;
+}
+
+.footer-bg .tariff-plans {
+  background: #111215;
 }
 
 .tariff-plan {

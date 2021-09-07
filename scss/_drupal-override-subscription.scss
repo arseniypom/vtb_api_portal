@@ -21,7 +21,7 @@
   flex-direction: column;
   width: 100%;
   min-width: 7rem;
-  max-width: 304px;
+  // max-width: 304px;
   transition: 250ms all cubic-bezier(0.5,0,.1,1);
   overflow: visible;
   padding-top: .75rem;
@@ -146,7 +146,7 @@ h3.field__label.label {
 }
 
 // Шаг с выбором приложения -----------------------------------------
-.route-ibm-apimsubscription-wizardstep .apicMainContent .apicWizardHeader {
+.route-ibm-apimsubscription-wizard .apicMainContent .apicWizardHeader, .route-ibm-apimsubscription-wizardstep .apicMainContent .apicWizardHeader, .route-ibm-apimsubscription-wizardnoplan .apicMainContent .apicWizardHeader, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .apicWizardHeader, .route-mail-subscribersproduct-wizard .apicMainContent .apicWizardHeader, .route-mail-subscribersproduct-wizardstep .apicMainContent .apicWizardHeader, .route-mail-subscribersplan-wizard .apicMainContent .apicWizardHeader, .route-mail-subscribersplan-wizardstep .apicMainContent .apicWizardHeader, .route-mail-subscribersapi-wizard .apicMainContent .apicWizardHeader, .route-mail-subscribersapi-wizardstep .apicMainContent .apicWizardHeader, .route-mail-subscribersall-wizard .apicMainContent .apicWizardHeader, .route-mail-subscribersall-wizardstep .apicMainContent .apicWizardHeader {
   color: $color-neutral-05;
   border-bottom: none;
   font-weight: 500;
@@ -154,7 +154,7 @@ h3.field__label.label {
   line-height: 32px;
 }
 
-.route-ibm-apimsubscription-wizardstep .apicMainContent .apicWizardMain.apicSubscribeChooseApp {
+.route-ibm-apimsubscription-wizardnoplan .apicMainContent .apicWizardMain.apicSubscribeChooseApp, .route-ibm-apimsubscription-wizardnoplanstep .apicMainContent .apicWizardMain.apicSubscribeChooseApp, .route-ibm-apimsubscription-wizardstep .apicMainContent .apicWizardMain.apicSubscribeChooseApp {
   padding: 0;
   max-width: 1220px;
   margin: 0 auto;
@@ -178,7 +178,12 @@ h3.field__label.label {
   display: none;
 }
 
-// Кнопки
+// Кнопки на предпоследнем этапе подписки
+.apic-wizard-navigation {
+  margin-top: 1rem;
+}
+
+// Кнопки на последнем этапе подписки
 .route-ibm-apimsubscription-wizardstep .apicMainContent .apicSubscribeResultFollowup {
   flex-direction: row;
 }

@@ -779,8 +779,14 @@ tr.bx--expandable-row-v2>td:first-of-type:before {
 .modalAppResultContainer.modal-dialog {
   color: $color-neutral-10;
 }
-.clientIDContainer .field__label, .clientSecretContainer .field__label, .applicationCredentials .credentialsTable .credentialsContent .credentialsData .field__label {
+.applicationCredentials .credentialsTable .credentialsContent .credentialsData .field__label, #application-create-form-two .field__label {
   color: $color-neutral-50;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.clientIDContainer .field__label, .clientSecretContainer .field__label {
+  display: none;
 }
 
 // Планы

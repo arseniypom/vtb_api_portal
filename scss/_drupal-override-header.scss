@@ -36,6 +36,12 @@ li.dropit-trigger a {
   min-width: 7.25rem;
   margin-left: .625rem;
 }
+
+// Декоративная точка между регистрацией и входом
+nav.block-login ul.menu li+li:before {
+  content: "";
+}
+
 // Меню выбора организации
 .consumerorgSelectBlock .orgmenu .dropit-trigger > a {
   display: flex;
