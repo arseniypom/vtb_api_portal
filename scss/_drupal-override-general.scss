@@ -624,6 +624,11 @@ li.dropit-trigger a {
   color: $color-primary-50;
 }
 
+// Кнопка перезагрузки возле инпута ввода текста
+span.input-group-addon {
+  display: none !important;
+}
+
 // Инпут "Заголовок"
 input#edit-title {
   background-color: transparent;

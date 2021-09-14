@@ -47,6 +47,18 @@ function vtb_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
       $form['actions']['#group'] = 'secondary';
     }
   }
+
+  if($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-faqs-page-1'){
+    if(isset($form['actions']) && isset($form['actions']['reset'])){
+      $old_reset = $form['actions']['reset'];
+      $form['actions']['reset'] = [
+        '#type' => 'link',
+        '#title' => $old_reset['#value'],
+        '#url' => \Drupal\Core\Url::fromRoute('ibm_apim.support'),
+        '#attributes' => ['class' => ['button', 'apicSecondary']],
+      ];
+    }
+  }
 }
 
 
@@ -65,4 +77,3 @@ function vtb_theme_form_application_create_form_two_alter(array &$form, FormStat
     <p class="field__label">' . t('Client Secret') . '</p>
   ');
 }
-

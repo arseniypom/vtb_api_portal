@@ -118,13 +118,13 @@
             {% set register_path = path('user.register') %}
             {% set login_path = path('user.login') %}
             {% trans %}
-              In order to subscribe, you must <a href="{{ register_path }}">create an account</a> or <a
-                href="{{ login_path }}">sign in</a>.
+              Чтобы подписаться, необходимо <a class="link-primary" href="{{ register_path }}">зарегистрироваться</a> или <a class="link-primary"
+                href="{{ login_path }}">войти</a>.
             {% endtrans %}
           {% else %}
             {% set login_path = path('user.login') %}
             {% trans %}
-              In order to subscribe, you must <a href="{{ login_path }}">sign in</a>.
+              Чтобы подписаться, необходимо <a class="link-primary" href="{{ login_path }}">войти</a>.
             {% endtrans %}
           {% endif %}</p>
       </div>
@@ -146,27 +146,47 @@
               {% for planid, plan in planList %}
                 <div class="tariff-plan">
                   <h4 class="tariff-plan-title">{{ plan.data.title }}</h4>
-                  <p class="tariff-plan-label">Вызовов в час</p>
+                  <p class="tariff-plan-label">Ограничение вызовов в час</p>
                   {% if plan.data.apiList is empty or api.node.api_xibmname[0].value in plan.data.apiList %}
-                    <h2 class="tariff-plan-api_calls">{{ plan.rateLimit }}</h2>
+                    {% set rates_array = plan.data['rate-limits'].default.value|split('/') %}
+                    {# {% set rates_object = json_decode(plan.rateData) %} #}
+                    <div class="tariff-plan-api_calls">
+                      <h2>{{ rates_array[0] }}</h2>
+                      {% if plan.rateData|length > 0 %}
+                        <div class="informer">
+                          <img src="{{ base_path ~ directory }}/images/question-mark.svg" alt="question mark" class="informer-icon">
+                          <span class="informer-text">
+                            <div>
+                              <p>{{ plan.rateData }}</p>
+                            </div>
+                          </span>
+                        </div>
+                      {% endif %}
+                    </div>
                   {% else %}
                     &#x2014;
                   {% endif %}
                   <p class="tariff-plan-label">Стоимость в месяц</p>
-                  <h2 class="tariff-plan-price">{{ plan.billing-info }}</h2>
-                  {% if subscribable %}
-                    <a href="{{ path('ibm_apim.subscription_wizard.noplan') }}/?productId={{ node.id }}&planTitle={{ plan.data.title }}&planId={{ planid }}">
-                      <button class="button-transparent button-transparent-blue tariff-plan-button-subscribe">{{ 'Subscribe'|t }}</button>
-                    </a>
+                  {% if plan.data['x-billing-info'].amount|length > 0 %}
+                    <h2 class="tariff-plan-price">{{ plan.data['x-billing-info'].amount }} {{ plan.data['x-billing-info'].currency }}</h2>
                   {% else %}
-                    <button  class="button-transparent button-transparent-blue tariff-plan-button-subscribe" disabled>{{ 'Subscribe'|t }}</button>
-                    <div class="apicSubscribeMsg">
-                      {% if content.product_state[0].value is defined and content.product_state[0].value == 'deprecated' %}
-                        {{ 'This plan is deprecated'|t }}
-                      {% else %}
-                        {{ 'This plan is not subscribable'|t }}
-                      {% endif %}
-                    </div>
+                    <h2 class="tariff-plan-price">Бесплатно</h2>
+                  {% endif %}
+                  {% if userLoggedIn %}
+                    {% if subscribable %}
+                      <a href="{{ path('ibm_apim.subscription_wizard.noplan') }}/?productId={{ node.id }}&planTitle={{ plan.data.title }}&planId={{ planid }}">
+                        <button class="button-transparent button-transparent-blue tariff-plan-button-subscribe">{{ 'Subscribe'|t }}</button>
+                      </a>
+                    {% else %}
+                      <button  class="button-transparent button-transparent-blue tariff-plan-button-subscribe" disabled>{{ 'Subscribe'|t }}</button>
+                      <div class="apicSubscribeMsg">
+                        {% if content.product_state[0].value is defined and content.product_state[0].value == 'deprecated' %}
+                          {{ 'This plan is deprecated'|t }}
+                        {% else %}
+                          {{ 'This plan is not subscribable'|t }}
+                        {% endif %}
+                      </div>
+                    {% endif %}
                   {% endif %}
                 </div>
               {% endfor %}

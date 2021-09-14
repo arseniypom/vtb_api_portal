@@ -311,3 +311,59 @@ p {
         display: flex;
     }
 }
+
+.informer {
+    margin-left: 11px;
+    position: relative;
+    display: flex;
+
+    &-icon {
+        display: initial;
+    }
+
+    &-text {
+        visibility: hidden;
+        width: 280px;
+        background-color: $color-neutral-80;
+        color: #fff;
+        border-radius: 4px;
+        padding: 12px 16px;
+        position: absolute;
+        z-index: 1;
+        bottom: 115%;
+        left: 50%;
+        margin-left: -20px;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            margin-left: -5px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: $color-neutral-80 transparent transparent transparent;
+        }
+
+        // &-close_button {
+        //     margin-left: 10px;
+        //     width: 32px;
+        //     height: 32px;
+        //     border-radius: 50%;
+
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+
+        //     &:hover {
+
+        //     }
+        // }
+    }
+
+    &:hover &-text {
+        visibility: visible;
+        opacity: 1;
+      }
+}
