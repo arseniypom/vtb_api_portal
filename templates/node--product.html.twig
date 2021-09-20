@@ -149,7 +149,6 @@
                   <p class="tariff-plan-label">Ограничение вызовов в час</p>
                   {% if plan.data.apiList is empty or api.node.api_xibmname[0].value in plan.data.apiList %}
                     {% set rates_array = plan.data['rate-limits'].default.value|split('/') %}
-                    {# {% set rates_object = json_decode(plan.rateData) %} #}
                     <div class="tariff-plan-api_calls">
                       <h2>{{ rates_array[0] }}</h2>
                       {% if plan.rateData|length > 0 %}
@@ -157,7 +156,10 @@
                           <img src="{{ base_path ~ directory }}/images/question-mark.svg" alt="question mark" class="informer-icon">
                           <span class="informer-text">
                             <div>
-                              <p>{{ plan.rateData }}</p>
+                              {% for rateId, rate in plan.parsedPlanList['#rates'] %}
+                                <p>{{ rate }}</p>
+                              {% endfor %}
+                              {# <p>{{ plan.rateData }}</p> #}
                             </div>
                           </span>
                         </div>
@@ -191,14 +193,14 @@
                 </div>
               {% endfor %}
           </div>
-          <div class="tariff-plans-section-description">
+          {# <div class="tariff-plans-section-description">
             <p class="tariff-plans-section-description-free">Вызовы API на искусственно сгенерированных данных</p>
             <p class="tariff-plans-section-description-paid">Продакшн-вызовы с использованием истинных данных, содержащих персональные данные, коммерческую и банковскую тайну</p>
           </div>
           <div class="tariff-plans-section-text">
             <p class="">Один тариф действует для одного приложения, подписанного на данный API</p>
             <p class="tariff-plans-section-description-paid">По вопросам тарифных планов обращайтесь к вашему бизнес-партнеру от Банка ВТБ или по адресу <a href="mailto:portal-open_api@vtb.ru" class="link-primary">developer@vtb.ru</a></p>
-          </div>
+          </div> #}
         </div>
 
 

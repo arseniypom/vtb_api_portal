@@ -257,14 +257,34 @@
                     {% for planid, plan in planList %}
                       <div class="tariff-plan">
                         <h4 class="tariff-plan-title">{{ plan.data.title }}</h4>
-                        <p class="tariff-plan-label">Вызовов в час</p>
-                        {# {% if plan.data.apiList is empty or api.node.api_xibmname[0].value in plan.data.apiList %}
-                          <h2 class="tariff-plan-api_calls">{{ plan.rateLimit }}</h2>
+                        <p class="tariff-plan-label">Ограничение вызовов в час</p>
+                        {% if plan.data.apiList is empty or api.node.api_xibmname[0].value in plan.data.apiList %}
+                          {% set rates_array = plan.data['rate-limits'].default.value|split('/') %}
+                          <div class="tariff-plan-api_calls">
+                            <h2>{{ rates_array[0] }}</h2>
+                            {% if plan.rateData|length > 0 %}
+                              <div class="informer">
+                                <img src="{{ base_path ~ directory }}/images/question-mark.svg" alt="question mark" class="informer-icon">
+                                <span class="informer-text">
+                                  <div>
+                                    {% for rateId, rate in plan.parsedPlanList['#rates'] %}
+                                      <p>{{ rate }}</p>
+                                    {% endfor %}
+                                    {# <p>{{ plan.rateData }}</p> #}
+                                  </div>
+                                </span>
+                              </div>
+                            {% endif %}
+                          </div>
                         {% else %}
                           &#x2014;
-                        {% endif %} #}
+                        {% endif %}
                         <p class="tariff-plan-label">Стоимость в месяц</p>
-                        <h2 class="tariff-plan-price">{{ plan.billing-info }}</h2>
+                        {% if plan.data['x-billing-info'].amount|length > 0 %}
+                          <h2 class="tariff-plan-price">{{ plan.data['x-billing-info'].amount }} {{ plan.data['x-billing-info'].currency }}</h2>
+                        {% else %}
+                          <h2 class="tariff-plan-price">Бесплатно</h2>
+                        {% endif %}
                         <button type="submit" name="selectedPlan" value="{{ plan.data.title }}:{{ planid }}" class="button-transparent button-transparent-blue tariff-plan-button-subscribe">
                             Выбрать
                         </button>
