@@ -783,13 +783,13 @@ span.icon.glyphicon.glyphicon-envelope {
 
 }
 
-.bx--global-light-ui .view-filters.form-group {
+.bx--global-light-ui .view-filters.form-group, .bx--global-light-ui .view-empty {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0;
 }
 @media (max-width: 1220px) {
-  .bx--global-light-ui .view-filters.form-group {
+  .bx--global-light-ui .view-filters.form-group, .bx--global-light-ui .view-empty {
     max-width: 97%;
   }
 }

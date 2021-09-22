@@ -130,7 +130,7 @@ h1.orgName {
 
 // Заголовок "Участники"
 .apicMyOrg .memberHeader {
-  margin: 2.5rem 0 .7rem;
+  margin: 2.5rem 0 .7rem !important;
 
   h3 {
     font-style: normal;
@@ -138,6 +138,11 @@ h1.orgName {
     font-size: 28px;
     line-height: 32px;
     color: #F3F4F6;
+  }
+}
+@media (max-width: 767px) {
+  .apicMyOrg .memberHeader {
+    margin-left: 1rem !important;
   }
 }
 
