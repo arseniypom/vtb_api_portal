@@ -190,8 +190,13 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 // Кнопка копирования
+.apiconnect-copier {
+  display: block !important;
+}
+
 .apiconnect-copier .copy-icon {
   fill: $color-primary-50;
+  right: 30px;
 }
 
 // Тултип / tooltip
@@ -893,7 +898,7 @@ svg.bx--inline-notification__close-icon,
   filter: invert(35%) sepia(28%) saturate(307%) hue-rotate(177deg) brightness(101%) contrast(92%);
 }
 
-// Переключатели страниц внизу
+// Переключатели страниц внизу (Пагинация)
 .pagination>li>a,
 .pagination>li>span,
 .pagination>li>a:focus,
@@ -922,11 +927,11 @@ svg.bx--inline-notification__close-icon,
 }
 
 
-// Переходы на 1 и последнюю страницы
-// a[rel="first"],
-// a[rel="last"] {
-//   display: none !important;
-// }
+//Переходы на 1 и последнюю страницы
+.pager__item.pager__item--last,
+.pager__item.pager__item--first {
+  display: none !important;
+}
 
 // Появляющийся текст об успешном копировании блока кода по кнопке "копировать"
 .apiconnect-copier .copyNotifier {
