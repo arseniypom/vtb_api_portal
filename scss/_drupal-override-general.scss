@@ -635,6 +635,12 @@ span.input-group-addon {
   display: none !important;
 }
 
+// Инпуты
+.bx--text-input {
+    background-color: transparent;
+    color: $color-darkweb-text-primary;
+}
+
 // Инпут "Заголовок"
 input#edit-title {
   background-color: transparent;
@@ -941,6 +947,10 @@ svg.bx--inline-notification__close-icon,
   color: $color-primary-50;
 }
 
+// Добавленная ссылка на файл
+.file {
+  display: inline;
+}
 
 // Footer ----------------------------------------------------------------
 .route-ibm-apimsubscription-wizard footer, .route-ibm-apimsubscription-wizardstep footer, .route-ibm-apimsubscription-wizardnoplan footer, .route-ibm-apimsubscription-wizardnoplanstep footer, .route-mail-subscribersproduct-wizard footer, .route-mail-subscribersproduct-wizardstep footer, .route-mail-subscribersplan-wizard footer, .route-mail-subscribersplan-wizardstep footer, .route-mail-subscribersapi-wizard footer, .route-mail-subscribersapi-wizardstep footer, .route-mail-subscribersall-wizard footer, .route-mail-subscribersall-wizardstep footer {

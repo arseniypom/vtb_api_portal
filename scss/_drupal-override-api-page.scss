@@ -167,6 +167,14 @@ use {
   fill: $color-primary-50;
 }
 
+.apiconnect-explorer .keyValueDisplay {
+  grid-template-columns: 40% 60%;
+}
+
+.apiconnect-explorer .key {
+  padding-right: 0;
+}
+
 .apiconnect-explorer .operationInformation, .apiconnect-explorer .operationDisplay .testToolSection {
   display: -ms-flexbox;
   display: flex;
@@ -182,6 +190,14 @@ use {
   .apiconnect-explorer .testTool .bx--text__input {
     min-width: auto;
   }
+}
+
+.apiconnect-explorer .testToolSecurity .testToolOauth .getToken {
+  grid-template-columns: 11rem auto;
+}
+
+.bx--global-light-ui .apiconnect-explorer .hljs {
+  background-color: transparent;
 }
 
 // Лэйблы
@@ -285,6 +301,7 @@ use {
   -ms-flex-direction: row;
   flex-direction: row;
   align-items: baseline;
+  display: grid;
 }
 
 .securityTitle.keyValueDisplay {
@@ -296,6 +313,13 @@ use {
   .key.securityTitle:last-child {
     display: none;
   }
+}
+
+.securityOptionPart-TestAuthOauth .securityNameAndType.keyValueDisplay {
+  color: $color-neutral-50;
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .securityNameAndType.keyValueDisplay {

@@ -140,7 +140,6 @@
     <div class="apicPlansTable">
       <div class="apicTableFixedContainer">
 
-      {# ВЕРСИЯ 3 #}
         <div class="tariff-plans-section">
           <div class="tariff-plans">
               {% for planid, plan in planList %}
@@ -159,7 +158,6 @@
                               {% for rateId, rate in plan.parsedPlanList['#rates'] %}
                                 <p>{{ rate }}</p>
                               {% endfor %}
-                              {# <p>{{ plan.rateData }}</p> #}
                             </div>
                           </span>
                         </div>
@@ -169,8 +167,12 @@
                     &#x2014;
                   {% endif %}
                   <p class="tariff-plan-label">Стоимость в месяц</p>
-                  {% if plan.data['x-billing-info'].amount|length > 0 %}
-                    <h2 class="tariff-plan-price">{{ plan.data['x-billing-info'].amount }} {{ plan.data['x-billing-info'].currency }}</h2>
+                  {% if plan.data['x-billing-info'].amount is defined %}
+                    {% if (plan.data['x-billing-info'].amount|length == 0) or (plan.data['x-billing-info'].amount == '***') %}
+                      <h2 class="tariff-plan-price">Бесплатно</h2>
+                    {% else %}
+                      <h2 class="tariff-plan-price">{{ plan.data['x-billing-info'].amount }} {{ plan.data['x-billing-info'].currency }}</h2>
+                    {% endif %}
                   {% else %}
                     <h2 class="tariff-plan-price">Бесплатно</h2>
                   {% endif %}

@@ -93,3 +93,22 @@ function vtb_theme_preprocess_node(array &$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Добавление текста на форму регистрации.
+ *
+ * @param array $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function vtb_theme_form_user_register_form_alter(array &$form, FormStateInterface $form_state){
+  $form['register_text'] = [
+    '#prefix' => '<div class="register-text">',
+    '#markup' => Drupal\Core\Render\Markup::create('Нажимая на кнопку "Зарегистрироваться", вы принимаете условия <a class="link-primary" href="https://portal.k3-apic-web101xv.vtb24.ru/vtb/test/sites/vtb.test.portal.k3-apic-web101xv.vtb24.ru/themes/vtb_theme/documents/user_agreement.pdf" target="_blank">Пользовательского соглашения</a> и <a class="link-primary" href="https://portal.k3-apic-web101xv.vtb24.ru/vtb/test/sites/vtb.test.portal.k3-apic-web101xv.vtb24.ru/themes/vtb_theme/documents/Obrabotka-pdn.pdf" target="_blank">Положения об организации обработки персональных данных в Банке ВТБ (ПАО)</a>'),
+    '#weight' => 49,  //Вес – позиция относительно других элементов формы
+    '#suffix' => '</div>'
+  ];
+  
+  // Кнопки сохранения в самом низу формы
+  $form['actions']['#weight'] = 50;
+}
