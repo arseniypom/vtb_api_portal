@@ -81,6 +81,15 @@ p {
     }
 }
 
+.link-green {
+    color: $color-darkweb-special-green !important;
+
+    &:hover, &:active {
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+    }
+}
+
 .title-container {
     margin: 6.25rem auto 3.5rem;
     max-width: 82.5%;

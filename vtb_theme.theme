@@ -92,6 +92,30 @@ function vtb_theme_preprocess_node(array &$variables) {
       $variables['planList'][$id]['parsedPlanList'] = $parsed;
     }
   }
+
+  if (function_exists('ibm_apim_entry_trace')) {
+    ibm_apim_entry_trace(__FUNCTION__, NULL);
+  }
+
+  // Добавляем переменную для определения вывода ссылки.
+  if(isset($variables['node']) && $variables['node']->bundle() == 'product'){
+    $node = $variables['node'];
+    $variables['showLink'] = TRUE;
+
+    if(sizeof($node->apic_tags->getValue())){
+      foreach ($node->apic_tags as $field){
+        $term = $field->entity;
+        if($term->getName() == 'Скоро в наличии'){ // Указать название тэга, для которого не выводить ссылку
+          $variables['showLink'] = FALSE;
+        }
+      }
+    }
+  }
+
+  if (function_exists('ibm_apim_exit_trace')) {
+    ibm_apim_exit_trace(__FUNCTION__, NULL);
+  }
+
 }
 
 /**
@@ -104,11 +128,11 @@ function vtb_theme_preprocess_node(array &$variables) {
 function vtb_theme_form_user_register_form_alter(array &$form, FormStateInterface $form_state){
   $form['register_text'] = [
     '#prefix' => '<div class="register-text">',
-    '#markup' => Drupal\Core\Render\Markup::create('Нажимая на кнопку "Зарегистрироваться", вы принимаете условия <a class="link-primary" href="https://portal.k3-apic-web101xv.vtb24.ru/vtb/test/sites/vtb.test.portal.k3-apic-web101xv.vtb24.ru/themes/vtb_theme/documents/user_agreement.pdf" target="_blank">Пользовательского соглашения</a> и <a class="link-primary" href="https://portal.k3-apic-web101xv.vtb24.ru/vtb/test/sites/vtb.test.portal.k3-apic-web101xv.vtb24.ru/themes/vtb_theme/documents/Obrabotka-pdn.pdf" target="_blank">Положения об организации обработки персональных данных в Банке ВТБ (ПАО)</a>'),
-    '#weight' => 49,  //Вес – позиция относительно других элементов формы
+    '#markup' => Drupal\Core\Render\Markup::create('Нажимая на кнопку "Регистрация", вы принимаете условия <a class="link-primary" href="https://portal.k3-apic-web101xv.vtb24.ru/vtb/test/sites/vtb.test.portal.k3-apic-web101xv.vtb24.ru/themes/vtb_theme/documents/user_agreement.pdf" target="_blank">Пользовательского соглашения</a> и <a class="link-primary" href="https://portal.k3-apic-web101xv.vtb24.ru/vtb/test/sites/vtb.test.portal.k3-apic-web101xv.vtb24.ru/themes/vtb_theme/documents/Obrabotka-pdn.pdf" target="_blank">Положения об организации обработки персональных данных в Банке ВТБ (ПАО)</a>'),
+    '#weight' => 999,  //Вес – позиция относительно других элементов формы (чем больше, тем ниже)
     '#suffix' => '</div>'
   ];
   
   // Кнопки сохранения в самом низу формы
-  $form['actions']['#weight'] = 50;
+  $form['actions']['#weight'] = 1000;
 }

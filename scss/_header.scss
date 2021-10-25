@@ -188,5 +188,15 @@
                 margin: 0 .25rem;
             }
         }
+
+        .hackathon-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin-right: .25rem;
+            }
+        }
     }
 }

@@ -87,11 +87,15 @@
               {% if page.navigation or page.navigation_right %}
                   {% block navbar %}
                   <div class="header-menu-links">
+                      <a class="header-menu-links-item hackathon-link link-green" href="/vtb/test/hackathon">
+                        <img src="{{ base_path ~ directory }}/images/hackathon.svg" alt="hackathon"/>
+                        Хакатон
+                      </a>
                       <a class="header-menu-links-item" href="/vtb/test/product">Каталог API</a>
                       <a class="header-menu-links-item" href="/vtb/test/connection">Подключение</a>
                       <a class="header-menu-links-item" href="/vtb/test/application">Приложения</a>
                       <a class="header-menu-links-item" href="/vtb/test/support">Поддержка</a>
-                      <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a>
+                      {# <a class="header-menu-links-item" href="/vtb/test/blog">Блог</a> #}
                   </div>
                   <div class="navbar-right">
                       {{ page.navigation_right }}

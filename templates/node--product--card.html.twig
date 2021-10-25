@@ -36,9 +36,20 @@ view_mode ? ('node--view-mode-' ~ view_mode)|clean_class,
     {% endif %} #}
     <div class="apicProductCardMain">
       <div class="bx--about__title--name product-card-title" data-toggle="tooltip" data-placement="bottom" title="{{- node.title[0].value -}}">
+      {# {% if content.field_clickable['#items'][0].value %}
         <a href="{{- path('product.view', {'prodNode': prodNode}) -}}" rel="bookmark">
           <h4 id="node-{{ node.id }}-title" class="apicProductName apicTruncate">{{- label -}}</h4>
         </a>
+      {% else %}
+        <h4 id="node-{{ node.id }}-title" class="apicProductName apicTruncate">{{- label -}}</h4>
+      {% endif %} #}
+      {% if showLink %}
+        <a href="{{- path('product.view', {'prodNode': prodNode}) -}}" rel="bookmark">
+          <h4 id="node-{{ node.id }}-title" class="apicProductName apicTruncate">{{- label -}}</h4>
+        </a>
+      {% else %}
+        <h4 id="node-{{ node.id }}-title" class="apicProductName apicTruncate">{{- label -}}</h4> 
+      {% endif %}
       </div>
       <div class="apicProductCardVersionAndRating">
         {# <div class="apicProductRating">
@@ -64,6 +75,11 @@ view_mode ? ('node--view-mode-' ~ view_mode)|clean_class,
       </div>
     {% endif %}
   </div>
+    {% if content.apic_tags is defined and content.apic_tags is not empty %}
+      <div class="apicProductCardTags">
+        {{ content.apic_tags }}
+      </div>
+    {% endif %}
   {# <div class="apicProductAPIs">
     <div class="apicApiCount">
       <p>API продукта:</p>
@@ -101,5 +117,8 @@ view_mode ? ('node--view-mode-' ~ view_mode)|clean_class,
     {% endif %} #}
     {# КОНЕЦ БЛОКА С ОПИСАНИЕМ ПРОДУКТА -------------------------- #}
 
-  <a href="{{- path('product.view', {'prodNode': prodNode}) -}}" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+  {# {% if content.field_clickable['#items'][0].value %} #}
+  {% if showLink %}
+    <a href="{{- path('product.view', {'prodNode': prodNode}) -}}" class="card-read_more link-primary"><img src="{{ base_path ~ directory }}/images/arrow-right.svg" alt="arrow" class="card-read_more-arrow"><p>Подробнее</p></a>
+  {% endif %}
 </article>

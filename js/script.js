@@ -441,7 +441,9 @@
   }
 
   // Выделение ссылки открытого раздела в хэдере
-  if ($('.catalog-info-public-cards-item').length || $('.apicProductApiList').length || $('.apiconnect-explorer-menu').length) {
+  if ($('.page-header').text() === "Хакатон") {
+    $('.header-menu-links-item:contains("Хакатон")').addClass('header-menu-links-item-active')
+  } else if ($('.page-header').text() === "Продукты API") {
     $('.header-menu-links-item:contains("Каталог API")').addClass('header-menu-links-item-active')
   } else if ($('.connection').length) {
     $('.header-menu-links-item:contains("Подключение")').addClass('header-menu-links-item-active')
@@ -452,10 +454,4 @@
   } else if ($('.view-blog').length) {
     $('.header-menu-links-item:contains("Блог")').addClass('header-menu-links-item-active')
   }
-
-  // Стрница с приложениями
-  // Перемещение кнопки создания нового приложения
-  // if ($('.apicNewAppWrapper').length) {
-  //   $('.apicNewAppWrapper').insertAfter('.page-header')
-  // }
 })(jQuery)

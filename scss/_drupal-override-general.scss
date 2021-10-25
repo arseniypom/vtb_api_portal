@@ -196,7 +196,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .apiconnect-copier .copy-icon {
   fill: $color-primary-50;
-  right: 30px;
+  right: 60px;
 }
 
 // Тултип / tooltip
@@ -950,6 +950,38 @@ svg.bx--inline-notification__close-icon,
 // Добавленная ссылка на файл
 .file {
   display: inline;
+}
+
+// Форма регистрации
+.context--user-register .tooltip {
+  display: none;
+}
+
+.register-text {
+  order: 1;
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+.user-register-form {
+  .reload-captcha-wrapper {
+    position: static;
+    padding: .625rem 0 .625rem;
+  }
+
+  .form-group.form-actions {
+    order: 2;
+  }
+}
+
+.apic-user-form-text a {
+  color: $color-primary-50 !important;
+
+  &:hover, &:active {
+      color: $color-primary-60 !important;
+      text-decoration-line: underline;
+      text-underline-offset: 3px;
+  }
 }
 
 // Footer ----------------------------------------------------------------
