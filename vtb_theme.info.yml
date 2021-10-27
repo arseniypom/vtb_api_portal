@@ -1,7 +1,7 @@
 core: 8.x
 type: theme
 base theme: connect_theme
-version: '8.x-3.9.6'
+version: '8.x-3.9.7'
 
 name: 'vtb_theme'
 project: 'vtb_theme'
