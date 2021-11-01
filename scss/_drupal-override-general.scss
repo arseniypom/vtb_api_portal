@@ -454,6 +454,16 @@ li.dropit-trigger a {
   }
 }
 
+// Заголовок блока
+.block-title {
+  border: none;
+  font-weight: 600;
+  color: inherit;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-bottom: 1.25rem;
+}
+
 // Карточки АПИ
 .bx--card {
   background-color: $color-light-grey-bg;
