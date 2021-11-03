@@ -40,6 +40,7 @@ li.dropit-trigger a {
 // Декоративная точка между регистрацией и входом
 nav.block-login ul.menu li+li:before {
   content: "";
+  display: none;
 }
 
 // Меню выбора организации
